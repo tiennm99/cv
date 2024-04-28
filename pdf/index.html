@@ -1,0 +1,22 @@
+<html lang="vi">
+<body>
+<script>
+    const owner = `tiennm99`;
+    const repo = `cv`;
+    const url = `https://api.github.com/repos/${owner}/${repo}/contents/`;
+    fetch(url).then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        return response.json();
+    }).then(data => {
+        let htmlString = "<ul>";
+        for (let file of data) {
+            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+        }
+        htmlString += "</ul>";
+        document.getElementsByTagName("body")[0].innerHTML = htmlString;
+    }).catch(error => console.error("Error:", error));
+</script>
+</body>
+</html>
