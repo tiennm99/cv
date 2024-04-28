@@ -1,40 +1,51 @@
-name: directory-listing
+name: Generate Directory Listing and Deploy to GitHub Pages
+
 on: [push]
 
 jobs:
-  pages-directory-listing:
+  build:
     runs-on: ubuntu-latest
-    name: Directory Listings Index
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-        with:
-          ref: main    #checkout different branch
+    - uses: actions/checkout@v2
 
-      - name: Generate Directory Listings
-        uses: jayanta525/github-pages-directory-listing@v4.0.0
-        with:
-          FOLDER: data      #directory to generate index
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: 'data'      # upload generated folder
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install beautifulsoup4
 
-  deploy:
-    needs: pages-directory-listing
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+    - name: Generate Directory Listing
+      run: |
+        import os
+        import pathlib
+        from bs4 import BeautifulSoup
 
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+        def create_index_html(path):
+            soup = BeautifulSoup("<html><body><ul></ul></body></html>", "html.parser")
+            ul = soup.find("ul")
 
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+            for child in sorted(path.iterdir()):
+                li = soup.new_tag("li")
+                a = soup.new_tag("a", href=str(child))
+                a.string = str(child)
+                li.append(a)
+                ul.append(li)
+
+            with open(path / "index.html", "w") as f:
+                f.write(str(soup))
+
+        root = pathlib.Path("data")
+        for path in sorted(root.rglob('*')):
+            if path.is_dir():
+                create_index_html(path)
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./data
