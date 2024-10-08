@@ -6,10 +6,10 @@ favicon: images/favicon.png
 version: 2
 
 # Personal info
-name: Tien Nguyen Minh
+name: Tien Nguyen Minh (miti99)
 title: Senior Software Engineer
 email: tiennm99@outlook.com
-website: miti99.dev
+website: tiennm99.github.io
 
 # Dark Mode (true/false/never)
 darkmode: false
