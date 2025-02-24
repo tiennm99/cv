@@ -61,9 +61,9 @@ content:
         link: github.com/survival2d
         # link_text: Project Website
         additional_links:
-          - title: survival2d.eu.org
+          - title: survival2d.github.io
             icon: fa fa-gamepad
-            url: survival2d.eu.org
+            url: survival2d.github.io
           # - title:  Github page for project (eg. sproogen/modern-resume-theme)
           #   icon: fab fa-github
           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
@@ -109,6 +109,7 @@ content:
     content:
       - layout: left
         title: Ho Chi Minh City University of Technology
+        link: hcmut.edu.vn
         caption: 2017
         sub_title: BEng Computer Science
         quote: >
