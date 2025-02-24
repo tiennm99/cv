@@ -121,13 +121,13 @@ content:
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Alongside my interests in game development and software engineering some of my other interests and hobbies are:
-      - Try do deploy something on internet: self-hosted services, website, AI,...
-      - Help develop open source projects related to Java & game development.
-      - Reading light novel, manga. Watching anime.
-      - Playing Game
+      Beyond my passion for game server development and software engineering, I enjoy:
+      - Experimenting with self-hosted services and AI applications
+      - Contributing to open-source projects related to Java and game development.
+      - Reading novels & manga, watching anime.
+      - Playing games like Genshin Impact & TFT.
 
-      My dream is to continuously evolve as a software engineer and create impactful systems.
+      My dream is ~~to continuously evolve as a software engineer and create impactful systems~~ to be come a magician.
 
 # Footer
 footer_show_references: true
