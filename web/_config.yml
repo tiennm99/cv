@@ -19,10 +19,10 @@ darkmode: false
 github_username: tiennm99
 # stackoverflow_username: "00000001"
 # dribbble_username: jekyll
-facebook_username: miti99
+facebook_username: tiennm99
 # flickr_username: jekyll
 #instagram_username: tiennm99
-#linkedin_username: jameswgrant
+linkedin_username: miti99
 # xing_username: jekyll
 # pinterest_username: jekyll
 #youtube_username: @miti99
@@ -48,9 +48,9 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Tien and I'm a senior software engineer. I have worked as a java game server developer at ZingPlay Game Studios - VNG Corporation since 2020.
+  Hi, my name's Tien, and I'm a Senior Software Engineer specializing in game server architecture and backend development. Since 2020, I have been working at ZingPlay Game Studios - VNG Corporation, focusing on building scalable and high-performance systems.
 
-  I am most skilled in: <mark>Java</mark> and <mark>Read Light Novel</mark>
+  I am most skilled in: <mark>Java (Netty, Vert.x, Spring Boot)</mark> and <mark>Game Server Development</mark>
 
 content:
   - title: Projects # Title for the section
@@ -72,6 +72,18 @@ content:
         description: | # this will include new lines to allow paragraphs
           Because at that time I was working in game area so I want to start a game project. I choose to make a 2D Battle Royale game inprired by surviv.io.
 
+      - layout: top-middle
+        title: Static Websites with Hugo
+        link: tiennm99.github.io
+        additional_links:
+          - title: GitHub Pages
+            icon: fab fa-github
+            url: https://github.com/tiennm99
+        quote: >
+          My personal blog and website.
+        description: |
+          Developed a personal blog using Hugo and GitHub Pages to share technical knowledge and personal projects.
+
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
@@ -84,15 +96,13 @@ content:
         quote: >
           Join Fresh. Grow Best.
         description: | # this will include new lines to allow paragraphs
-          On July 06 2020, I joined Game Studio North - VNG Corporation as a Game Programming Fresher of the VNG Tech Fresher 2020 program.
-          
-          On January 01 2021, we changed our name to ZingPlay Game Studios.
-          
-          On October 01 2020, I was promoted to Associate Software Engineer.
-          
-          On September 26 2021, I was promoted to Software Engineer.
-          
-          From June 26 2023 util now, I have worked as a Senior Software Engineer.
+          Started my journey at VNG Tech Fresher Program and progressed to Senior Software Engineer at ZingPlay Game Studios. Over the years, I have honed my expertise in game server architecture and backend development using Java, while also contributing to client-side logic with Cocos and Godot when needed.
+
+          Notable projects I have worked on at ZingPlay Game Studios include:
+          - [**Show**](https://play.google.com/store/apps/details?id=zps.games.show) - A card game for Myanmar market.
+          - [**Burkozel**](https://play.google.com/store/apps/details?id=zps.games.burkozel) - A card game for the Russian audience.
+          - [**Bida3D**](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn) - Global 8-ball pool game.
+          - [**Chaos Age 2**](https://play.google.com/store/apps/details?id=vn.zps.tl2) - Global strategy game.
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
@@ -105,7 +115,7 @@ content:
           1 Encouraging Study Scholarship.<br>
           1 Student of 5 merits.
         description: | # this will include new lines to allow paragraphs
-          During this time, I improved my knowledge of programming, algorithms, data structures, and other computer science fundamentals. I also learned about create static blog and create blog for me and my team.
+          Gained a solid foundation in algorithms, data structures, and software engineering. Developed skills in creating and managing static websites and contributing to open-source projects.
 
   - title: A Little More About Me
     layout: text
@@ -116,7 +126,7 @@ content:
       - Reading light novel, manga. Watching anime.
       - Playing Game
 
-      My dream is to become a magician. 
+      My dream is to continuously evolve as a software engineer and create impactful systems.
 
 # Footer
 footer_show_references: true
