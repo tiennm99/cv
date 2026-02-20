@@ -85,56 +85,30 @@
 
 = Tien Nguyen Minh
 
+  #headline([Senior Software Engineer])
+
 #connections(
   [#connection-with-icon("location-dot")[HCMC, VN]],
   [#link("mailto:tiennm99@outlook.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[tiennm99\@outlook.com]]],
   [#link("https://miti99.com/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("link")[miti99.com]]],
   [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[miti99]]],
   [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tiennm99]]],
+  [#link("https://instagram.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("instagram")[tiennm99]]],
 )
 
-
-== Welcome to RenderCV
-
-RenderCV reads a CV written in a YAML file, and generates a PDF with professional typography.
-
-See the #link("https://docs.rendercv.com")[documentation] for more details.
 
 == Education
 
 #education-entry(
   [
-    #strong[Princeton University], PhD in Computer Science -- Princeton, NJ
+    #strong[Ho Chi Minh City University of Technology], B.E. in Computer Science in Computer Science and Engineering -- Ho Chi Minh City, Vietnam
 
   ],
   [
-    Sept 2018 – May 2023
+    Sept 2017 – June 2023
 
   ],
   main-column-second-row: [
-    - Thesis: Efficient Neural Architecture Search for Resource-Constrained Deployment
-
-    - Advisor: Prof. Sanjeev Arora
-
-    - NSF Graduate Research Fellowship, Siebel Scholar (Class of 2022)
-
-  ],
-)
-
-#education-entry(
-  [
-    #strong[Boğaziçi University], BS in Computer Engineering -- Istanbul, Türkiye
-
-  ],
-  [
-    Sept 2014 – June 2018
-
-  ],
-  main-column-second-row: [
-    - GPA: 3.97\/4.00, Valedictorian
-
-    - Fulbright Scholarship recipient for graduate studies
-
   ],
 )
 
@@ -142,95 +116,31 @@ See the #link("https://docs.rendercv.com")[documentation] for more details.
 
 #regular-entry(
   [
-    #strong[Co-Founder & CTO], Nexus AI -- San Francisco, CA
+    #strong[Senior Software Engineer], ZingPlay Game Studios, VNG Corporation -- Ho Chi Minh City, Vietnam
 
   ],
   [
-    June 2023 – present
+    July 2020 – present
 
   ],
   main-column-second-row: [
-    - Built foundation model infrastructure serving 2M+ monthly API requests with 99.97\% uptime
+    #summary[Started my journey at VNG Tech Fresher Program and progressed to Senior Software Engineer at ZingPlay Game Studios (ZPS). Over the years, I have honed my expertise in game server architecture and backend development using Java, while also contributing to client-side logic with Cocos and Godot when needed.]
 
-    - Raised \$18M Series A led by Sequoia Capital, with participation from a16z and Founders Fund
+    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show]
 
-    - Scaled engineering team from 3 to 28 across ML research, platform, and applied AI divisions
+      - A card game for Myanmar market
 
-    - Developed proprietary inference optimization reducing latency by 73\% compared to baseline
+    - #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]
 
-  ],
-)
+      - A card game for the Russian audience
 
-#regular-entry(
-  [
-    #strong[Research Intern], NVIDIA Research -- Santa Clara, CA
+    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]
 
-  ],
-  [
-    May 2022 – Aug 2022
+      - Global 8-ball pool game
 
-  ],
-  main-column-second-row: [
-    - Designed sparse attention mechanism reducing transformer memory footprint by 4.2x
+    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]
 
-    - Co-authored paper accepted at NeurIPS 2022 (spotlight presentation, top 5\% of submissions)
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[Research Intern], Google DeepMind -- London, UK
-
-  ],
-  [
-    May 2021 – Aug 2021
-
-  ],
-  main-column-second-row: [
-    - Developed reinforcement learning algorithms for multi-agent coordination
-
-    - Published research at top-tier venues with significant academic impact
-
-      - ICML 2022 main conference paper, cited 340+ times within two years
-
-      - NeurIPS 2022 workshop paper on emergent communication protocols
-
-      - Invited journal extension in JMLR (2023)
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[Research Intern], Apple ML Research -- Cupertino, CA
-
-  ],
-  [
-    May 2020 – Aug 2020
-
-  ],
-  main-column-second-row: [
-    - Created on-device neural network compression pipeline deployed across 50M+ devices
-
-    - Filed 2 patents on efficient model quantization techniques for edge inference
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[Research Intern], Microsoft Research -- Redmond, WA
-
-  ],
-  [
-    May 2019 – Aug 2019
-
-  ],
-  main-column-second-row: [
-    - Implemented novel self-supervised learning framework for low-resource language modeling
-
-    - Research integrated into Azure Cognitive Services, reducing training data requirements by 60\%
+      - Global strategy game
 
   ],
 )
@@ -239,165 +149,29 @@ See the #link("https://docs.rendercv.com")[documentation] for more details.
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/")[FlashInfer]]
+    #strong[#link("https://tiennm99.github.io/")[Static websites with Hugo]]
 
   ],
   [
-    Jan 2023 – present
+    Jan 2020 – present
 
   ],
   main-column-second-row: [
-    #summary[Open-source library for high-performance LLM inference kernels]
-
-    - Achieved 2.8x speedup over baseline attention implementations on A100 GPUs
-
-    - Adopted by 3 major AI labs, 8,500+ GitHub stars, 200+ contributors
+    #summary[My blog on GitHub Pages using Hugo. Website for Ngăm - a charity project founded by my brother's friends.]
 
   ],
 )
-
-#regular-entry(
-  [
-    #strong[#link("https://github.com/")[NeuralPrune]]
-
-  ],
-  [
-    Jan 2021
-
-  ],
-  main-column-second-row: [
-    #summary[Automated neural network pruning toolkit with differentiable masks]
-
-    - Reduced model size by 90\% with less than 1\% accuracy degradation on ImageNet
-
-    - Featured in PyTorch ecosystem tools, 4,200+ GitHub stars
-
-  ],
-)
-
-== Publications
-
-#regular-entry(
-  [
-    #strong[Sparse Mixture-of-Experts at Scale: Efficient Routing for Trillion-Parameter Models]
-
-  ],
-  [
-    July 2023
-
-  ],
-  main-column-second-row: [
-    #emph[John Doe], Sarah Williams, David Park
-
-    #link("https://doi.org/10.1234/neurips.2023.1234")[10.1234\/neurips.2023.1234] (NeurIPS 2023)
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[Neural Architecture Search via Differentiable Pruning]
-
-  ],
-  [
-    Dec 2022
-
-  ],
-  main-column-second-row: [
-    James Liu, #emph[John Doe]
-
-    #link("https://doi.org/10.1234/neurips.2022.5678")[10.1234\/neurips.2022.5678] (NeurIPS 2022, Spotlight)
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[Multi-Agent Reinforcement Learning with Emergent Communication]
-
-  ],
-  [
-    July 2022
-
-  ],
-  main-column-second-row: [
-    Maria Garcia, #emph[John Doe], Tom Anderson
-
-    #link("https://doi.org/10.1234/icml.2022.9012")[10.1234\/icml.2022.9012] (ICML 2022)
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[On-Device Model Compression via Learned Quantization]
-
-  ],
-  [
-    May 2021
-
-  ],
-  main-column-second-row: [
-    #emph[John Doe], Kevin Wu
-
-    #link("https://doi.org/10.1234/iclr.2021.3456")[10.1234\/iclr.2021.3456] (ICLR 2021, Best Paper Award)
-
-  ],
-)
-
-== Selected Honors
-
-- MIT Technology Review 35 Under 35 Innovators (2024)
-
-- Forbes 30 Under 30 in Enterprise Technology (2024)
-
-- ACM Doctoral Dissertation Award Honorable Mention (2023)
-
-- Google PhD Fellowship in Machine Learning (2020 – 2023)
-
-- Fulbright Scholarship for Graduate Studies (2018)
 
 == Skills
 
-#strong[Languages:] Python, C++, CUDA, Rust, Julia
+#strong[Programming:] Java (Netty, Vert.x, Spring Boot), JavaScript
 
-#strong[ML Frameworks:] PyTorch, JAX, TensorFlow, Triton, ONNX
+#strong[Databases:] Couchbase, Redis, MySQL
 
-#strong[Infrastructure:] Kubernetes, Ray, distributed training, AWS, GCP
+#strong[Tools & DevOps:] Git, Docker, CI\/CD
 
-#strong[Research Areas:] Neural architecture search, model compression, efficient inference, multi-agent RL
+== Interests
 
-== Patents
+#strong[Professional:] Game server architecture, distributed systems, Java performance tuning
 
-+ Adaptive Quantization for Neural Network Inference on Edge Devices (US Patent 11,234,567)
-
-+ Dynamic Sparsity Patterns for Efficient Transformer Attention (US Patent 11,345,678)
-
-+ Hardware-Aware Neural Architecture Search Method (US Patent 11,456,789)
-
-== Invited Talks
-
-#reversed-numbered-entries(
-  [
-
-+ Scaling Laws for Efficient Inference — Stanford HAI Symposium (2024)
-
-+ Building AI Infrastructure for the Next Decade — TechCrunch Disrupt (2024)
-
-+ From Research to Production: Lessons in ML Systems — NeurIPS Workshop (2023)
-
-+ Efficient Deep Learning: A Practitioner's Perspective — Google Tech Talk (2022)
-  ],
-)
-
-== Any Section Title
-
-You can use any section title you want.
-
-You can choose any entry type for the section: `TextEntry`, `ExperienceEntry`, `EducationEntry`, `PublicationEntry`, `BulletEntry`, `NumberedEntry`, or `ReversedNumberedEntry`.
-
-Markdown syntax is supported everywhere.
-
-The `design` field in YAML gives you control over almost any aspect of your CV design.
-
-See the #link("https://docs.rendercv.com")[documentation] for more details.
+#strong[Personal:] Reading novels & manga, playing Genshin Impact & TFT
