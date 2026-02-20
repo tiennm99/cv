@@ -3,8 +3,8 @@
 
 // Apply the rendercv template with custom configuration
 #show: rendercv.with(
-  name: "miti99",
-  footer: context { [#emph[miti99 -- #str(here().page())\/#str(counter(page).final().first())]] },
+  name: "Tien Nguyen Minh",
+  footer: context { [#emph[Tien Nguyen Minh -- #str(here().page())\/#str(counter(page).final().first())]] },
   top-note: [ #emph[Last updated in Feb 2026] ],
   locale-catalog-language: "en",
   page-size: "us-letter",
@@ -83,14 +83,14 @@
 )
 
 
-= miti99
+= Tien Nguyen Minh
 
 #connections(
-  [#connection-with-icon("location-dot")[San Francisco, CA]],
-  [#link("mailto:john.doe@email.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[john.doe\@email.com]]],
-  [#link("https://rendercv.com/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("link")[rendercv.com]]],
-  [#link("https://linkedin.com/in/rendercv", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[rendercv]]],
-  [#link("https://github.com/rendercv", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[rendercv]]],
+  [#connection-with-icon("location-dot")[HCMC, VN]],
+  [#link("mailto:tiennm99@outlook.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[tiennm99\@outlook.com]]],
+  [#link("https://miti99.com/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("link")[miti99.com]]],
+  [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[miti99]]],
+  [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tiennm99]]],
 )
 
 

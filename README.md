@@ -1,10 +1,10 @@
-# miti99's CV
+# Tien Nguyen Minh's CV
 
-- Email: [john.doe@email.com](mailto:john.doe@email.com)
-- Location: San Francisco, CA
-- Website: [rendercv.com](https://rendercv.com/)
-- LinkedIn: [rendercv](https://linkedin.com/in/rendercv)
-- GitHub: [rendercv](https://github.com/rendercv)
+- Email: [tiennm99@outlook.com](mailto:tiennm99@outlook.com)
+- Location: HCMC, VN
+- Website: [miti99.com](https://miti99.com/)
+- LinkedIn: [miti99](https://linkedin.com/in/miti99)
+- GitHub: [tiennm99](https://github.com/tiennm99)
 
 
 # Welcome to RenderCV
