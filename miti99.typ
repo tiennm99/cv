@@ -93,7 +93,6 @@
   [#link("https://miti99.com/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("link")[miti99.com]]],
   [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[miti99]]],
   [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tiennm99]]],
-  [#link("https://instagram.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("instagram")[tiennm99]]],
 )
 
 

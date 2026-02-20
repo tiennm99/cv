@@ -5,7 +5,6 @@
 - Website: [miti99.com](https://miti99.com/)
 - LinkedIn: [miti99](https://linkedin.com/in/miti99)
 - GitHub: [tiennm99](https://github.com/tiennm99)
-- Instagram: [tiennm99](https://instagram.com/tiennm99)
 
 
 # Education
