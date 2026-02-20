@@ -362,7 +362,7 @@ settings:
     png_path: NAME_IN_SNAKE_CASE.png
     dont_generate_markdown: false
     dont_generate_html: false
-    dont_generate_typst: false
+    dont_generate_typst: true
     dont_generate_pdf: false
-    dont_generate_png: false
+    dont_generate_png: true
   bold_keywords: []
