@@ -186,7 +186,7 @@ cv:
       - The `design` field in YAML gives you control over almost any aspect of your CV design.
       - See the [documentation](https://docs.rendercv.com) for more details.
 design:
-  theme: classic
+  theme: engineeringclassic
   # page:
   #   size: us-letter
   #   top_margin: 0.7in
@@ -355,14 +355,14 @@ settings:
   render_command:
     design:
     locale:
-    typst_path: NAME_IN_SNAKE_CASE.typ
-    pdf_path: NAME_IN_SNAKE_CASE.pdf
+    typst_path: miti99.typ
+    pdf_path: miti99.pdf
     markdown_path: README.md
     html_path: index.html
-    png_path: NAME_IN_SNAKE_CASE.png
+    png_path: miti99.png
     dont_generate_markdown: false
     dont_generate_html: false
-    dont_generate_typst: true
+    dont_generate_typst: false
     dont_generate_pdf: false
     dont_generate_png: true
   bold_keywords: []

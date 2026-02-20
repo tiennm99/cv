@@ -13,13 +13,7 @@ RenderCV reads a CV written in a YAML file, and generates a PDF with professiona
 See the [documentation](https://docs.rendercv.com) for more details.
 
 # Education
-## **Princeton University**, Computer Science
-
-**PhD**
-
-Princeton, NJ
-
-Sept 2018 – May 2023
+## **Princeton University**, PhD in Computer Science -- Princeton, NJSept 2018 – May 2023
 
 - Thesis: Efficient Neural Architecture Search for Resource-Constrained Deployment
 
@@ -29,13 +23,7 @@ Sept 2018 – May 2023
 
 
 
-## **Boğaziçi University**, Computer Engineering
-
-**BS**
-
-Istanbul, Türkiye
-
-Sept 2014 – June 2018
+## **Boğaziçi University**, BS in Computer Engineering -- Istanbul, TürkiyeSept 2014 – June 2018
 
 - GPA: 3.97/4.00, Valedictorian
 
@@ -44,15 +32,9 @@ Sept 2014 – June 2018
 
 
 # Experience
-## **Nexus AI**, Co-Founder & CTO
-
-San Francisco, CA
+## **Co-Founder & CTO**, Nexus AI -- San Francisco, CA
 
 June 2023 – present
-
-
-
-2 years 9 months
 
 - Built foundation model infrastructure serving 2M+ monthly API requests with 99.97% uptime
 
@@ -64,15 +46,9 @@ June 2023 – present
 
 
 
-## **NVIDIA Research**, Research Intern
-
-Santa Clara, CA
+## **Research Intern**, NVIDIA Research -- Santa Clara, CA
 
 May 2022 – Aug 2022
-
-
-
-4 months
 
 - Designed sparse attention mechanism reducing transformer memory footprint by 4.2x
 
@@ -80,15 +56,9 @@ May 2022 – Aug 2022
 
 
 
-## **Google DeepMind**, Research Intern
-
-London, UK
+## **Research Intern**, Google DeepMind -- London, UK
 
 May 2021 – Aug 2021
-
-
-
-4 months
 
 - Developed reinforcement learning algorithms for multi-agent coordination
 
@@ -102,15 +72,9 @@ May 2021 – Aug 2021
 
 
 
-## **Apple ML Research**, Research Intern
-
-Cupertino, CA
+## **Research Intern**, Apple ML Research -- Cupertino, CA
 
 May 2020 – Aug 2020
-
-
-
-4 months
 
 - Created on-device neural network compression pipeline deployed across 50M+ devices
 
@@ -118,15 +82,9 @@ May 2020 – Aug 2020
 
 
 
-## **Microsoft Research**, Research Intern
-
-Redmond, WA
+## **Research Intern**, Microsoft Research -- Redmond, WA
 
 May 2019 – Aug 2019
-
-
-
-4 months
 
 - Implemented novel self-supervised learning framework for low-resource language modeling
 
