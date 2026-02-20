@@ -1,17 +1,17 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
 cv:
-  name: miti99
+  name: Tien Nguyen Minh
   headline:
-  location: San Francisco, CA
-  email: john.doe@email.com
+  location: HCMC, VN
+  email: tiennm99@outlook.com
   photo:
   phone:
-  website: https://rendercv.com/
+  website: https://miti99.com/
   social_networks:
     - network: LinkedIn
-      username: rendercv
+      username: miti99
     - network: GitHub
-      username: rendercv
+      username: tiennm99
   custom_connections:
   sections:
     Welcome to RenderCV:
