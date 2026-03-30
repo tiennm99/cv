@@ -105,6 +105,7 @@
   [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[miti99]]],
   [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tiennm99]]],
   [#link("https://t.me/tiennm5", icon: false, if-underline: false, if-color: false)[#connection-with-icon("telegram")[tiennm5]]],
+  [#link("https://www.facebook.com/tiennm99/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("fa-brands fa-facebook")[Facebook]]],
 )
   ]
 )
@@ -206,6 +207,19 @@
   ],
   main-column-second-row: [
     #summary[Telegram bot that scrapes app information from stores.]
+
+  ],
+)
+
+  #regular-entry(
+  [
+    #strong[#link("https://github.com/tiennm99?tab=repositories")[More fun projects on GitHub]]
+
+  ],
+  [
+  ],
+  main-column-second-row: [
+    #summary[Check out my GitHub profile for more fun side projects including clones, bots, and experiments.]
 
   ],
 )

@@ -63,6 +63,12 @@ Telegram bot that scrapes app information from stores.
 
 
 
+## **[More fun projects on GitHub](https://github.com/tiennm99?tab=repositories)**
+
+Check out my GitHub profile for more fun side projects including clones, bots, and experiments.
+
+
+
 # Skills
 **Programming:** Java (Netty, Vert.x, Spring Boot), JavaScript, Go
 
