@@ -49,6 +49,13 @@ cv:
         location:
         summary: My blog on GitHub Pages using Hugo. Website for Ngăm - a charity project founded by my brother's friends.
         highlights:
+      - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot)"
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: Telegram bot that scrapes app information from stores.
+        highlights:
     skills:
       - label: Programming
         details: Java (Netty, Vert.x, Spring Boot), JavaScript, Go
