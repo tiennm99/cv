@@ -43,6 +43,26 @@ My blog on GitHub Pages using Hugo. Website for Ngăm - a charity project founde
 
 
 
+## **[Survival 2D Server](https://github.com/survival2d/server)**
+
+Sept 2021 – present
+
+Server-side of my thesis project — a 2D survival battle royale game server written in Java.
+
+
+
+## **[VN GeoGuessr](https://github.com/tiennm99/vngeoguessr)**
+
+A GeoGuessr clone for Vietnam locations, built with Leaflet.js, Mapillary, and OpenStreetMap.
+
+
+
+## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot)**
+
+Telegram bot that scrapes app information from stores.
+
+
+
 # Skills
 **Programming:** Java (Netty, Vert.x, Spring Boot), JavaScript, Go
 
