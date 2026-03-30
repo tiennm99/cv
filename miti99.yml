@@ -49,6 +49,13 @@ cv:
         location:
         summary: My blog on GitHub Pages using Hugo. Website for Ngăm - a charity project founded by my brother's friends.
         highlights:
+      - name: "[VN GeoGuessr](https://github.com/tiennm99/vngeoguessr)"
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: A GeoGuessr clone for Vietnam locations, built with Leaflet.js, Mapillary, and OpenStreetMap.
+        highlights:
       - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot)"
         date:
         start_date:
