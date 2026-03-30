@@ -1,18 +1,21 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Tien Nguyen Minh
   headline: Senior Software Engineer
   location: HCMC, VN
   email: tiennm99@outlook.com
-  photo:
-  phone:
+  photo: img/avatar.jpg
+  phone: (+84) 869 156 149
   website: https://miti99.com/
   social_networks:
     - network: LinkedIn
       username: miti99
     - network: GitHub
       username: tiennm99
+    - network: Telegram
+      username: tiennm5
   custom_connections:
+
   sections:
     education:
       - institution: Ho Chi Minh City University of Technology
@@ -33,10 +36,11 @@ cv:
         location: Ho Chi Minh City, Vietnam
         summary: Started my journey at VNG Tech Fresher Program and progressed to Senior Software Engineer at ZingPlay Game Studios (ZPS). Over the years, I have honed my expertise in game server architecture and backend development using Java, while also contributing to client-side logic with Cocos and Godot when needed.
         highlights:
-          - "[Show](https://play.google.com/store/apps/details?id=zps.games.show) - A card game for Myanmar market"
-          - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel) - A card game for the Russian audience"
-          - "[Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn) - Global 8-ball pool game"
-          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2) - Global strategy game"
+          - "[Show](https://play.google.com/store/apps/details?id=zps.games.show): A card game for Myanmar market"
+          - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel): A card game for the Russian audience"
+          - "[Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Global 8-ball pool game"
+          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Global strategy game"
+          - "[Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Farm game. Maintain, fixed some legacy core bugs, develop new event features, customer care."
     projects:
       - name: "[Static websites with Hugo](https://tiennm99.github.io/)"
         date:
@@ -47,7 +51,7 @@ cv:
         highlights:
     skills:
       - label: Programming
-        details: Java (Netty, Vert.x, Spring Boot), JavaScript
+        details: Java (Netty, Vert.x, Spring Boot), JavaScript, Go
       - label: Databases
         details: Couchbase, Redis, MySQL
       - label: Tools & DevOps
@@ -223,7 +227,7 @@ locale:
   #   - November
   #   - December
 settings:
-  current_date: "2026-02-20"
+  current_date: "2026-03-30"
   render_command:
     design:
     locale:
