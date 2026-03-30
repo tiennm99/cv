@@ -105,7 +105,7 @@
   [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[miti99]]],
   [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tiennm99]]],
   [#link("https://t.me/tiennm5", icon: false, if-underline: false, if-color: false)[#connection-with-icon("telegram")[tiennm5]]],
-  [#link("https://www.facebook.com/tiennm99/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("fa-brands fa-facebook")[Facebook]]],
+  [#link("https://www.facebook.com/tiennm99/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("facebook")[Facebook]]],
 )
   ]
 )
@@ -231,9 +231,3 @@
 #strong[Databases:] Couchbase, Redis, MySQL
 
 #strong[Tools & DevOps:] Git, Docker, CI\/CD
-
-== Interests
-
-#strong[Professional:] Game server architecture, distributed systems, Java performance tuning
-
-#strong[Personal:] Reading novels & manga, playing Genshin Impact & TFT

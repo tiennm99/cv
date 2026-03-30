@@ -75,8 +75,3 @@ Check out my GitHub profile for more fun side projects including clones, bots, a
 **Databases:** Couchbase, Redis, MySQL
 
 **Tools & DevOps:** Git, Docker, CI/CD
-
-# Interests
-**Professional:** Game server architecture, distributed systems, Java performance tuning
-
-**Personal:** Reading novels & manga, playing Genshin Impact & TFT
