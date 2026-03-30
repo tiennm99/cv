@@ -169,6 +169,47 @@
   ],
 )
 
+#regular-entry(
+  [
+    #strong[#link("https://github.com/survival2d/server")[Survival 2D Server]]
+
+  ],
+  [
+    Sept 2021 – present
+
+  ],
+  main-column-second-row: [
+    #summary[Server-side of my thesis project — a 2D survival battle royale game server written in Java.]
+
+  ],
+)
+
+  #regular-entry(
+  [
+    #strong[#link("https://github.com/tiennm99/vngeoguessr")[VN GeoGuessr]]
+
+  ],
+  [
+  ],
+  main-column-second-row: [
+    #summary[A GeoGuessr clone for Vietnam locations, built with Leaflet.js, Mapillary, and OpenStreetMap.]
+
+  ],
+)
+
+  #regular-entry(
+  [
+    #strong[#link("https://github.com/tiennm99/store-scraper-bot")[Store Scraper Bot]]
+
+  ],
+  [
+  ],
+  main-column-second-row: [
+    #summary[Telegram bot that scrapes app information from stores.]
+
+  ],
+)
+
 == Skills
 
 #strong[Programming:] Java (Netty, Vert.x, Spring Boot), JavaScript, Go
