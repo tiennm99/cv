@@ -1,12 +1,14 @@
 // Import the rendercv function and all the refactored components
-#import "@preview/rendercv:0.1.0": *
+#import "@preview/rendercv:0.3.0": *
 
 // Apply the rendercv template with custom configuration
 #show: rendercv.with(
   name: "Tien Nguyen Minh",
+  title: "Tien Nguyen Minh - CV",
   footer: context { [#emph[Tien Nguyen Minh -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in Feb 2026] ],
+  top-note: [ #emph[Last updated in Mar 2026] ],
   locale-catalog-language: "en",
+  text-direction: ltr,
   page-size: "us-letter",
   page-top-margin: 0.7in,
   page-bottom-margin: 0.7in,
@@ -67,6 +69,7 @@
   entries-space-between-columns: 0.1cm,
   entries-allow-page-break: false,
   entries-short-second-row: false,
+  entries-degree-width: 1cm,
   entries-summary-space-left: 0cm,
   entries-summary-space-above: 0.12cm,
   entries-highlights-bullet:  "•" ,
@@ -77,12 +80,19 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 2,
-    day: 20,
+    month: 3,
+    day: 30,
   ),
 )
 
 
+#grid(
+  columns: (auto, 1fr),
+  column-gutter: 0cm,
+  align: horizon + left,
+  [#pad(left: 0.4cm, right: 0.4cm, image("avatar.jpg", width: 3.5cm))
+],
+  [
 = Tien Nguyen Minh
 
   #headline([Senior Software Engineer])
@@ -90,9 +100,13 @@
 #connections(
   [#connection-with-icon("location-dot")[HCMC, VN]],
   [#link("mailto:tiennm99@outlook.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[tiennm99\@outlook.com]]],
+  [#link("tel:+84-869-156-149", icon: false, if-underline: false, if-color: false)[#connection-with-icon("phone")[0869 156 149]]],
   [#link("https://miti99.com/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("link")[miti99.com]]],
   [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[miti99]]],
   [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tiennm99]]],
+  [#link("https://t.me/tiennm5", icon: false, if-underline: false, if-color: false)[#connection-with-icon("telegram")[tiennm5]]],
+)
+  ]
 )
 
 
@@ -125,21 +139,15 @@
   main-column-second-row: [
     #summary[Started my journey at VNG Tech Fresher Program and progressed to Senior Software Engineer at ZingPlay Game Studios (ZPS). Over the years, I have honed my expertise in game server architecture and backend development using Java, while also contributing to client-side logic with Cocos and Godot when needed.]
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show]
+    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show]: A card game for Myanmar market
 
-      - A card game for Myanmar market
+    - #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]: A card game for the Russian audience
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]
+    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Global 8-ball pool game
 
-      - A card game for the Russian audience
+    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Global strategy game
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]
-
-      - Global 8-ball pool game
-
-    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]
-
-      - Global strategy game
+    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Farm game. Maintain, fixed some legacy core bugs, develop new event features, customer care.
 
   ],
 )
@@ -163,7 +171,7 @@
 
 == Skills
 
-#strong[Programming:] Java (Netty, Vert.x, Spring Boot), JavaScript
+#strong[Programming:] Java (Netty, Vert.x, Spring Boot), JavaScript, Go
 
 #strong[Databases:] Couchbase, Redis, MySQL
 
