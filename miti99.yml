@@ -15,7 +15,7 @@ cv:
     - network: Telegram
       username: tiennm5
   custom_connections:
-    - fontawesome_icon: "fa-brands fa-facebook"
+    - fontawesome_icon: "facebook"
       placeholder: "Facebook"
       url: "https://www.facebook.com/tiennm99/"
 
