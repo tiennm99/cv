@@ -28,8 +28,6 @@ cv:
         start_date: 2017-09
         end_date: 2023-06
         location: Ho Chi Minh City, Vietnam
-        summary:
-        highlights:
     experience:
       - company: ZingPlay Game Studios, VNG Corporation
         position: Senior Software Engineer
@@ -46,38 +44,21 @@ cv:
           - "[Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Farm game. Maintain, fixed some legacy core bugs, develop new event features, customer care."
     projects:
       - name: "[Static websites with Hugo](https://tiennm99.github.io/)"
-        date:
         start_date: 2020-01
         end_date: present
-        location:
         summary: My blog on GitHub Pages using Hugo. Website for Ngăm - a charity project founded by my brother's friends.
         highlights:
       - name: "[Survival 2D Server](https://github.com/survival2d/server)"
-        date:
         start_date: 2021-09
-        end_date:
-        location:
         summary: Server-side of my thesis project — a 2D survival battle royale game server written in Java.
         highlights:
       - name: "[VN GeoGuessr](https://github.com/tiennm99/vngeoguessr)"
-        date:
-        start_date:
-        end_date:
-        location:
         summary: A GeoGuessr clone for Vietnam locations, built with Leaflet.js, Mapillary, and OpenStreetMap.
         highlights:
       - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot)"
-        date:
-        start_date:
-        end_date:
-        location:
         summary: Telegram bot that scrapes app information from stores.
         highlights:
       - name: "[More fun projects on GitHub](https://github.com/tiennm99?tab=repositories)"
-        date:
-        start_date:
-        end_date:
-        location:
         summary: Check out my GitHub profile for more fun side projects including clones, bots, and experiments.
         highlights:
     skills:
@@ -87,11 +68,6 @@ cv:
         details: Couchbase, Redis, MySQL
       - label: Tools & DevOps
         details: Git, Docker, CI/CD
-    interests:
-      - label: Professional
-        details: Game server architecture, distributed systems, Java performance tuning
-      - label: Personal
-        details: Reading novels & manga, playing Genshin Impact & TFT
 design:
   theme: engineeringclassic
   # page:
