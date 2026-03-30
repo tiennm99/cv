@@ -15,6 +15,9 @@ cv:
     - network: Telegram
       username: tiennm5
   custom_connections:
+    - fontawesome_icon: "fa-brands fa-facebook"
+      placeholder: "Facebook"
+      url: "https://www.facebook.com/tiennm99/"
 
   sections:
     education:
@@ -69,6 +72,13 @@ cv:
         end_date:
         location:
         summary: Telegram bot that scrapes app information from stores.
+        highlights:
+      - name: "[More fun projects on GitHub](https://github.com/tiennm99?tab=repositories)"
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: Check out my GitHub profile for more fun side projects including clones, bots, and experiments.
         highlights:
     skills:
       - label: Programming
