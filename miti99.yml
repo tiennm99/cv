@@ -4,7 +4,7 @@ cv:
   headline: Senior Software Engineer
   location: HCMC, Vietnam
   email: tiennm99@outlook.com
-  photo: img/avatar.jpg
+  photo: avatar.jpg
   phone: (+84) 869 156 149
   website: https://miti99.com/
   social_networks:
@@ -55,7 +55,7 @@ cv:
         summary: Telegram bot that automates scraping and reporting of app metadata from mobile app stores.
         highlights:
       - name: "[Pet Projects & Open Source](https://github.com/tiennm99)"
-        start_date: 2017
+        start_date: 2018
         end_date: present
         summary: Various personal projects spanning game servers, bots, and web tools. Occasionally contribute to open-source projects. Full portfolio on GitHub.
         highlights:
