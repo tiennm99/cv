@@ -13,6 +13,14 @@
 ## **Ho Chi Minh City University of Technology**, B.E. in Computer Science in Computer Science and Engineering -- Ho Chi Minh City, Vietnam
 Sept 2017 – June 2023
 
+- GPA: 8.0/10 (Good)
+
+- Academic Excellence Scholarship (Học bổng khuyến khích học tập)
+
+- Recipient of the "Five Good Student" (Sinh viên 5 tốt) title — a university-wide recognition for academic performance, personal conduct, and community involvement
+
+- Thesis: Survival2D — Designed and implemented a high-performance multiplayer battle royale game server in Java; applied finite state machines to implement autonomous game bots
+
 
 
 # Experience
@@ -20,58 +28,62 @@ Sept 2017 – June 2023
 
 July 2020 – present
 
-Started my journey at VNG Tech Fresher Program and progressed to Senior Software Engineer at ZingPlay Game Studios (ZPS). Over the years, I have honed my expertise in game server architecture and backend development using Java, while also contributing to client-side logic with Cocos and Godot when needed.
+Joined VNG as a Game Programming Fresher and progressed through Associate Software Engineer and Software Engineer to Senior Software Engineer (promoted in June 2023, advanced to level 2.2 in June 2025). Focused on scalable game server architecture and backend systems in Java (Netty, Vert.x), with consistent cross-functional contributions to client-side logic in Cocos and Godot. Passionate about architecture design and delivering reliable services to large user bases.
 
-- [Show](https://play.google.com/store/apps/details?id=zps.games.show): A card game for Myanmar market
+- [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Sole server developer on a 4-person team (1 server, 2–3 client); architected the backend from scratch for a global strategy game, supporting up to ~1,000 concurrent users; also assisted the client team with networking and game logic integration
 
-- [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel): A card game for the Russian audience
+- [Show](https://play.google.com/store/apps/details?id=zps.games.show) & [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel): Full-stack contributor on a 2-person team (1 server, 1 client) for two real-time card games targeting the Myanmar and Russian-speaking markets; delivered both server-side game logic and significant client-side feature work
 
-- [Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Global 8-ball pool game
+- [Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Delivered end-to-end feature development spanning server and client on a 10-person team for a global 8-ball pool game
 
-- [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Global strategy game
-
-- [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Farm game. Maintain, fixed some legacy core bugs, develop new event features, customer care.
+- [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained server stability for a live farm game on a 4-person team (2 server, 2 client); proactively detected and resolved production issues, developed new event features, and supported customer care workflows
 
 
 
 # Projects
-## **[Static websites with Hugo](https://tiennm99.github.io/)**
-
-Jan 2020 – present
-
-My blog on GitHub Pages using Hugo. Website for Ngăm - a charity project founded by my brother's friends.
-
-
-
 ## **[Survival 2D Server](https://github.com/survival2d/server)**
 
 Sept 2021 – present
 
-Server-side of my thesis project — a 2D survival battle royale game server written in Java.
+University thesis project — a 2D survival battle royale game server written in Java. Implemented a real-time multiplayer game loop with player synchronization, collision detection, match lifecycle management, and finite state machine-based autonomous bots.
 
 
 
 ## **[VN GeoGuessr](https://github.com/tiennm99/vngeoguessr)**
 
-A GeoGuessr clone for Vietnam locations, built with Leaflet.js, Mapillary, and OpenStreetMap.
+A location-guessing game for Vietnam built with Leaflet.js, Mapillary, and OpenStreetMap, featuring street-level panoramic imagery and interactive map-based scoring.
 
 
 
 ## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot)**
 
-Telegram bot that scrapes app information from stores.
+A Telegram bot that automates scraping and reporting of app metadata from mobile stores, useful for monitoring app listings and tracking store presence.
 
 
 
-## **[More fun projects on GitHub](https://github.com/tiennm99?tab=repositories)**
+## **[Static websites with Hugo](https://tiennm99.github.io/)**
 
-Check out my GitHub profile for more fun side projects including clones, bots, and experiments.
+Jan 2020 – present
+
+Personal blog and static site portfolio on GitHub Pages using the Hugo framework. Also built a site for Ngăm, a community charity project.
+
+
+
+## **[Open Source Contributions](https://github.com/tiennm99)**
+
+Occasional contributor to open-source projects — submitted fixes and improvements when encountering bugs while using various tools and services.
 
 
 
 # Skills
-**Programming:** Java (Netty, Vert.x, Spring Boot), JavaScript, Go
+**Languages:** Java, Go, JavaScript
 
-**Databases:** Couchbase, Redis, MySQL
+**Frameworks & Libraries:** Netty, Vert.x, Spring Boot, Cocos Creator, Godot
 
-**Tools & DevOps:** Git, Docker, CI/CD
+**Databases:** Couchbase, Redis, MySQL, ClickHouse
+
+**Infrastructure & DevOps:** Docker, CI/CD (GitHub Actions), Git, Linux, Oracle Cloud Infrastructure (OCI)
+
+**Architecture:** Game server architecture, real-time multiplayer systems, event-driven design
+
+**Languages (Spoken):** Vietnamese (Native), English (TOEIC 600+)
