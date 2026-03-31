@@ -81,7 +81,7 @@
   date: datetime(
     year: 2026,
     month: 3,
-    day: 30,
+    day: 31,
   ),
 )
 
@@ -98,14 +98,14 @@
   #headline([Senior Software Engineer])
 
 #connections(
-  [HCMC, VN],
+  [Ho Chi Minh City, Vietnam],
   [#link("mailto:tiennm99@outlook.com", icon: false, if-underline: false, if-color: false)[tiennm99\@outlook.com]],
   [#link("tel:+84-869-156-149", icon: false, if-underline: false, if-color: false)[0869 156 149]],
   [#link("https://miti99.com/", icon: false, if-underline: false, if-color: false)[miti99.com]],
   [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[linkedin.com\/in\/miti99]],
   [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[github.com\/tiennm99]],
   [#link("https://t.me/tiennm5", icon: false, if-underline: false, if-color: false)[t.me\/tiennm5]],
-  [#link("https://www.facebook.com/tiennm99/", icon: false, if-underline: false, if-color: false)[Facebook]],
+  [#link("https://www.facebook.com/tiennm99/", icon: false, if-underline: false, if-color: false)[fb.com\/tiennm99]],
 )
   ]
 )
@@ -123,11 +123,7 @@
 
   ],
   main-column-second-row: [
-    - GPA: 8.0\/10 (Good)
-
-    - Academic Excellence Scholarship (Học bổng khuyến khích học tập)
-
-    - Recipient of the \"Five Good Student\" (Sinh viên 5 tốt) title — a university-wide recognition for academic performance, personal conduct, and community involvement
+    - GPA: 8.0\/10 — Academic Excellence Scholarship; Five Good Student Award (university-wide recognition for academic performance, personal conduct, and community involvement)
 
     - Thesis: Survival2D — Designed and implemented a high-performance multiplayer battle royale game server in Java; applied finite state machines to implement autonomous game bots
 
@@ -146,15 +142,15 @@
 
   ],
   main-column-second-row: [
-    #summary[Joined VNG as a Game Programming Fresher and progressed through Associate Software Engineer and Software Engineer to Senior Software Engineer (promoted in June 2023, advanced to level 2.2 in June 2025). Focused on scalable game server architecture and backend systems in Java (Netty, Vert.x), with consistent cross-functional contributions to client-side logic in Cocos and Godot. Passionate about architecture design and delivering reliable services to large user bases.]
+    #summary[Joined VNG as a Game Programming Fresher and progressed through Associate Software Engineer and Software Engineer to Senior Software Engineer. Focused on scalable game server architecture and backend systems in Java (Netty, Vert.x), with consistent cross-functional contributions to client-side logic in Cocos2d-x and Godot. Passionate about architecture design and delivering reliable services to large user bases.]
 
-    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Sole server developer on a 4-person team (1 server, 2–3 client); architected the backend from scratch for a global strategy game, supporting up to \~1,000 concurrent users; also assisted the client team with networking and game logic integration
+    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Sole server developer on a 4-person team (1 server, 2–3 client); architected the backend from scratch for a global strategy game, supporting more than 300 concurrent users; also assisted the client team with networking and game logic integration
 
     - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show] & #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]: Full-stack contributor on a 2-person team (1 server, 1 client) for two real-time card games targeting the Myanmar and Russian-speaking markets; delivered both server-side game logic and significant client-side feature work
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Delivered end-to-end feature development spanning server and client on a 10-person team for a global 8-ball pool game
+    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Implemented matchmaking system on the server and cue direction logic on the client for a global 8-ball pool game on a 10-person team; applied mathematics, physics, and geometry to deliver accurate ball trajectory simulation
 
-    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Maintained server stability for a live farm game on a 4-person team (2 server, 2 client); proactively detected and resolved production issues, developed new event features, and supported customer care workflows
+    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Maintained server stability for a live farm game with up to \~5,000 concurrent users on a 4-person team (2 server, 2 client); proactively detected and resolved production issues, developed new event features, and supported customer care workflows
 
   ],
 )
@@ -219,26 +215,26 @@
 
   #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99")[Open Source Contributions]]
+    #strong[#link("https://github.com/tiennm99")[Pet Projects & Open Source]]
 
   ],
   [
   ],
   main-column-second-row: [
-    #summary[Occasional contributor to open-source projects — submitted fixes and improvements when encountering bugs while using various tools and services.]
+    #summary[Maintain a variety of personal projects spanning game servers, bots, web tools, and more. Occasionally contribute fixes and improvements to open-source projects when encountering issues while using various tools and services. Full portfolio available on GitHub.]
 
   ],
 )
 
 == Skills
 
-#strong[Languages:] Java, Go, JavaScript
+#strong[Languages:] Java, Go, JavaScript, Shell
 
-#strong[Frameworks & Libraries:] Netty, Vert.x, Spring Boot, Cocos Creator, Godot
+#strong[Frameworks & Libraries:] Netty, Vert.x, Spring Boot, Cocos2d-x, Godot
 
 #strong[Databases:] Couchbase, Redis, MySQL, ClickHouse
 
-#strong[Infrastructure & DevOps:] Docker, CI\/CD (GitHub Actions), Git, Linux, Oracle Cloud Infrastructure (OCI)
+#strong[Infrastructure & DevOps:] Docker, CI\/CD (GitHub Actions\/GitLab CI), Git, Linux, Oracle Cloud Infrastructure (OCI)
 
 #strong[Architecture:] Game server architecture, real-time multiplayer systems, event-driven design
 
