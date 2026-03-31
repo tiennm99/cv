@@ -14,29 +14,29 @@
   page-bottom-margin: 0.7in,
   page-left-margin: 0.7in,
   page-right-margin: 0.7in,
-  page-show-footer: true,
+  page-show-footer: false,
   page-show-top-note: true,
   colors-body: rgb(0, 0, 0),
-  colors-name: rgb(0, 79, 144),
-  colors-headline: rgb(0, 79, 144),
-  colors-connections: rgb(0, 79, 144),
-  colors-section-titles: rgb(0, 79, 144),
-  colors-links: rgb(0, 79, 144),
+  colors-name: rgb(0, 0, 0),
+  colors-headline: rgb(0, 0, 0),
+  colors-connections: rgb(0, 0, 0),
+  colors-section-titles: rgb(0, 0, 0),
+  colors-links: rgb(0, 0, 0),
   colors-footer: rgb(128, 128, 128),
   colors-top-note: rgb(128, 128, 128),
   typography-line-spacing: 0.6em,
   typography-alignment: "justified",
   typography-date-and-location-column-alignment: right,
-  typography-font-family-body: "Raleway",
-  typography-font-family-name: "Raleway",
-  typography-font-family-headline: "Raleway",
-  typography-font-family-connections: "Raleway",
-  typography-font-family-section-titles: "Raleway",
+  typography-font-family-body: "XCharter",
+  typography-font-family-name: "XCharter",
+  typography-font-family-headline: "XCharter",
+  typography-font-family-connections: "XCharter",
+  typography-font-family-section-titles: "XCharter",
   typography-font-size-body: 10pt,
-  typography-font-size-name: 30pt,
+  typography-font-size-name: 25pt,
   typography-font-size-headline: 10pt,
   typography-font-size-connections: 10pt,
-  typography-font-size-section-titles: 1.4em,
+  typography-font-size-section-titles: 1.2em,
   typography-small-caps-name: false,
   typography-small-caps-headline: false,
   typography-small-caps-connections: false,
@@ -44,40 +44,40 @@
   typography-bold-name: false,
   typography-bold-headline: false,
   typography-bold-connections: false,
-  typography-bold-section-titles: false,
-  links-underline: false,
+  typography-bold-section-titles: true,
+  links-underline: true,
   links-show-external-link-icon: false,
-  header-alignment: left,
+  header-alignment: center,
   header-photo-width: 3.5cm,
   header-space-below-name: 0.7cm,
   header-space-below-headline: 0.7cm,
   header-space-below-connections: 0.7cm,
   header-connections-hyperlink: true,
-  header-connections-show-icons: true,
-  header-connections-display-urls-instead-of-usernames: false,
-  header-connections-separator: "",
+  header-connections-show-icons: false,
+  header-connections-display-urls-instead-of-usernames: true,
+  header-connections-separator: "|",
   header-connections-space-between-connections: 0.5cm,
   section-titles-type: "with_full_line",
   section-titles-line-thickness: 0.5pt,
   section-titles-space-above: 0.5cm,
   section-titles-space-below: 0.3cm,
   sections-allow-page-break: true,
-  sections-space-between-text-based-entries: 0.3em,
-  sections-space-between-regular-entries: 1.2em,
+  sections-space-between-text-based-entries: 0.15cm,
+  sections-space-between-regular-entries: 0.42cm,
   entries-date-and-location-width: 4.15cm,
-  entries-side-space: 0.2cm,
+  entries-side-space: 0cm,
   entries-space-between-columns: 0.1cm,
   entries-allow-page-break: false,
   entries-short-second-row: false,
   entries-degree-width: 1cm,
   entries-summary-space-left: 0cm,
-  entries-summary-space-above: 0.12cm,
-  entries-highlights-bullet:  "•" ,
-  entries-highlights-nested-bullet:  "•" ,
+  entries-summary-space-above: 0.08cm,
+  entries-highlights-bullet:  text(13pt, [•], baseline: -0.6pt) ,
+  entries-highlights-nested-bullet:  text(13pt, [•], baseline: -0.6pt) ,
   entries-highlights-space-left: 0cm,
-  entries-highlights-space-above: 0.12cm,
-  entries-highlights-space-between-items: 0.12cm,
-  entries-highlights-space-between-bullet-and-text: 0.5em,
+  entries-highlights-space-above: 0.08cm,
+  entries-highlights-space-between-items: 0.08cm,
+  entries-highlights-space-between-bullet-and-text: 0.3em,
   date: datetime(
     year: 2026,
     month: 3,
@@ -98,14 +98,14 @@
   #headline([Senior Software Engineer])
 
 #connections(
-  [#connection-with-icon("location-dot")[HCMC, VN]],
-  [#link("mailto:tiennm99@outlook.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[tiennm99\@outlook.com]]],
-  [#link("tel:+84-869-156-149", icon: false, if-underline: false, if-color: false)[#connection-with-icon("phone")[0869 156 149]]],
-  [#link("https://miti99.com/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("link")[miti99.com]]],
-  [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[miti99]]],
-  [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tiennm99]]],
-  [#link("https://t.me/tiennm5", icon: false, if-underline: false, if-color: false)[#connection-with-icon("telegram")[tiennm5]]],
-  [#link("https://www.facebook.com/tiennm99/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("facebook")[Facebook]]],
+  [HCMC, VN],
+  [#link("mailto:tiennm99@outlook.com", icon: false, if-underline: false, if-color: false)[tiennm99\@outlook.com]],
+  [#link("tel:+84-869-156-149", icon: false, if-underline: false, if-color: false)[0869 156 149]],
+  [#link("https://miti99.com/", icon: false, if-underline: false, if-color: false)[miti99.com]],
+  [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[linkedin.com\/in\/miti99]],
+  [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[github.com\/tiennm99]],
+  [#link("https://t.me/tiennm5", icon: false, if-underline: false, if-color: false)[t.me\/tiennm5]],
+  [#link("https://www.facebook.com/tiennm99/", icon: false, if-underline: false, if-color: false)[Facebook]],
 )
   ]
 )
@@ -123,6 +123,14 @@
 
   ],
   main-column-second-row: [
+    - GPA: 8.0\/10 (Good)
+
+    - Academic Excellence Scholarship (Học bổng khuyến khích học tập)
+
+    - Recipient of the \"Five Good Student\" (Sinh viên 5 tốt) title — a university-wide recognition for academic performance, personal conduct, and community involvement
+
+    - Thesis: Survival2D — Designed and implemented a high-performance multiplayer battle royale game server in Java; applied finite state machines to implement autonomous game bots
+
   ],
 )
 
@@ -138,37 +146,20 @@
 
   ],
   main-column-second-row: [
-    #summary[Started my journey at VNG Tech Fresher Program and progressed to Senior Software Engineer at ZingPlay Game Studios (ZPS). Over the years, I have honed my expertise in game server architecture and backend development using Java, while also contributing to client-side logic with Cocos and Godot when needed.]
+    #summary[Joined VNG as a Game Programming Fresher and progressed through Associate Software Engineer and Software Engineer to Senior Software Engineer (promoted in June 2023, advanced to level 2.2 in June 2025). Focused on scalable game server architecture and backend systems in Java (Netty, Vert.x), with consistent cross-functional contributions to client-side logic in Cocos and Godot. Passionate about architecture design and delivering reliable services to large user bases.]
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show]: A card game for Myanmar market
+    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Sole server developer on a 4-person team (1 server, 2–3 client); architected the backend from scratch for a global strategy game, supporting up to \~1,000 concurrent users; also assisted the client team with networking and game logic integration
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]: A card game for the Russian audience
+    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show] & #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]: Full-stack contributor on a 2-person team (1 server, 1 client) for two real-time card games targeting the Myanmar and Russian-speaking markets; delivered both server-side game logic and significant client-side feature work
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Global 8-ball pool game
+    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Delivered end-to-end feature development spanning server and client on a 10-person team for a global 8-ball pool game
 
-    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Global strategy game
-
-    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Farm game. Maintain, fixed some legacy core bugs, develop new event features, customer care.
+    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Maintained server stability for a live farm game on a 4-person team (2 server, 2 client); proactively detected and resolved production issues, developed new event features, and supported customer care workflows
 
   ],
 )
 
 == Projects
-
-#regular-entry(
-  [
-    #strong[#link("https://tiennm99.github.io/")[Static websites with Hugo]]
-
-  ],
-  [
-    Jan 2020 – present
-
-  ],
-  main-column-second-row: [
-    #summary[My blog on GitHub Pages using Hugo. Website for Ngăm - a charity project founded by my brother's friends.]
-
-  ],
-)
 
 #regular-entry(
   [
@@ -180,7 +171,7 @@
 
   ],
   main-column-second-row: [
-    #summary[Server-side of my thesis project — a 2D survival battle royale game server written in Java.]
+    #summary[University thesis project — a 2D survival battle royale game server written in Java. Implemented a real-time multiplayer game loop with player synchronization, collision detection, match lifecycle management, and finite state machine-based autonomous bots.]
 
   ],
 )
@@ -193,7 +184,7 @@
   [
   ],
   main-column-second-row: [
-    #summary[A GeoGuessr clone for Vietnam locations, built with Leaflet.js, Mapillary, and OpenStreetMap.]
+    #summary[A location-guessing game for Vietnam built with Leaflet.js, Mapillary, and OpenStreetMap, featuring street-level panoramic imagery and interactive map-based scoring.]
 
   ],
 )
@@ -206,28 +197,49 @@
   [
   ],
   main-column-second-row: [
-    #summary[Telegram bot that scrapes app information from stores.]
+    #summary[A Telegram bot that automates scraping and reporting of app metadata from mobile stores, useful for monitoring app listings and tracking store presence.]
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[#link("https://tiennm99.github.io/")[Static websites with Hugo]]
+
+  ],
+  [
+    Jan 2020 – present
+
+  ],
+  main-column-second-row: [
+    #summary[Personal blog and static site portfolio on GitHub Pages using the Hugo framework. Also built a site for Ngăm, a community charity project.]
 
   ],
 )
 
   #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99?tab=repositories")[More fun projects on GitHub]]
+    #strong[#link("https://github.com/tiennm99")[Open Source Contributions]]
 
   ],
   [
   ],
   main-column-second-row: [
-    #summary[Check out my GitHub profile for more fun side projects including clones, bots, and experiments.]
+    #summary[Occasional contributor to open-source projects — submitted fixes and improvements when encountering bugs while using various tools and services.]
 
   ],
 )
 
 == Skills
 
-#strong[Programming:] Java (Netty, Vert.x, Spring Boot), JavaScript, Go
+#strong[Languages:] Java, Go, JavaScript
 
-#strong[Databases:] Couchbase, Redis, MySQL
+#strong[Frameworks & Libraries:] Netty, Vert.x, Spring Boot, Cocos Creator, Godot
 
-#strong[Tools & DevOps:] Git, Docker, CI\/CD
+#strong[Databases:] Couchbase, Redis, MySQL, ClickHouse
+
+#strong[Infrastructure & DevOps:] Docker, CI\/CD (GitHub Actions), Git, Linux, Oracle Cloud Infrastructure (OCI)
+
+#strong[Architecture:] Game server architecture, real-time multiplayer systems, event-driven design
+
+#strong[Languages (Spoken):] Vietnamese (Native), English (TOEIC 600+)
