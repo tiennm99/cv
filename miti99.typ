@@ -98,7 +98,7 @@
   #headline([Senior Software Engineer])
 
 #connections(
-  [Ho Chi Minh City, Vietnam],
+  [HCMC, Vietnam],
   [#link("mailto:tiennm99@outlook.com", icon: false, if-underline: false, if-color: false)[tiennm99\@outlook.com]],
   [#link("tel:+84-869-156-149", icon: false, if-underline: false, if-color: false)[0869 156 149]],
   [#link("https://miti99.com/", icon: false, if-underline: false, if-color: false)[miti99.com]],
@@ -115,7 +115,7 @@
 
 #education-entry(
   [
-    #strong[Ho Chi Minh City University of Technology], B.E. in Computer Science in Computer Science and Engineering -- Ho Chi Minh City, Vietnam
+    #strong[Ho Chi Minh City University of Technology], B.E. in Computer Science in Computer Science and Engineering -- HCMC, Vietnam
 
   ],
   [
@@ -123,9 +123,9 @@
 
   ],
   main-column-second-row: [
-    - GPA: 8.0\/10 — Academic Excellence Scholarship; Five Good Student Award (university-wide recognition for academic performance, personal conduct, and community involvement)
+    - GPA: 8.0\/10 — Academic Excellence Scholarship; Five Good Student Award
 
-    - Thesis: Survival2D — Built a 2D multiplayer Battle Royale game server in Java (Netty\/WebSocket) with authoritative server architecture, QuadTree-based collision detection, FlatBuffers serialization (76\% packet reduction vs JSON), behavior tree AI bots with A#sym.ast.basic pathfinding, and server-side anti-cheat via visibility culling
+    - Thesis: Survival2D — 2D multiplayer Battle Royale game server in Java (Netty\/WebSocket); authoritative architecture, FlatBuffers serialization (76\% packet reduction vs JSON), behavior tree AI bots, and server-side anti-cheat
 
   ],
 )
@@ -134,7 +134,7 @@
 
 #regular-entry(
   [
-    #strong[Senior Software Engineer], ZingPlay Game Studios, VNG Corporation -- Ho Chi Minh City, Vietnam
+    #strong[Senior Software Engineer], ZingPlay Game Studios, VNG Corp. -- HCMC, Vietnam
 
   ],
   [
@@ -142,15 +142,15 @@
 
   ],
   main-column-second-row: [
-    #summary[Joined VNG as a Game Programming Fresher and progressed through Associate Software Engineer and Software Engineer to Senior Software Engineer. Focused on scalable game server architecture and backend systems in Java (Netty, Vert.x), with consistent cross-functional contributions to client-side logic in Cocos2d-x and Godot. Passionate about architecture design and delivering reliable services to large user bases.]
+    #summary[Progressed from Game Programming Fresher to Senior Software Engineer. Focused on scalable game server architecture in Java (Netty, Vert.x), with cross-functional contributions to client-side logic in Cocos2d-x and Godot.]
 
-    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Sole server developer on a 4-person team (1 server, 2–3 client); architected the backend from scratch for a global strategy game, supporting more than 300 concurrent users; also assisted the client team with networking and game logic integration
+    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Sole server developer; architected backend from scratch for a global strategy game, 300+ CCU; assisted client team with networking and game logic
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show] & #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]: Full-stack contributor on a 2-person team (1 server, 1 client) for two real-time card games targeting the Myanmar and Russian-speaking markets; delivered both server-side game logic and significant client-side feature work
+    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show] & #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]: Full-stack contributor on two real-time card games for Myanmar and Russian-speaking markets; delivered server-side logic and client features
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Implemented matchmaking system on the server and cue direction logic on the client for a global 8-ball pool game on a 10-person team; applied mathematics, physics, and geometry to deliver accurate ball trajectory simulation
+    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Implemented matchmaking (server) and cue direction logic (client) for a global 8-ball pool game; applied physics and geometry for accurate ball trajectory simulation
 
-    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Maintained server stability for a live farm game with up to \~5,000 concurrent users on a 4-person team (2 server, 2 client); proactively detected and resolved production issues, developed new event features, and supported customer care workflows
+    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Maintained server stability for a live farm game (\~5,000 CCU); resolved production issues and developed new event features
 
   ],
 )
@@ -159,69 +159,45 @@
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/survival2d/server")[Survival 2D Server]]
-
-  ],
-  [
-    Sept 2021 – present
-
-  ],
-  main-column-second-row: [
-    #summary[University thesis — a 2D multiplayer Battle Royale game server in Java (Netty) over WebSocket. Designed an authoritative server with client-side prediction, QuadTree spatial indexing for efficient collision detection, and procedural map generation. Applied FlatBuffers serialization to reduce packet sizes by 76\% compared to JSON. Implemented AI bots using behavior trees with A#sym.ast.basic pathfinding, and server-side anti-cheat through visibility culling to prevent ESP exploits.]
-
-  ],
-)
-
-  #regular-entry(
-  [
     #strong[#link("https://github.com/tiennm99/vngeoguessr")[VN GeoGuessr]]
 
   ],
   [
+    Aug 2025
+
   ],
   main-column-second-row: [
-    #summary[A location-guessing game for Vietnam built with Leaflet.js, Mapillary, and OpenStreetMap, featuring street-level panoramic imagery and interactive map-based scoring.]
-
-  ],
-)
-
-  #regular-entry(
-  [
-    #strong[#link("https://github.com/tiennm99/store-scraper-bot")[Store Scraper Bot]]
-
-  ],
-  [
-  ],
-  main-column-second-row: [
-    #summary[A Telegram bot that automates scraping and reporting of app metadata from mobile stores, useful for monitoring app listings and tracking store presence.]
+    #summary[Location-guessing game for Vietnam using Leaflet.js, Mapillary, and OpenStreetMap with street-level panoramic imagery and map-based scoring.]
 
   ],
 )
 
 #regular-entry(
   [
-    #strong[#link("https://tiennm99.github.io/")[Static websites with Hugo]]
+    #strong[#link("https://github.com/tiennm99/store-scraper-bot")[Store Scraper Bot]]
 
   ],
   [
-    Jan 2020 – present
+    Nov 2025 – Dec 2025
 
   ],
   main-column-second-row: [
-    #summary[Personal blog and static site portfolio on GitHub Pages using the Hugo framework. Also built a site for Ngăm, a community charity project.]
+    #summary[Telegram bot that automates scraping and reporting of app metadata from mobile app stores.]
 
   ],
 )
 
-  #regular-entry(
+#regular-entry(
   [
     #strong[#link("https://github.com/tiennm99")[Pet Projects & Open Source]]
 
   ],
   [
+    2017 – present
+
   ],
   main-column-second-row: [
-    #summary[Maintain a variety of personal projects spanning game servers, bots, web tools, and more. Occasionally contribute fixes and improvements to open-source projects when encountering issues while using various tools and services. Full portfolio available on GitHub.]
+    #summary[Various personal projects spanning game servers, bots, and web tools. Occasionally contribute to open-source projects. Full portfolio on GitHub.]
 
   ],
 )
@@ -234,7 +210,7 @@
 
 #strong[Databases:] Couchbase, Redis, MySQL, ClickHouse
 
-#strong[Infrastructure & DevOps:] Docker, CI\/CD (GitHub Actions\/GitLab CI), Git, Linux, Oracle Cloud Infrastructure (OCI)
+#strong[Infrastructure & DevOps:] Docker, CI\/CD (GitHub Actions\/GitLab CI), Git, Linux, OCI
 
 #strong[Architecture:] Game server architecture, real-time multiplayer systems, event-driven design
 
