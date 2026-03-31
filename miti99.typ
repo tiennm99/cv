@@ -125,7 +125,7 @@
   main-column-second-row: [
     - GPA: 8.0\/10 — Academic Excellence Scholarship; Five Good Student Award (university-wide recognition for academic performance, personal conduct, and community involvement)
 
-    - Thesis: Survival2D — Designed and implemented a high-performance multiplayer battle royale game server in Java; applied finite state machines to implement autonomous game bots
+    - Thesis: Survival2D — Built a 2D multiplayer Battle Royale game server in Java (Netty\/WebSocket) with authoritative server architecture, QuadTree-based collision detection, FlatBuffers serialization (76\% packet reduction vs JSON), behavior tree AI bots with A#sym.ast.basic pathfinding, and server-side anti-cheat via visibility culling
 
   ],
 )
@@ -167,7 +167,7 @@
 
   ],
   main-column-second-row: [
-    #summary[University thesis project — a 2D survival battle royale game server written in Java. Implemented a real-time multiplayer game loop with player synchronization, collision detection, match lifecycle management, and finite state machine-based autonomous bots.]
+    #summary[University thesis — a 2D multiplayer Battle Royale game server in Java (Netty) over WebSocket. Designed an authoritative server with client-side prediction, QuadTree spatial indexing for efficient collision detection, and procedural map generation. Applied FlatBuffers serialization to reduce packet sizes by 76\% compared to JSON. Implemented AI bots using behavior trees with A#sym.ast.basic pathfinding, and server-side anti-cheat through visibility culling to prevent ESP exploits.]
 
   ],
 )
