@@ -55,7 +55,7 @@ Telegram bot that automates scraping and reporting of app metadata from mobile a
 
 ## **[Pet Projects & Open Source](https://github.com/tiennm99)**
 
-2017 – present
+2018 – present
 
 Various personal projects spanning game servers, bots, and web tools. Occasionally contribute to open-source projects. Full portfolio on GitHub.
 
