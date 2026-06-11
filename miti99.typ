@@ -10,10 +10,10 @@
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "us-letter",
-  page-top-margin: 0.7in,
-  page-bottom-margin: 0.7in,
-  page-left-margin: 0.7in,
-  page-right-margin: 0.7in,
+  page-top-margin: 0.45in,
+  page-bottom-margin: 0.45in,
+  page-left-margin: 0.55in,
+  page-right-margin: 0.55in,
   page-show-footer: false,
   page-show-top-note: true,
   colors-body: rgb(0, 0, 0),
@@ -24,7 +24,7 @@
   colors-links: rgb(0, 0, 0),
   colors-footer: rgb(128, 128, 128),
   colors-top-note: rgb(128, 128, 128),
-  typography-line-spacing: 0.6em,
+  typography-line-spacing: 0.5em,
   typography-alignment: "justified",
   typography-date-and-location-column-alignment: right,
   typography-font-family-body: "XCharter",
@@ -48,10 +48,10 @@
   links-underline: true,
   links-show-external-link-icon: false,
   header-alignment: center,
-  header-photo-width: 3.5cm,
-  header-space-below-name: 0.7cm,
-  header-space-below-headline: 0.7cm,
-  header-space-below-connections: 0.7cm,
+  header-photo-width: 3cm,
+  header-space-below-name: 0.3cm,
+  header-space-below-headline: 0.3cm,
+  header-space-below-connections: 0.3cm,
   header-connections-hyperlink: true,
   header-connections-show-icons: false,
   header-connections-display-urls-instead-of-usernames: true,
@@ -59,11 +59,11 @@
   header-connections-space-between-connections: 0.5cm,
   section-titles-type: "with_full_line",
   section-titles-line-thickness: 0.5pt,
-  section-titles-space-above: 0.5cm,
-  section-titles-space-below: 0.3cm,
+  section-titles-space-above: 0.3cm,
+  section-titles-space-below: 0.2cm,
   sections-allow-page-break: true,
-  sections-space-between-text-based-entries: 0.15cm,
-  sections-space-between-regular-entries: 0.42cm,
+  sections-space-between-text-based-entries: 0.2em,
+  sections-space-between-regular-entries: 0.7em,
   entries-date-and-location-width: 4.15cm,
   entries-side-space: 0cm,
   entries-space-between-columns: 0.1cm,
@@ -86,16 +86,9 @@
 )
 
 
-#grid(
-  columns: (auto, 1fr),
-  column-gutter: 0cm,
-  align: horizon + left,
-  [#pad(left: 0.4cm, right: 0.4cm, image("avatar.jpg", width: 3.5cm))
-],
-  [
 = Tien Nguyen Minh
 
-  #headline([Senior Java Software Engineer])
+  #headline([Senior Java Software Engineer | Java 21, Real-Time Backends, CI\/CD, AI-Assisted Delivery])
 
 #connections(
   [HCMC, Vietnam],
@@ -106,28 +99,7 @@
   [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[github.com\/tiennm99]],
   [#link("https://t.me/tiennm5", icon: false, if-underline: false, if-color: false)[t.me\/tiennm5]],
 )
-  ]
-)
 
-
-== Education
-
-#education-entry(
-  [
-    #strong[Ho Chi Minh City University of Technology], B.E. in Computer Science and Engineering -- HCMC, Vietnam
-
-  ],
-  [
-    Sept 2017 – June 2023
-
-  ],
-  main-column-second-row: [
-    - GPA: 8.0\/10 — Academic Excellence Scholarship; Five Good Student Award
-
-    - Thesis: Survival2D — 2D multiplayer Battle Royale game server in Java (Netty\/WebSocket); authoritative architecture, FlatBuffers serialization (76\% packet reduction vs JSON), behavior tree AI bots, and server-side anti-cheat
-
-  ],
-)
 
 == Experience
 
@@ -141,17 +113,17 @@
 
   ],
   main-column-second-row: [
-    #summary[Progressed from Game Programming Fresher to Senior Software Engineer. Focuses on Java game backends, live operations, delivery automation, and collaboration with client, QA, release, and product stakeholders.]
+    #summary[Progressed from Game Programming Fresher to Senior Software Engineer over 5+ years building and operating production backends for real-time multiplayer games, collaborating daily with client, QA, release, and product stakeholders.]
 
-    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Primary Java server contributor across gameplay, battle sync, matchmaking, payment\/webpay, admin tooling, tests, and delivery automation
+    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Built and operated gameplay systems, battle synchronization, matchmaking, payments\/webpay, admin tooling, automated tests, and delivery pipelines as primary Java backend contributor
 
-    - Built and maintained Java 21 backend modules with Netty\/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used tests around gameplay, payment, and release-critical flows
+    - Built and maintained Java 21 backend modules with Netty\/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used automated tests around gameplay, payment, and release-critical flows
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel] and #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show]: Implemented and maintained backend gameplay events, payment\/config updates, tests, metrics, concurrency fixes, live diagnostics, and release support
+    - Applied OOP and design patterns to reusable packet handlers, gameplay workflows, payment\/config modules, and admin tooling for live products
 
-    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden] \/ KVTM: Maintained Java server features, web payment fixes, Redis\/runtime diagnostics, GM tooling, CI\/deploy support, and Godot migration support
+    - #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel], #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show], and #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Diagnosed and fixed live concurrency issues; maintained backend gameplay events, payment\/config updates, metrics, and release support
 
-    - Built internal Claude Code plugin\/skill marketplace and Java game-server scaffolding guidance to standardize packet-handler generation, framework usage, and AI-assisted delivery workflows
+    - Built an internal Claude Code plugin\/skill marketplace and Java game-server scaffolding guidance, standardizing packet-handler generation, framework usage, and AI-assisted delivery workflows
 
   ],
 )
@@ -168,7 +140,9 @@
 
   ],
   main-column-second-row: [
-    #summary[Telegram bot for tracking Apple App Store and Google Play metadata changes; originally built in Java, then ported to JavaScript.]
+    #summary[Telegram bot for tracking Apple App Store and Google Play app updates; original Java 21 implementation later ported to Node.js\/Vercel.]
+
+    - Built Java bot with Gradle, MongoDB, command-pattern Telegram handlers, reusable repository abstractions, Docker Compose, and JUnit scraper tests; ported to serverless Node.js with Upstash Redis, Vercel Cron, and GitHub Actions checks
 
   ],
 )
@@ -183,37 +157,26 @@
 
   ],
   main-column-second-row: [
-    #summary[Multiplayer Gomoku game with Go WebSocket backend, protobuf messaging, Docker support, PVP\/PVE\/spectator modes, and Phaser client.]
+    #summary[Multiplayer Gomoku game with authoritative Go WebSocket backend, protobuf binary messages, Docker Compose, GitHub Actions CI, and Phaser client.]
+
+    - Designed server-authoritative gameplay (move validation, win detection, PVP\/PVE\/spectator modes, minimax AI with alpha-beta pruning) with Go tests over game, lobby, and codec flows; CI runs vet, tests, and builds
 
   ],
 )
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99/rplace")[Rplace]]
+    #strong[#link("https://github.com/tiennm99/miti99bot")[miti99bot]]
 
   ],
   [
-    2026
+    May 2026 – present
 
   ],
   main-column-second-row: [
-    #summary[Collaborative pixel-art canvas using Svelte, Hono, Cloudflare Workers, and Durable Object SQLite.]
+    #summary[Modular Go Telegram bot framework on AWS Lambda (SAM) with pluggable KV storage providers (Firestore\/DynamoDB) and AI integration with rate limiting.]
 
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[#link("https://github.com/tiennm99/db-keepalive")[DB Keepalive]]
-
-  ],
-  [
-    2026
-
-  ],
-  main-column-second-row: [
-    #summary[Pluggable Go daemon for keeping free-tier database clusters active across Redis, Valkey, PostgreSQL, MySQL, MongoDB, and Couchbase.]
+    - Covered modules, storage providers, and AI rate limiting with 53 Go test files; GitHub Actions CI plus OIDC-authenticated AWS deploy pipeline
 
   ],
 )
@@ -222,14 +185,31 @@
 
 #strong[Languages:] Java, Go, JavaScript\/TypeScript, Shell
 
-#strong[Frameworks & Libraries:] Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot
+#strong[Frameworks & Libraries:] Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot, WebSocket
 
-#strong[Databases:] Couchbase, Redis, MySQL, Kafka, ClickHouse
+#strong[Data & Messaging:] Couchbase, Redis, MySQL, Kafka, ClickHouse
 
-#strong[Infrastructure & DevOps:] Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda\/SAM, Cloudflare Workers
+#strong[Infrastructure & DevOps:] Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda\/SAM, Cloudflare Workers, Vercel
 
-#strong[Architecture:] Object-oriented design, game server architecture, real-time multiplayer systems, event-driven design, clean reusable code
+#strong[Architecture:] OOP and design patterns, reusable components, real-time multiplayer game-server architecture, event-driven design
 
-#strong[Delivery Practices:] Unit testing, code review, production debugging, CI\/CD, AI-assisted development workflows
+#strong[Delivery Practices:] Unit testing, code review, production debugging, continuous integration and delivery (CI\/CD), DevOps collaboration, AI-assisted development workflows
 
-#strong[Languages (Spoken):] Vietnamese (Native), English (TOEIC 600+)
+== Education
+
+#education-entry(
+  [
+    #strong[Ho Chi Minh City University of Technology], B.E. in Computer Science and Engineering -- HCMC, Vietnam
+
+  ],
+  [
+    Sept 2017 – June 2023
+
+  ],
+  main-column-second-row: [
+    - GPA: 8.0\/10 — Academic Excellence Scholarship; Five Good Student Award
+
+    - Thesis: Survival2D — multiplayer Battle Royale game server in Java (Netty\/WebSocket) with authoritative architecture, FlatBuffers serialization, behavior-tree AI bots, and server-side anti-cheat
+
+  ],
+)
