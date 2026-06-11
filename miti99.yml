@@ -38,30 +38,30 @@ cv:
         start_date: 2020-07
         end_date: present
         location: HCMC, Vietnam
-        summary: Progressed from Game Programming Fresher to Senior Software Engineer. Builds and maintains Java game backends and production tooling with cross-functional work across server, client, QA, and release workflows.
+        summary: Progressed from Game Programming Fresher to Senior Software Engineer. Focuses on Java game backends, live operations, delivery automation, and internal tooling for game-server development.
         highlights:
-          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Sole server developer for a global strategy game; built Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, and GitLab CI/CD"
-          - "Worked with JUnit 5/Mockito tests, load-test clients, Docker-based local dependencies, and GitLab CI pipelines for multi-environment builds and deploys"
-          - "Built internal Claude Code skills/plugin marketplace for ZingPlay game-server development, including typed packet-handler scaffolding and framework guidance"
-          - "[Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained Java server features for a live farm game; handled event logic, web payment fixes, Redis/runtime diagnostics, and release support"
-          - "[Show](https://play.google.com/store/apps/details?id=zps.games.show), [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), and [Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Contributed server-side gameplay, matchmaking, and client logic across real-time card and pool games"
+          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Primary Java server contributor; authored 3.7k+ server commits across gameplay, battle sync, matchmaking, payment/webpay, admin tooling, testing, and delivery automation"
+          - "Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines"
+          - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel) and [Show](https://play.google.com/store/apps/details?id=zps.games.show): Implemented and maintained backend gameplay events, payment/config updates, tests, metrics, concurrency fixes, live diagnostics, and release support"
+          - "[Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js) / KVTM: Maintained Java server features, web payment fixes, Redis/runtime diagnostics, GM tooling, CI/deploy support, and Godot migration support"
+          - "Built internal Claude Code plugin/skill marketplace and game-server scaffolding guidance for ZingPlay server development"
     projects:
-      - name: "[Test Sharding](https://github.com/tiennm99/test-sharding)"
-        date: 2026
-        summary: Java server experiment for sharding with Couchbase replication, Redis replication, and Kafka.
-        highlights:
-      - name: "[TaskBus](https://github.com/tiennm99/taskbus)"
-        date: 2025
-        summary: Java demo for task distribution, assigning tasks to specific executors with examples in tests.
-        highlights:
       - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)"
         start_date: 2025-11
         end_date: present
-        summary: Telegram bot for scraping and tracking Apple App Store and Google Play app metadata; original implementation was Java, later ported to JavaScript.
+        summary: Telegram bot for tracking Apple App Store and Google Play metadata changes; originally built in Java, then ported to JavaScript.
+        highlights:
+      - name: "[Gomoku](https://github.com/tiennm99/gomoku)"
+        date: 2026
+        summary: Multiplayer Gomoku game with Go WebSocket backend, protobuf messaging, Docker support, PVP/PVE/spectator modes, and Phaser client.
+        highlights:
+      - name: "[Rplace](https://github.com/tiennm99/rplace)"
+        date: 2026
+        summary: Collaborative pixel-art canvas using Svelte, Hono, Cloudflare Workers, and Durable Object SQLite.
         highlights:
       - name: "[DB Keepalive](https://github.com/tiennm99/db-keepalive)"
         date: 2026
-        summary: Go daemon for keeping free-tier database clusters active across Redis, Valkey, PostgreSQL, MySQL, MongoDB, and Couchbase.
+        summary: Pluggable Go daemon for keeping free-tier database clusters active across Redis, Valkey, PostgreSQL, MySQL, MongoDB, and Couchbase.
         highlights:
     skills:
       - label: Languages
