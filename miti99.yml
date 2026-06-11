@@ -14,11 +14,6 @@ cv:
       username: tiennm99
     - network: Telegram
       username: tiennm5
-  custom_connections:
-    - fontawesome_icon: "facebook"
-      placeholder: "fb.com/tiennm99"
-      url: "https://www.facebook.com/tiennm99/"
-
   sections:
     education:
       - institution: Ho Chi Minh City University of Technology
@@ -38,13 +33,13 @@ cv:
         start_date: 2020-07
         end_date: present
         location: HCMC, Vietnam
-        summary: Progressed from Game Programming Fresher to Senior Software Engineer. Focuses on Java game backends, live operations, delivery automation, and internal tooling for game-server development.
+        summary: Progressed from Game Programming Fresher to Senior Software Engineer. Focuses on Java game backends, live operations, delivery automation, and collaboration with client, QA, release, and product stakeholders.
         highlights:
-          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Primary Java server contributor; authored 3.7k+ server commits across gameplay, battle sync, matchmaking, payment/webpay, admin tooling, testing, and delivery automation"
-          - "Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines"
+          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Primary Java server contributor across gameplay, battle sync, matchmaking, payment/webpay, admin tooling, tests, and delivery automation"
+          - "Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used tests around gameplay, payment, and release-critical flows"
           - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel) and [Show](https://play.google.com/store/apps/details?id=zps.games.show): Implemented and maintained backend gameplay events, payment/config updates, tests, metrics, concurrency fixes, live diagnostics, and release support"
           - "[Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js) / KVTM: Maintained Java server features, web payment fixes, Redis/runtime diagnostics, GM tooling, CI/deploy support, and Godot migration support"
-          - "Built internal Claude Code plugin/skill marketplace and game-server scaffolding guidance for ZingPlay server development"
+          - "Built internal Claude Code plugin/skill marketplace and Java game-server scaffolding guidance to standardize packet-handler generation, framework usage, and AI-assisted delivery workflows"
     projects:
       - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)"
         start_date: 2025-11
