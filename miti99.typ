@@ -105,7 +105,6 @@
   [#link("https://linkedin.com/in/miti99", icon: false, if-underline: false, if-color: false)[linkedin.com\/in\/miti99]],
   [#link("https://github.com/tiennm99", icon: false, if-underline: false, if-color: false)[github.com\/tiennm99]],
   [#link("https://t.me/tiennm5", icon: false, if-underline: false, if-color: false)[t.me\/tiennm5]],
-  [#link("https://www.facebook.com/tiennm99/", icon: false, if-underline: false, if-color: false)[fb.com\/tiennm99]],
 )
   ]
 )
@@ -115,7 +114,7 @@
 
 #education-entry(
   [
-    #strong[Ho Chi Minh City University of Technology], B.E. in Computer Science in Computer Science and Engineering -- HCMC, Vietnam
+    #strong[Ho Chi Minh City University of Technology], B.E. in Computer Science and Engineering -- HCMC, Vietnam
 
   ],
   [
@@ -142,52 +141,22 @@
 
   ],
   main-column-second-row: [
-    #summary[Progressed from Game Programming Fresher to Senior Software Engineer. Builds and maintains Java game backends and production tooling with cross-functional work across server, client, QA, and release workflows.]
+    #summary[Progressed from Game Programming Fresher to Senior Software Engineer. Focuses on Java game backends, live operations, delivery automation, and collaboration with client, QA, release, and product stakeholders.]
 
-    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Sole server developer for a global strategy game; built Java 21 backend modules with Netty\/Vert.x, Couchbase, Redis, Kafka, Gradle, and GitLab CI\/CD
+    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Primary Java server contributor across gameplay, battle sync, matchmaking, payment\/webpay, admin tooling, tests, and delivery automation
 
-    - Improved delivery quality with JUnit 5\/Mockito tests, load-test clients, Docker-based local dependencies, and multi-environment build\/deploy pipelines
+    - Built and maintained Java 21 backend modules with Netty\/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used tests around gameplay, payment, and release-critical flows
 
-    - Built internal AI-assisted Claude Code skills\/plugin marketplace for ZingPlay game-server development, including typed packet-handler scaffolding and framework guidance
+    - #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel] and #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show]: Implemented and maintained backend gameplay events, payment\/config updates, tests, metrics, concurrency fixes, live diagnostics, and release support
 
-    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Maintained production Java server features for a live farm game; handled event logic, web payment fixes, Redis\/runtime diagnostics, and release support
+    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden] \/ KVTM: Maintained Java server features, web payment fixes, Redis\/runtime diagnostics, GM tooling, CI\/deploy support, and Godot migration support
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show], #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel], and #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Delivered server-side gameplay, matchmaking, and client logic across real-time card and pool games
+    - Built internal Claude Code plugin\/skill marketplace and Java game-server scaffolding guidance to standardize packet-handler generation, framework usage, and AI-assisted delivery workflows
 
   ],
 )
 
 == Projects
-
-#regular-entry(
-  [
-    #strong[#link("https://github.com/tiennm99/mitisrv")[MiTiSrv]]
-
-  ],
-  [
-    2018 – 2025
-
-  ],
-  main-column-second-row: [
-    #summary[Lightweight Java game server framework using Netty; personal framework for experimenting with reusable multiplayer server architecture.]
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[#link("https://github.com/tiennm99/test-sharding")[Test Sharding]]
-
-  ],
-  [
-    2025
-
-  ],
-  main-column-second-row: [
-    #summary[Java server experiment for sharding with Couchbase replication, Redis replication, and Kafka.]
-
-  ],
-)
 
 #regular-entry(
   [
@@ -199,14 +168,14 @@
 
   ],
   main-column-second-row: [
-    #summary[Telegram bot for tracking Apple App Store and Google Play metadata updates; original Java version later ported to JavaScript.]
+    #summary[Telegram bot for tracking Apple App Store and Google Play metadata changes; originally built in Java, then ported to JavaScript.]
 
   ],
 )
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99/miti99bot")[Miti99bot]]
+    #strong[#link("https://github.com/tiennm99/gomoku")[Gomoku]]
 
   ],
   [
@@ -214,7 +183,37 @@
 
   ],
   main-column-second-row: [
-    #summary[Go Telegram bot framework deployed serverlessly on AWS Lambda\/SAM with Firestore and Gemini integration.]
+    #summary[Multiplayer Gomoku game with Go WebSocket backend, protobuf messaging, Docker support, PVP\/PVE\/spectator modes, and Phaser client.]
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[#link("https://github.com/tiennm99/rplace")[Rplace]]
+
+  ],
+  [
+    2026
+
+  ],
+  main-column-second-row: [
+    #summary[Collaborative pixel-art canvas using Svelte, Hono, Cloudflare Workers, and Durable Object SQLite.]
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[#link("https://github.com/tiennm99/db-keepalive")[DB Keepalive]]
+
+  ],
+  [
+    2026
+
+  ],
+  main-column-second-row: [
+    #summary[Pluggable Go daemon for keeping free-tier database clusters active across Redis, Valkey, PostgreSQL, MySQL, MongoDB, and Couchbase.]
 
   ],
 )

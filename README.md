@@ -10,7 +10,7 @@
 
 
 # Education
-## **Ho Chi Minh City University of Technology**, B.E. in Computer Science in Computer Science and Engineering -- HCMC, Vietnam
+## **Ho Chi Minh City University of Technology**, B.E. in Computer Science and Engineering -- HCMC, Vietnam
 Sept 2017 – June 2023
 
 - GPA: 8.0/10 — Academic Excellence Scholarship; Five Good Student Award
@@ -24,50 +24,50 @@ Sept 2017 – June 2023
 
 July 2020 – present
 
-Progressed from Game Programming Fresher to Senior Software Engineer. Builds and maintains Java game backends and production tooling with cross-functional work across server, client, QA, and release workflows.
+Progressed from Game Programming Fresher to Senior Software Engineer. Focuses on Java game backends, live operations, delivery automation, and collaboration with client, QA, release, and product stakeholders.
 
-- [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Sole server developer for a global strategy game; built Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, and GitLab CI/CD
+- [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Primary Java server contributor across gameplay, battle sync, matchmaking, payment/webpay, admin tooling, tests, and delivery automation
 
-- Improved delivery quality with JUnit 5/Mockito tests, load-test clients, Docker-based local dependencies, and multi-environment build/deploy pipelines
+- Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used tests around gameplay, payment, and release-critical flows
 
-- Built internal AI-assisted Claude Code skills/plugin marketplace for ZingPlay game-server development, including typed packet-handler scaffolding and framework guidance
+- [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel) and [Show](https://play.google.com/store/apps/details?id=zps.games.show): Implemented and maintained backend gameplay events, payment/config updates, tests, metrics, concurrency fixes, live diagnostics, and release support
 
-- [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained production Java server features for a live farm game; handled event logic, web payment fixes, Redis/runtime diagnostics, and release support
+- [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js) / KVTM: Maintained Java server features, web payment fixes, Redis/runtime diagnostics, GM tooling, CI/deploy support, and Godot migration support
 
-- [Show](https://play.google.com/store/apps/details?id=zps.games.show), [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), and [Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Delivered server-side gameplay, matchmaking, and client logic across real-time card and pool games
+- Built internal Claude Code plugin/skill marketplace and Java game-server scaffolding guidance to standardize packet-handler generation, framework usage, and AI-assisted delivery workflows
 
 
 
 # Projects
-## **[MiTiSrv](https://github.com/tiennm99/mitisrv)**
-
-2018 – 2025
-
-Lightweight Java game server framework using Netty; personal framework for experimenting with reusable multiplayer server architecture.
-
-
-
-## **[Test Sharding](https://github.com/tiennm99/test-sharding)**
-
-2025
-
-Java server experiment for sharding with Couchbase replication, Redis replication, and Kafka.
-
-
-
 ## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)**
 
 Nov 2025 – present
 
-Telegram bot for tracking Apple App Store and Google Play metadata updates; original Java version later ported to JavaScript.
+Telegram bot for tracking Apple App Store and Google Play metadata changes; originally built in Java, then ported to JavaScript.
 
 
 
-## **[Miti99bot](https://github.com/tiennm99/miti99bot)**
+## **[Gomoku](https://github.com/tiennm99/gomoku)**
 
 2026
 
-Go Telegram bot framework deployed serverlessly on AWS Lambda/SAM with Firestore and Gemini integration.
+Multiplayer Gomoku game with Go WebSocket backend, protobuf messaging, Docker support, PVP/PVE/spectator modes, and Phaser client.
+
+
+
+## **[Rplace](https://github.com/tiennm99/rplace)**
+
+2026
+
+Collaborative pixel-art canvas using Svelte, Hono, Cloudflare Workers, and Durable Object SQLite.
+
+
+
+## **[DB Keepalive](https://github.com/tiennm99/db-keepalive)**
+
+2026
+
+Pluggable Go daemon for keeping free-tier database clusters active across Redis, Valkey, PostgreSQL, MySQL, MongoDB, and Couchbase.
 
 
 
