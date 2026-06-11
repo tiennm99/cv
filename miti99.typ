@@ -6,7 +6,7 @@
   name: "Tien Nguyen Minh",
   title: "Tien Nguyen Minh - CV",
   footer: context { [#emph[Tien Nguyen Minh -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in Mar 2026] ],
+  top-note: [ #emph[Last updated in June 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "us-letter",
@@ -80,8 +80,8 @@
   entries-highlights-space-between-bullet-and-text: 0.3em,
   date: datetime(
     year: 2026,
-    month: 3,
-    day: 31,
+    month: 6,
+    day: 11,
   ),
 )
 
@@ -95,7 +95,7 @@
   [
 = Tien Nguyen Minh
 
-  #headline([Senior Software Engineer])
+  #headline([Senior Java Software Engineer])
 
 #connections(
   [HCMC, Vietnam],
@@ -142,15 +142,17 @@
 
   ],
   main-column-second-row: [
-    #summary[Progressed from Game Programming Fresher to Senior Software Engineer. Focused on scalable game server architecture in Java (Netty, Vert.x), with cross-functional contributions to client-side logic in Cocos2d-x and Godot.]
+    #summary[Progressed from Game Programming Fresher to Senior Software Engineer. Builds and maintains Java game backends and production tooling with cross-functional work across server, client, QA, and release workflows.]
 
-    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Sole server developer; architected backend from scratch for a global strategy game, 300+ CCU; assisted client team with networking and game logic
+    - #link("https://play.google.com/store/apps/details?id=vn.zps.tl2")[Chaos Age 2]: Sole server developer for a global strategy game; built Java 21 backend modules with Netty\/Vert.x, Couchbase, Redis, Kafka, Gradle, and GitLab CI\/CD
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show] & #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel]: Full-stack contributor on two real-time card games for Myanmar and Russian-speaking markets; delivered server-side logic and client features
+    - Improved delivery quality with JUnit 5\/Mockito tests, load-test clients, Docker-based local dependencies, and multi-environment build\/deploy pipelines
 
-    - #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Implemented matchmaking (server) and cue direction logic (client) for a global 8-ball pool game; applied physics and geometry for accurate ball trajectory simulation
+    - Built internal AI-assisted Claude Code skills\/plugin marketplace for ZingPlay game-server development, including typed packet-handler scaffolding and framework guidance
 
-    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Maintained server stability for a live farm game (\~5,000 CCU); resolved production issues and developed new event features
+    - #link("https://play.google.com/store/apps/details?id=vn.kvtm.js")[Sky Garden]: Maintained production Java server features for a live farm game; handled event logic, web payment fixes, Redis\/runtime diagnostics, and release support
+
+    - #link("https://play.google.com/store/apps/details?id=zps.games.show")[Show], #link("https://play.google.com/store/apps/details?id=zps.games.burkozel")[Burkozel], and #link("https://play.google.com/store/apps/details?id=zps.games.bida3d.vn")[Bida3D]: Delivered server-side gameplay, matchmaking, and client logic across real-time card and pool games
 
   ],
 )
@@ -159,59 +161,76 @@
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99/vngeoguessr")[VN GeoGuessr]]
+    #strong[#link("https://github.com/tiennm99/mitisrv")[MiTiSrv]]
 
   ],
   [
-    Aug 2025
+    2018 – 2025
 
   ],
   main-column-second-row: [
-    #summary[Location-guessing game for Vietnam using Leaflet.js, Mapillary, and OpenStreetMap with street-level panoramic imagery and map-based scoring.]
+    #summary[Lightweight Java game server framework using Netty; personal framework for experimenting with reusable multiplayer server architecture.]
 
   ],
 )
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99/store-scraper-bot")[Store Scraper Bot]]
+    #strong[#link("https://github.com/tiennm99/test-sharding")[Test Sharding]]
 
   ],
   [
-    Nov 2025 – Dec 2025
+    2025
 
   ],
   main-column-second-row: [
-    #summary[Telegram bot that automates scraping and reporting of app metadata from mobile app stores.]
+    #summary[Java server experiment for sharding with Couchbase replication, Redis replication, and Kafka.]
 
   ],
 )
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99")[Pet Projects & Open Source]]
+    #strong[#link("https://github.com/tiennm99/store-scraper-bot")[Store Scraper Bot] \/ #link("https://github.com/tiennm99/store-scraper-bot-java")[Java original]]
 
   ],
   [
-    2018 – present
+    Nov 2025 – present
 
   ],
   main-column-second-row: [
-    #summary[Various personal projects spanning game servers, bots, and web tools. Occasionally contribute to open-source projects. Full portfolio on GitHub.]
+    #summary[Telegram bot for tracking Apple App Store and Google Play metadata updates; original Java version later ported to JavaScript.]
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[#link("https://github.com/tiennm99/miti99bot")[Miti99bot]]
+
+  ],
+  [
+    2026
+
+  ],
+  main-column-second-row: [
+    #summary[Go Telegram bot framework deployed serverlessly on AWS Lambda\/SAM with Firestore and Gemini integration.]
 
   ],
 )
 
 == Skills
 
-#strong[Languages:] Java, Go, JavaScript, Shell
+#strong[Languages:] Java, Go, JavaScript\/TypeScript, Shell
 
-#strong[Frameworks & Libraries:] Netty, Vert.x, Spring Boot, Cocos2d-x, Godot
+#strong[Frameworks & Libraries:] Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot
 
-#strong[Databases:] Couchbase, Redis, MySQL, ClickHouse
+#strong[Databases:] Couchbase, Redis, MySQL, Kafka, ClickHouse
 
-#strong[Infrastructure & DevOps:] Docker, CI\/CD (GitHub Actions\/GitLab CI), Git, Linux, OCI
+#strong[Infrastructure & DevOps:] Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda\/SAM, Cloudflare Workers
 
-#strong[Architecture:] Game server architecture, real-time multiplayer systems, event-driven design
+#strong[Architecture:] Object-oriented design, game server architecture, real-time multiplayer systems, event-driven design, clean reusable code
+
+#strong[Delivery Practices:] Unit testing, code review, production debugging, CI\/CD, AI-assisted development workflows
 
 #strong[Languages (Spoken):] Vietnamese (Native), English (TOEIC 600+)

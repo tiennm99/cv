@@ -24,52 +24,64 @@ Sept 2017 – June 2023
 
 July 2020 – present
 
-Progressed from Game Programming Fresher to Senior Software Engineer. Focused on scalable game server architecture in Java (Netty, Vert.x), with cross-functional contributions to client-side logic in Cocos2d-x and Godot.
+Progressed from Game Programming Fresher to Senior Software Engineer. Builds and maintains Java game backends and production tooling with cross-functional work across server, client, QA, and release workflows.
 
-- [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Sole server developer; architected backend from scratch for a global strategy game, 300+ CCU; assisted client team with networking and game logic
+- [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Sole server developer for a global strategy game; built Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, and GitLab CI/CD
 
-- [Show](https://play.google.com/store/apps/details?id=zps.games.show) & [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel): Full-stack contributor on two real-time card games for Myanmar and Russian-speaking markets; delivered server-side logic and client features
+- Improved delivery quality with JUnit 5/Mockito tests, load-test clients, Docker-based local dependencies, and multi-environment build/deploy pipelines
 
-- [Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Implemented matchmaking (server) and cue direction logic (client) for a global 8-ball pool game; applied physics and geometry for accurate ball trajectory simulation
+- Built internal AI-assisted Claude Code skills/plugin marketplace for ZingPlay game-server development, including typed packet-handler scaffolding and framework guidance
 
-- [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained server stability for a live farm game (~5,000 CCU); resolved production issues and developed new event features
+- [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained production Java server features for a live farm game; handled event logic, web payment fixes, Redis/runtime diagnostics, and release support
+
+- [Show](https://play.google.com/store/apps/details?id=zps.games.show), [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), and [Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Delivered server-side gameplay, matchmaking, and client logic across real-time card and pool games
 
 
 
 # Projects
-## **[VN GeoGuessr](https://github.com/tiennm99/vngeoguessr)**
+## **[MiTiSrv](https://github.com/tiennm99/mitisrv)**
 
-Aug 2025
+2018 – 2025
 
-Location-guessing game for Vietnam using Leaflet.js, Mapillary, and OpenStreetMap with street-level panoramic imagery and map-based scoring.
-
-
-
-## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot)**
-
-Nov 2025 – Dec 2025
-
-Telegram bot that automates scraping and reporting of app metadata from mobile app stores.
+Lightweight Java game server framework using Netty; personal framework for experimenting with reusable multiplayer server architecture.
 
 
 
-## **[Pet Projects & Open Source](https://github.com/tiennm99)**
+## **[Test Sharding](https://github.com/tiennm99/test-sharding)**
 
-2018 – present
+2025
 
-Various personal projects spanning game servers, bots, and web tools. Occasionally contribute to open-source projects. Full portfolio on GitHub.
+Java server experiment for sharding with Couchbase replication, Redis replication, and Kafka.
+
+
+
+## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)**
+
+Nov 2025 – present
+
+Telegram bot for tracking Apple App Store and Google Play metadata updates; original Java version later ported to JavaScript.
+
+
+
+## **[Miti99bot](https://github.com/tiennm99/miti99bot)**
+
+2026
+
+Go Telegram bot framework deployed serverlessly on AWS Lambda/SAM with Firestore and Gemini integration.
 
 
 
 # Skills
-**Languages:** Java, Go, JavaScript, Shell
+**Languages:** Java, Go, JavaScript/TypeScript, Shell
 
-**Frameworks & Libraries:** Netty, Vert.x, Spring Boot, Cocos2d-x, Godot
+**Frameworks & Libraries:** Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot
 
-**Databases:** Couchbase, Redis, MySQL, ClickHouse
+**Databases:** Couchbase, Redis, MySQL, Kafka, ClickHouse
 
-**Infrastructure & DevOps:** Docker, CI/CD (GitHub Actions/GitLab CI), Git, Linux, OCI
+**Infrastructure & DevOps:** Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda/SAM, Cloudflare Workers
 
-**Architecture:** Game server architecture, real-time multiplayer systems, event-driven design
+**Architecture:** Object-oriented design, game server architecture, real-time multiplayer systems, event-driven design, clean reusable code
+
+**Delivery Practices:** Unit testing, code review, production debugging, CI/CD, AI-assisted development workflows
 
 **Languages (Spoken):** Vietnamese (Native), English (TOEIC 600+)
