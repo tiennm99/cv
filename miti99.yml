@@ -23,7 +23,7 @@ cv:
     education:
       - institution: Ho Chi Minh City University of Technology
         area: Computer Science and Engineering
-        degree: B.E. in Computer Science
+        degree: B.E.
         date:
         start_date: 2017-09
         end_date: 2023-06
@@ -41,28 +41,27 @@ cv:
         summary: Progressed from Game Programming Fresher to Senior Software Engineer. Builds and maintains Java game backends and production tooling with cross-functional work across server, client, QA, and release workflows.
         highlights:
           - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Sole server developer for a global strategy game; built Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, and GitLab CI/CD"
-          - "Improved delivery quality with JUnit 5/Mockito tests, load-test clients, Docker-based local dependencies, and multi-environment build/deploy pipelines"
-          - "Built internal AI-assisted Claude Code skills/plugin marketplace for ZingPlay game-server development, including typed packet-handler scaffolding and framework guidance"
-          - "[Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained production Java server features for a live farm game; handled event logic, web payment fixes, Redis/runtime diagnostics, and release support"
-          - "[Show](https://play.google.com/store/apps/details?id=zps.games.show), [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), and [Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Delivered server-side gameplay, matchmaking, and client logic across real-time card and pool games"
+          - "Worked with JUnit 5/Mockito tests, load-test clients, Docker-based local dependencies, and GitLab CI pipelines for multi-environment builds and deploys"
+          - "Built internal Claude Code skills/plugin marketplace for ZingPlay game-server development, including typed packet-handler scaffolding and framework guidance"
+          - "[Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained Java server features for a live farm game; handled event logic, web payment fixes, Redis/runtime diagnostics, and release support"
+          - "[Show](https://play.google.com/store/apps/details?id=zps.games.show), [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), and [Bida3D](https://play.google.com/store/apps/details?id=zps.games.bida3d.vn): Contributed server-side gameplay, matchmaking, and client logic across real-time card and pool games"
     projects:
-      - name: "[MiTiSrv](https://github.com/tiennm99/mitisrv)"
-        start_date: 2018
-        end_date: 2025
-        summary: Lightweight Java game server framework using Netty; personal framework for experimenting with reusable multiplayer server architecture.
-        highlights:
       - name: "[Test Sharding](https://github.com/tiennm99/test-sharding)"
-        date: 2025
+        date: 2026
         summary: Java server experiment for sharding with Couchbase replication, Redis replication, and Kafka.
+        highlights:
+      - name: "[TaskBus](https://github.com/tiennm99/taskbus)"
+        date: 2025
+        summary: Java demo for task distribution, assigning tasks to specific executors with examples in tests.
         highlights:
       - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)"
         start_date: 2025-11
         end_date: present
-        summary: Telegram bot for tracking Apple App Store and Google Play metadata updates; original Java version later ported to JavaScript.
+        summary: Telegram bot for scraping and tracking Apple App Store and Google Play app metadata; original implementation was Java, later ported to JavaScript.
         highlights:
-      - name: "[Miti99bot](https://github.com/tiennm99/miti99bot)"
+      - name: "[DB Keepalive](https://github.com/tiennm99/db-keepalive)"
         date: 2026
-        summary: Go Telegram bot framework deployed serverlessly on AWS Lambda/SAM with Firestore and Gemini integration.
+        summary: Go daemon for keeping free-tier database clusters active across Redis, Valkey, PostgreSQL, MySQL, MongoDB, and Couchbase.
         highlights:
     skills:
       - label: Languages
