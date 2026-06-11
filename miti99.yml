@@ -1,10 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Tien Nguyen Minh
-  headline: Senior Java Software Engineer | Java 21, Backend Systems, Real-Time Multiplayer, CI/CD
+  headline: Senior Java Software Engineer | Java 21, Real-Time Backends, CI/CD, AI-Assisted Delivery
   location: HCMC, Vietnam
   email: tiennm99@outlook.com
-  photo: avatar.jpg
   phone: (+84) 869 156 149
   website: https://miti99.com/
   social_networks:
@@ -15,6 +14,51 @@ cv:
     - network: Telegram
       username: tiennm5
   sections:
+    experience:
+      - company: ZingPlay Game Studios, VNG Corp.
+        position: Senior Software Engineer
+        date:
+        start_date: 2020-07
+        end_date: present
+        location: HCMC, Vietnam
+        summary: Progressed from Game Programming Fresher to Senior Software Engineer over 5+ years building and operating production backends for real-time multiplayer games, collaborating daily with client, QA, release, and product stakeholders.
+        highlights:
+          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Built and operated gameplay systems, battle synchronization, matchmaking, payments/webpay, admin tooling, automated tests, and delivery pipelines as primary Java backend contributor"
+          - "Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used automated tests around gameplay, payment, and release-critical flows"
+          - "Applied OOP and design patterns to reusable packet handlers, gameplay workflows, payment/config modules, and admin tooling for live products"
+          - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), [Show](https://play.google.com/store/apps/details?id=zps.games.show), and [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Diagnosed and fixed live concurrency issues; maintained backend gameplay events, payment/config updates, metrics, and release support"
+          - "Built an internal Claude Code plugin/skill marketplace and Java game-server scaffolding guidance, standardizing packet-handler generation, framework usage, and AI-assisted delivery workflows"
+    projects:
+      - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)"
+        start_date: 2025-11
+        end_date: present
+        summary: Telegram bot for tracking Apple App Store and Google Play app updates; original Java 21 implementation later ported to Node.js/Vercel.
+        highlights:
+          - "Built Java bot with Gradle, MongoDB, command-pattern Telegram handlers, reusable repository abstractions, Docker Compose, and JUnit scraper tests; ported to serverless Node.js with Upstash Redis, Vercel Cron, and GitHub Actions checks"
+      - name: "[Gomoku](https://github.com/tiennm99/gomoku)"
+        date: 2026
+        summary: Multiplayer Gomoku game with authoritative Go WebSocket backend, protobuf binary messages, Docker Compose, GitHub Actions CI, and Phaser client.
+        highlights:
+          - "Designed server-authoritative gameplay (move validation, win detection, PVP/PVE/spectator modes, minimax AI with alpha-beta pruning) with Go tests over game, lobby, and codec flows; CI runs vet, tests, and builds"
+      - name: "[miti99bot](https://github.com/tiennm99/miti99bot)"
+        start_date: 2026-05
+        end_date: present
+        summary: Modular Go Telegram bot framework on AWS Lambda (SAM) with pluggable KV storage providers (Firestore/DynamoDB) and AI integration with rate limiting.
+        highlights:
+          - "Covered modules, storage providers, and AI rate limiting with 53 Go test files; GitHub Actions CI plus OIDC-authenticated AWS deploy pipeline"
+    skills:
+      - label: Languages
+        details: Java, Go, JavaScript/TypeScript, Shell
+      - label: Frameworks & Libraries
+        details: Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot, WebSocket
+      - label: Data & Messaging
+        details: Couchbase, Redis, MySQL, Kafka, ClickHouse
+      - label: Infrastructure & DevOps
+        details: Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda/SAM, Cloudflare Workers, Vercel
+      - label: Architecture
+        details: OOP and design patterns, reusable components, real-time multiplayer game-server architecture, event-driven design
+      - label: Delivery Practices
+        details: Unit testing, code review, production debugging, continuous integration and delivery (CI/CD), DevOps collaboration, AI-assisted development workflows
     education:
       - institution: Ho Chi Minh City University of Technology
         area: Computer Science and Engineering
@@ -25,58 +69,29 @@ cv:
         location: HCMC, Vietnam
         highlights:
           - "GPA: 8.0/10 — Academic Excellence Scholarship; Five Good Student Award"
-          - "Thesis: Survival2D — 2D multiplayer Battle Royale game server in Java (Netty/WebSocket); authoritative architecture, FlatBuffers serialization to reduce packet size compared with JSON, behavior tree AI bots, and server-side anti-cheat"
-    experience:
-      - company: ZingPlay Game Studios, VNG Corp.
-        position: Senior Software Engineer
-        date:
-        start_date: 2020-07
-        end_date: present
-        location: HCMC, Vietnam
-        summary: Senior Java engineer with 5+ years building and operating production backends for real-time multiplayer games. Experienced in Java 21, Netty/Vert.x, Redis, Couchbase, Kafka, automated testing, CI/CD, production debugging, and cross-functional delivery.
-        highlights:
-          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Primary Java backend contributor for gameplay systems, battle synchronization, matchmaking, payments/webpay, admin tooling, automated tests, and delivery pipelines"
-          - "Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used automated tests around gameplay, payment, and release-critical flows"
-          - "Applied OOP and design patterns to reusable packet handlers, gameplay workflows, payment/config modules, and admin tooling for live products"
-          - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), [Show](https://play.google.com/store/apps/details?id=zps.games.show), and [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained backend gameplay events, payment/config updates, metrics, concurrency fixes, live diagnostics, Redis/runtime debugging, CI/deploy support, and release support"
-          - "Standardized Java game-server scaffolding, packet-handler generation, framework usage, and AI-assisted delivery workflows with documented guidance"
-    projects:
-      - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)"
-        start_date: 2025-11
-        end_date: present
-        summary: Telegram bot for tracking Apple App Store and Google Play app updates; original Java 21 implementation later ported to Node.js/Vercel.
-        highlights:
-          - "Built Java bot with Gradle, MongoDB, Telegram command handlers, reusable repository abstractions, Docker/Compose setup, and JUnit scraper tests"
-          - "Ported operational bot to serverless Node.js with Upstash Redis, Vercel Cron, webhook/cron request validation, and GitHub Actions syntax/leak checks"
-      - name: "[Gomoku](https://github.com/tiennm99/gomoku)"
-        date: 2026
-        summary: Multiplayer Gomoku game with authoritative Go WebSocket backend, protobuf binary messages, Docker Compose, GitHub Actions CI, and Phaser client.
-        highlights:
-          - "Designed server-authoritative gameplay with move validation, win detection, PVP/PVE/spectator modes, per-player state machine, and minimax AI"
-          - "Covered game, lobby, network codec, and state flows with Go tests; CI runs go vet, go test, server build, and client build"
-      - name: "[Rplace](https://github.com/tiennm99/rplace)"
-        date: 2026
-        summary: Collaborative pixel canvas on Cloudflare Workers using Durable Object SQLite storage, WebSocket pixel broadcasts, edge validation, and Svelte client.
-        highlights:
-          - "Implemented batch pixel placement, per-user cooldowns, real-time broadcast, and 4096x4096 canvas chunking"
-          - "Added Vitest coverage for worker validation, Durable Object storage, canvas loading, cookies, WebSocket behavior, and rate limits"
-    skills:
-      - label: Languages
-        details: Java, Go, JavaScript/TypeScript, Shell
-      - label: Frameworks & Libraries
-        details: Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot, WebSocket
-      - label: Databases
-        details: Couchbase, Redis, MySQL, Kafka, ClickHouse
-      - label: Infrastructure & DevOps
-        details: Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda/SAM, Cloudflare Workers, Vercel
-      - label: Architecture
-        details: Object-oriented design, reusable backend components, game server architecture, real-time multiplayer systems, event-driven design
-      - label: Delivery Practices
-        details: Unit testing, code review, production debugging, CI/CD, DevOps collaboration, AI-assisted development workflows
-      - label: Languages (Spoken)
-        details: Vietnamese (Native), English (TOEIC 600+)
+          - "Thesis: Survival2D — multiplayer Battle Royale game server in Java (Netty/WebSocket) with authoritative architecture, FlatBuffers serialization, behavior-tree AI bots, and server-side anti-cheat"
 design:
   theme: engineeringresumes
+  page:
+    top_margin: 0.45in
+    bottom_margin: 0.45in
+    left_margin: 0.55in
+    right_margin: 0.55in
+  header:
+    photo_width: 3cm
+    space_below_name: 0.3cm
+    space_below_headline: 0.3cm
+    space_below_connections: 0.3cm
+  section_titles:
+    space_above: 0.3cm
+    space_below: 0.2cm
+  sections:
+    space_between_regular_entries: 0.7em
+    space_between_text_based_entries: 0.2em
+  typography:
+    line_spacing: 0.5em
+    font_size:
+      body: 10pt
   # page:
   #   size: us-letter
   #   top_margin: 0.7in
