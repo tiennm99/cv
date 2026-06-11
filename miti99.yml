@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Tien Nguyen Minh
-  headline: Senior Java Software Engineer
+  headline: Senior Java Software Engineer | Java 21, Backend Systems, Real-Time Multiplayer, CI/CD
   location: HCMC, Vietnam
   email: tiennm99@outlook.com
   photo: avatar.jpg
@@ -25,7 +25,7 @@ cv:
         location: HCMC, Vietnam
         highlights:
           - "GPA: 8.0/10 — Academic Excellence Scholarship; Five Good Student Award"
-          - "Thesis: Survival2D — 2D multiplayer Battle Royale game server in Java (Netty/WebSocket); authoritative architecture, FlatBuffers serialization (76% packet reduction vs JSON), behavior tree AI bots, and server-side anti-cheat"
+          - "Thesis: Survival2D — 2D multiplayer Battle Royale game server in Java (Netty/WebSocket); authoritative architecture, FlatBuffers serialization to reduce packet size compared with JSON, behavior tree AI bots, and server-side anti-cheat"
     experience:
       - company: ZingPlay Game Studios, VNG Corp.
         position: Senior Software Engineer
@@ -33,44 +33,46 @@ cv:
         start_date: 2020-07
         end_date: present
         location: HCMC, Vietnam
-        summary: Progressed from Game Programming Fresher to Senior Software Engineer. Focuses on Java game backends, live operations, delivery automation, and collaboration with client, QA, release, and product stakeholders.
+        summary: Senior Java engineer with 5+ years building and operating production backends for real-time multiplayer games. Experienced in Java 21, Netty/Vert.x, Redis, Couchbase, Kafka, automated testing, CI/CD, production debugging, and cross-functional delivery.
         highlights:
-          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Primary Java server contributor across gameplay, battle sync, matchmaking, payment/webpay, admin tooling, tests, and delivery automation"
-          - "Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used tests around gameplay, payment, and release-critical flows"
-          - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel) and [Show](https://play.google.com/store/apps/details?id=zps.games.show): Implemented and maintained backend gameplay events, payment/config updates, tests, metrics, concurrency fixes, live diagnostics, and release support"
-          - "[Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js) / KVTM: Maintained Java server features, web payment fixes, Redis/runtime diagnostics, GM tooling, CI/deploy support, and Godot migration support"
-          - "Built internal Claude Code plugin/skill marketplace and Java game-server scaffolding guidance to standardize packet-handler generation, framework usage, and AI-assisted delivery workflows"
+          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Primary Java backend contributor for gameplay systems, battle synchronization, matchmaking, payments/webpay, admin tooling, automated tests, and delivery pipelines"
+          - "Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used automated tests around gameplay, payment, and release-critical flows"
+          - "Applied OOP and design patterns to reusable packet handlers, gameplay workflows, payment/config modules, and admin tooling for live products"
+          - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), [Show](https://play.google.com/store/apps/details?id=zps.games.show), and [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Maintained backend gameplay events, payment/config updates, metrics, concurrency fixes, live diagnostics, Redis/runtime debugging, CI/deploy support, and release support"
+          - "Standardized Java game-server scaffolding, packet-handler generation, framework usage, and AI-assisted delivery workflows with documented guidance"
     projects:
       - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)"
         start_date: 2025-11
         end_date: present
-        summary: Telegram bot for tracking Apple App Store and Google Play metadata changes; originally built in Java, then ported to JavaScript.
+        summary: Telegram bot for tracking Apple App Store and Google Play app updates; original Java 21 implementation later ported to Node.js/Vercel.
         highlights:
+          - "Built Java bot with Gradle, MongoDB, Telegram command handlers, reusable repository abstractions, Docker/Compose setup, and JUnit scraper tests"
+          - "Ported operational bot to serverless Node.js with Upstash Redis, Vercel Cron, webhook/cron request validation, and GitHub Actions syntax/leak checks"
       - name: "[Gomoku](https://github.com/tiennm99/gomoku)"
         date: 2026
-        summary: Multiplayer Gomoku game with Go WebSocket backend, protobuf messaging, Docker support, PVP/PVE/spectator modes, and Phaser client.
+        summary: Multiplayer Gomoku game with authoritative Go WebSocket backend, protobuf binary messages, Docker Compose, GitHub Actions CI, and Phaser client.
         highlights:
+          - "Designed server-authoritative gameplay with move validation, win detection, PVP/PVE/spectator modes, per-player state machine, and minimax AI"
+          - "Covered game, lobby, network codec, and state flows with Go tests; CI runs go vet, go test, server build, and client build"
       - name: "[Rplace](https://github.com/tiennm99/rplace)"
         date: 2026
-        summary: Collaborative pixel-art canvas using Svelte, Hono, Cloudflare Workers, and Durable Object SQLite.
+        summary: Collaborative pixel canvas on Cloudflare Workers using Durable Object SQLite storage, WebSocket pixel broadcasts, edge validation, and Svelte client.
         highlights:
-      - name: "[DB Keepalive](https://github.com/tiennm99/db-keepalive)"
-        date: 2026
-        summary: Pluggable Go daemon for keeping free-tier database clusters active across Redis, Valkey, PostgreSQL, MySQL, MongoDB, and Couchbase.
-        highlights:
+          - "Implemented batch pixel placement, per-user cooldowns, real-time broadcast, and 4096x4096 canvas chunking"
+          - "Added Vitest coverage for worker validation, Durable Object storage, canvas loading, cookies, WebSocket behavior, and rate limits"
     skills:
       - label: Languages
         details: Java, Go, JavaScript/TypeScript, Shell
       - label: Frameworks & Libraries
-        details: Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot
+        details: Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot, WebSocket
       - label: Databases
         details: Couchbase, Redis, MySQL, Kafka, ClickHouse
       - label: Infrastructure & DevOps
-        details: Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda/SAM, Cloudflare Workers
+        details: Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda/SAM, Cloudflare Workers, Vercel
       - label: Architecture
-        details: Object-oriented design, game server architecture, real-time multiplayer systems, event-driven design, clean reusable code
+        details: Object-oriented design, reusable backend components, game server architecture, real-time multiplayer systems, event-driven design
       - label: Delivery Practices
-        details: Unit testing, code review, production debugging, CI/CD, AI-assisted development workflows
+        details: Unit testing, code review, production debugging, CI/CD, DevOps collaboration, AI-assisted development workflows
       - label: Languages (Spoken)
         details: Vietnamese (Native), English (TOEIC 600+)
 design:
