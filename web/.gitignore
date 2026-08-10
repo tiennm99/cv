@@ -1,9 +1,0 @@
-.idea
-
-
-*.gem
-.bundle
-.sass-cache
-_site
-Gemfile.lock
-*.code-workspace
