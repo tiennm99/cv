@@ -29,13 +29,13 @@ cv:
           - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), [Show](https://play.google.com/store/apps/details?id=zps.games.show), and [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Diagnosed and fixed live concurrency issues; maintained backend gameplay events, payment/config updates, metrics, and release support"
           - "Built an internal Claude Code plugin/skill marketplace and Java game-server scaffolding guidance, standardizing packet-handler generation, framework usage, and AI-assisted delivery workflows"
     projects:
-      - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)"
+      - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot/tree/e794000df38c35d3e1a9aa0545d4573a2298a8a9)"
         start_date: 2025-11
         end_date: present
         summary: Telegram bot for tracking Apple App Store and Google Play app updates; original Java 21 implementation later ported to Node.js/Vercel.
         highlights:
           - "Built Java bot with Gradle, MongoDB, command-pattern Telegram handlers, reusable repository abstractions, Docker Compose, and JUnit scraper tests; ported to serverless Node.js with Upstash Redis, Vercel Cron, and GitHub Actions checks"
-      - name: "[Gomoku](https://github.com/tiennm99/gomoku)"
+      - name: "[Gomoku](https://github.com/tiennm99dev/gomoku)"
         date: 2026
         summary: Multiplayer Gomoku game with authoritative Go WebSocket backend, protobuf binary messages, Docker Compose, GitHub Actions CI, and Phaser client.
         highlights:

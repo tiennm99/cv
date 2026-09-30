@@ -29,7 +29,7 @@ Progressed from Game Programming Fresher to Senior Software Engineer over 5+ yea
 
 
 # Projects
-## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot-java)**
+## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot/tree/e794000df38c35d3e1a9aa0545d4573a2298a8a9)**
 
 Nov 2025 – present
 
@@ -39,7 +39,7 @@ Telegram bot for tracking Apple App Store and Google Play app updates; original 
 
 
 
-## **[Gomoku](https://github.com/tiennm99/gomoku)**
+## **[Gomoku](https://github.com/tiennm99dev/gomoku)**
 
 2026
 

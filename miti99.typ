@@ -132,7 +132,7 @@
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99/store-scraper-bot")[Store Scraper Bot] \/ #link("https://github.com/tiennm99/store-scraper-bot-java")[Java original]]
+    #strong[#link("https://github.com/tiennm99/store-scraper-bot")[Store Scraper Bot] \/ #link("https://github.com/tiennm99/store-scraper-bot/tree/e794000df38c35d3e1a9aa0545d4573a2298a8a9")[Java original]]
 
   ],
   [
@@ -149,7 +149,7 @@
 
 #regular-entry(
   [
-    #strong[#link("https://github.com/tiennm99/gomoku")[Gomoku]]
+    #strong[#link("https://github.com/tiennm99dev/gomoku")[Gomoku]]
 
   ],
   [
