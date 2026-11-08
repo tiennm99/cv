@@ -56,3 +56,27 @@ test('reports malformed YAML and duplicate keys clearly', async () => {
     }
   } finally { await rm(directory, { recursive: true, force: true }); }
 });
+
+test('rejects HTTP URLs whose authority would require parser repair', () => {
+  for (const website of [
+    'https:example.com', 'https:/example.com', 'https:///example.com',
+    'https:////example.com', 'https:\\example.com', 'https://\\example.com',
+    'https://example.com\\path',
+  ]) {
+    const input = fresh();
+    input.cv.website = website;
+    assert.throws(() => validateCvDocument(input), /cv.website/, website);
+    const markdownInput = fresh();
+    markdownInput.cv.sections.projects[0].summary = `[project](<${website}>)`;
+    assert.throws(() => validateCvDocument(markdownInput), /summary/, website);
+  }
+});
+
+test('accepts explicit case-insensitive HTTP authorities without changing them', () => {
+  for (const website of ['HTTPS://EXAMPLE.com:443/Path?A=1&B=2', 'http://EXAMPLE.com:80/', 'https://[::1]:443/path']) {
+    const input = fresh();
+    input.cv.website = website;
+    input.cv.sections.projects[0].summary = `[project](${website})`;
+    assert.equal(validateCvDocument(input).website, website);
+  }
+});

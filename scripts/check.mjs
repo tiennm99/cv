@@ -3,6 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { readFile, readdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import MarkdownIt from 'markdown-it';
+import { normalizedLinks, pdfUrlLinks } from '../src/link-checks.mjs';
 import { loadCv } from '../src/load-cv.mjs';
 import { launchBrowser } from '../src/browser.mjs';
 import { createPreviewServer } from './preview.mjs';
@@ -15,7 +16,7 @@ assert.match(info, /Pages:\s+1\b/, 'PDF must fit one page');
 assert.match(info, /Page size:\s+612 x 792 pts/, 'PDF must use US Letter');
 assert.match(info, /Tagged:\s+yes/, 'PDF must be tagged');
 const pdfText = execFileSync('pdftotext', ['-layout', pdfPath, '-'], { encoding: 'utf8' });
-const pdfLinks = execFileSync('pdfinfo', ['-url', pdfPath], { encoding: 'utf8' });
+const pdfLinks = pdfUrlLinks(execFileSync('pdfinfo', ['-url', pdfPath], { encoding: 'utf8' }));
 assert.deepEqual((await readdir(new URL('dist/', root))).sort(), ['index.html', 'miti99.pdf']);
 for (const name of ['index.html', 'miti99.pdf']) assert.deepEqual(await readFile(new URL(name, root)), await readFile(new URL(`dist/${name}`, root)));
 
@@ -41,7 +42,7 @@ collect(cv);
 for (const social of cv.social_networks) links.add(social.network === 'GitHub' ? `https://github.com/${social.username}` : `https://linkedin.com/in/${social.username}`);
 const normalize = value => value.normalize('NFKC').replace(/[\s\u00ad]/g, '').toLowerCase();
 for (const expected of text) assert.ok(normalize(pdfText).includes(normalize(expected)), 'PDF lost source text');
-for (const expected of links) assert.ok(pdfLinks.includes(expected), `PDF lost link: ${expected}`);
+for (const expected of normalizedLinks(links)) assert.ok(pdfLinks.has(expected), `PDF lost link: ${expected}`);
 
 const server = createPreviewServer();
 const browser = await launchBrowser();
@@ -57,8 +58,8 @@ try {
   assert.equal(await page.locator('link[href^="http"], [src^="http"]').count(), 0, 'Public page must be self-contained');
   const htmlText = await page.locator('body').innerText();
   for (const expected of text) assert.ok(normalize(htmlText).includes(normalize(expected)), 'HTML lost source text');
-  const htmlLinks = await page.locator('a[href]').evaluateAll(anchors => anchors.map(anchor => anchor.getAttribute('href')));
-  for (const expected of links) assert.ok(htmlLinks.includes(expected), `HTML lost link: ${expected}`);
+  const htmlLinks = normalizedLinks(await page.locator('a[href]').evaluateAll(anchors => anchors.map(anchor => anchor.href)));
+  for (const expected of normalizedLinks(links)) assert.ok(htmlLinks.has(expected), `HTML lost link: ${expected}`);
   for (const width of [375, 768, 1440]) {
     await page.setViewportSize({ width, height: 1000 });
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Horizontal overflow at ${width}px`);

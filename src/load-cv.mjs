@@ -4,6 +4,8 @@ import MarkdownIt from 'markdown-it';
 
 const markdown = new MarkdownIt({ html: false });
 markdown.validateLink = () => true;
+// Validate the destination before Markdown percent-encodes malformed characters.
+markdown.normalizeLink = value => value;
 const fail = (path, message) => { throw new Error(`${path}: ${message}`); };
 const object = (value, path, keys) => {
   if (!value || typeof value !== 'object' || Array.isArray(value)) fail(path, 'expected a mapping');
@@ -22,7 +24,7 @@ const text = (value, path) => {
 };
 function url(value, path) {
   try {
-    if (typeof value !== 'string' || /[\s\u0000-\u001f]/.test(value)) throw new Error();
+    if (typeof value !== 'string' || !/^https?:\/\/[^/\\]/i.test(value) || /[\s\u0000-\u001f\\]/.test(value)) throw new Error();
     const parsed = new URL(value);
     if (!['https:', 'http:'].includes(parsed.protocol) || !parsed.hostname || parsed.username || parsed.password) throw new Error();
   } catch { fail(path, 'expected an absolute HTTP(S) URL without credentials'); }
