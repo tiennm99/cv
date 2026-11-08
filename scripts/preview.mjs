@@ -1,5 +1,6 @@
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 
 export function createPreviewServer() {
   return createServer(async (request, response) => {
@@ -19,7 +20,7 @@ export function createPreviewServer() {
   });
 }
 
-if (process.argv[1] && import.meta.url === new URL(process.argv[1], 'file:').href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const server = createPreviewServer();
   server.on('error', error => { console.error(`Preview failed: ${error.message}`); process.exitCode = 1; });
   server.listen(4173, '127.0.0.1', () => console.log('CV preview: http://127.0.0.1:4173'));
