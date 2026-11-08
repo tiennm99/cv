@@ -1,9 +1,9 @@
 ---
-title: "Phase 1: Start"
-status: todo
+title: "Node build and layout"
+status: completed
 ---
 
-# Phase 1: Start
+# Node build and layout
 
 ## Overview
 

@@ -16,6 +16,11 @@ An isolated reviewer inspected the integrated source, CI, README, data parity,
 and PDF raster. No actionable findings or blockers remained. The requested
 generated HTML was rebuilt after its trailing-whitespace correction.
 
+The [PR Linux build](https://github.com/tiennm99/cv/actions/runs/42497954734)
+passed, verifying the locked dependencies and Playwright-installed Chromium in
+GitHub Actions. The deployment job was skipped. Delivery is
+[PR #4](https://github.com/tiennm99/cv/pull/4); it remains unmerged.
+
 Reversible decisions: retain YAML for existing content editing; use Node and
 Playwright instead of a mixed-language pipeline; share the semantic document
 between screen and print; deploy only `dist/`; use explicit browser setup and

@@ -1,7 +1,7 @@
 ---
 title: "Replace RenderCV with a Node.js web and PDF build"
 description: "Preserve the CV content while generating a responsive website and compact PDF without Python."
-status: in-progress
+status: completed
 priority: P1
 effort: "3h"
 branch: feature/cv-rewrite-with-codex
@@ -32,20 +32,24 @@ services are out of scope. The user confirmed scope and reported prerequisites r
 
 | # | Phase | Status |
 |---|-------|--------|
-| 1 | [Phase 1: Start](./phase-01-start.md) | Pending |
+| 1 | [Node build and layout](./phase-01-start.md) | Completed |
+| 2 | [Integration and PR](./phase-02-integrate-and-publish.md) | Completed |
 
 ## Success Criteria
 
-- [ ] All original CV text and links preserved in the integrated outputs.
-- [ ] Website works at 375, 768, and 1440px with a working PDF download.
-- [ ] Current CV PDF is readable, selectable, and checked for pagination.
-- [ ] Python/RenderCV dependencies and CI removed; Node commands documented.
-- [ ] Unit and integration checks pass; independent review has no blockers.
-- [ ] PR opened, issue labelled done, temporary processes/worktrees removed.
+- [x] All original CV text and links preserved in the integrated outputs.
+- [x] Website works at 375, 768, and 1440px with a working PDF download.
+- [x] Current CV PDF is readable, selectable, and checked for pagination.
+- [x] Python/RenderCV dependencies and CI removed; Node commands documented.
+- [x] Unit and integration checks pass; independent review has no blockers.
+- [x] PR opened, issue labelled done, temporary processes/worktrees removed.
 
 ## Evidence
 
 - Issue: https://github.com/tiennm99/cv/issues/3
+- PR: https://github.com/tiennm99/cv/pull/4 (unmerged).
+- Linux CI passed: https://github.com/tiennm99/cv/actions/runs/42497954734;
+  the deployment job was skipped as intended for a pull request.
 - Original and migrated `cv` mappings compare deeply equal.
 - `npm test`: four tests passed outside sandbox subprocess restrictions.
 - `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/google-chrome npm run check`:

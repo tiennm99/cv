@@ -1,9 +1,9 @@
 ---
-title: "Phase 2: integrate-and-publish"
-status: todo
+title: "Integration and PR"
+status: completed
 ---
 
-# Phase 2: integrate-and-publish
+# Integration and PR
 
 ## Overview
 
@@ -12,8 +12,8 @@ merging or deploying. Depends on [implementation](phase-01-start.md).
 
 ## Requirements
 
-- [ ] Independent review has no blocking findings.
-- [ ] PR and issue state match the verified delivery state.
+- [x] Independent review has no blocking findings.
+- [x] PR and issue state match the verified delivery state.
 
 ## Implementation Steps
 
@@ -25,9 +25,10 @@ merging or deploying. Depends on [implementation](phase-01-start.md).
 
 ## Todo
 
-- [ ] Integrated verification and isolated review clean.
-- [ ] PR opened and CI verified.
-- [ ] Temporary worktrees/processes/artifacts cleaned.
+- [x] Integrated verification and isolated review clean.
+- [x] PR opened and CI verified: [PR #4](https://github.com/tiennm99/cv/pull/4),
+  [successful Linux build](https://github.com/tiennm99/cv/actions/runs/42497954734).
+- [x] Temporary worktrees removed; no task-owned background process remains.
 
 ## Success Criteria
 
