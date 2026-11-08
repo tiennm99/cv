@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test test/*.test.mjs",
-    "check": "npm run build && node scripts/check.mjs",
+    "check": "npm run build && node scripts/check.mjs && node scripts/check-url-regressions.mjs",
     "preview": "node scripts/preview.mjs"
   },
   "dependencies": {

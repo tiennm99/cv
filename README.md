@@ -34,6 +34,9 @@ alongside content or presentation changes. `dist/` contains only the two public
 files and is the GitHub Pages deployment artifact; source files and plans are
 not published.
 
+Website URLs must include an explicit `http://` or `https://` prefix; malformed
+forms such as `https:example.com` fail validation before generation.
+
 The `cv` mapping in `miti99.yml` is the single content source. It contains contact
 details, social links, experience, projects, skills, and education. Existing
 Markdown links in summaries, names, and highlights are supported. Screen and
@@ -66,8 +69,10 @@ npm run check
 
 The first command runs focused unit tests. The second builds both outputs and
 checks the website in Chromium at mobile, tablet, and desktop sizes, validates
-the PDF download, and inspects PDF text and pagination. Both generation and
-checks use the browser override above when it is set.
+the PDF download, and inspects PDF text and pagination. It also renders a
+temporary HTML/PDF variant to verify equivalent URL spellings, including
+uppercase hostnames and default ports, without modifying the CV source.
+Both generation and checks use the browser override above when it is set.
 
 ## GitHub Pages
 
@@ -76,4 +81,5 @@ runs tests and output checks, and uploads only `dist/`. Pull requests and manual
 workflow runs build and verify the outputs. A successful push to `main` also
 deploys the resulting artifact to GitHub Pages. In repository settings, select
 **GitHub Actions** as the Pages build source. The workflow does not commit
-generated files or require Python or RenderCV.
+generated files or require Python or RenderCV. A separate Windows job verifies
+native preview startup; deployment requires both Linux and Windows checks.
