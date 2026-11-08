@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Tien Nguyen Minh
-  headline: Senior Java Software Engineer | Java 21, Real-Time Backends, CI/CD, AI-Assisted Delivery
-  location: HCMC, Vietnam
+  headline: Senior Java Software Engineer | Real-Time Backends
+  location: Ho Chi Minh City, Vietnam
   email: tiennm99@outlook.com
   phone: (+84) 869 156 149
   website: https://miti99.com/
@@ -11,65 +11,59 @@ cv:
       username: miti99
     - network: GitHub
       username: tiennm99
-    - network: Telegram
-      username: tiennm5
   sections:
     experience:
       - company: ZingPlay Game Studios, VNG Corp.
         position: Senior Software Engineer
-        date:
         start_date: 2020-07
         end_date: present
         location: HCMC, Vietnam
-        summary: Progressed from Game Programming Fresher to Senior Software Engineer over 5+ years building and operating production backends for real-time multiplayer games, collaborating daily with client, QA, release, and product stakeholders.
+        summary: Progressed from an entry-level game programmer to Senior Software Engineer, building and maintaining Java backends for multiplayer games since 2020. Work with client developers, QA, release teams, and product stakeholders to deliver and support live games.
         highlights:
-          - "[Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Built and operated gameplay systems, battle synchronization, matchmaking, payments/webpay, admin tooling, automated tests, and delivery pipelines as primary Java backend contributor"
-          - "Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used automated tests around gameplay, payment, and release-critical flows"
-          - "Applied OOP and design patterns to reusable packet handlers, gameplay workflows, payment/config modules, and admin tooling for live products"
-          - "[Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), [Show](https://play.google.com/store/apps/details?id=zps.games.show), and [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Diagnosed and fixed live concurrency issues; maintained backend gameplay events, payment/config updates, metrics, and release support"
-          - "Built an internal Claude Code plugin/skill marketplace and Java game-server scaffolding guidance, standardizing packet-handler generation, framework usage, and AI-assisted delivery workflows"
+          - "Developed gameplay, battle synchronization, matchmaking, payments, and admin tools for [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2) as a primary Java backend contributor, using Java 21, Netty, Vert.x, Couchbase, Redis, and Kafka."
+          - "Diagnosed and fixed production concurrency issues; maintained gameplay events, payment integrations, configuration, and metrics for [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), [Show](https://play.google.com/store/apps/details?id=zps.games.show), and [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js)."
+          - "Investigated high CPU usage and memory pressure using JVM thread dumps, heap analysis, and GC logs; built load-testing tools to reproduce game-server workloads."
+          - "Built reusable packet handlers and gameplay modules; added JUnit 5 and Mockito tests for gameplay and payments, Docker-based local dependencies, and Gradle/GitLab CI delivery pipelines."
+          - "Created an internal Claude Code plugin and skill marketplace with Java server scaffolding guidance to standardize packet-handler generation and AI-assisted development."
     projects:
-      - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot/tree/e794000df38c35d3e1a9aa0545d4573a2298a8a9)"
+      - name: "[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot)"
         start_date: 2025-11
         end_date: present
-        summary: Telegram bot for tracking Apple App Store and Google Play app updates; original Java 21 implementation later ported to Node.js/Vercel.
+        summary: Telegram bot that tracks app updates on the Apple App Store and Google Play.
         highlights:
-          - "Built Java bot with Gradle, MongoDB, command-pattern Telegram handlers, reusable repository abstractions, Docker Compose, and JUnit scraper tests; ported to serverless Node.js with Upstash Redis, Vercel Cron, and GitHub Actions checks"
+          - "Built the [original Java 21 implementation](https://github.com/tiennm99/store-scraper-bot/tree/e794000df38c35d3e1a9aa0545d4573a2298a8a9) with MongoDB, command-based handlers, reusable repositories, Gradle, Docker Compose, and JUnit scraper tests. Ported it to Node.js on Vercel with Upstash Redis, Vercel Cron, and GitHub Actions."
       - name: "[Gomoku](https://github.com/tiennm99dev/gomoku)"
         date: 2026
-        summary: Multiplayer Gomoku game with authoritative Go WebSocket backend, protobuf binary messages, Docker Compose, GitHub Actions CI, and Phaser client.
+        summary: Multiplayer Gomoku game with a Go WebSocket server, Protocol Buffers messages, and a Phaser client.
         highlights:
-          - "Designed server-authoritative gameplay (move validation, win detection, PVP/PVE/spectator modes, minimax AI with alpha-beta pruning) with Go tests over game, lobby, and codec flows; CI runs vet, tests, and builds"
+          - "Implemented server-side move validation, win detection, player and spectator modes, and a minimax AI with alpha-beta pruning. Added game, lobby, and codec tests, Docker Compose, and GitHub Actions for vet, tests, and builds."
       - name: "[miti99bot](https://github.com/tiennm99/miti99bot)"
         start_date: 2026-05
         end_date: present
-        summary: Modular Go Telegram bot framework on AWS Lambda (SAM) with pluggable KV storage providers (Firestore/DynamoDB) and AI integration with rate limiting.
+        summary: Modular Go Telegram bot framework deployed to AWS Lambda with AWS SAM.
         highlights:
-          - "Covered modules, storage providers, and AI rate limiting with 53 Go test files; GitHub Actions CI plus OIDC-authenticated AWS deploy pipeline"
+          - "Built pluggable Firestore and DynamoDB storage providers and rate-limited AI integrations. Added 53 Go test files covering modules, storage, and rate limiting, plus GitHub Actions CI and OIDC-authenticated AWS deployments."
     skills:
       - label: Languages
         details: Java, Go, JavaScript/TypeScript, Shell
       - label: Frameworks & Libraries
-        details: Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot, WebSocket
+        details: Netty, Vert.x, Spring Boot, WebSocket, Cocos2d-x, Godot
       - label: Data & Messaging
         details: Couchbase, Redis, MySQL, Kafka, ClickHouse
       - label: Infrastructure & DevOps
-        details: Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda/SAM, Cloudflare Workers, Vercel
-      - label: Architecture
-        details: OOP and design patterns, reusable components, real-time multiplayer game-server architecture, event-driven design
-      - label: Delivery Practices
-        details: Unit testing, code review, production debugging, continuous integration and delivery (CI/CD), DevOps collaboration, AI-assisted development workflows
+        details: Docker, Linux, GitLab CI, GitHub Actions, AWS Lambda/SAM, Cloudflare Workers, Vercel
+      - label: Testing & Engineering
+        details: JUnit 5, Mockito, unit testing, code review, production debugging, CI/CD, OOP, design patterns, event-driven architecture, AI-assisted development
     education:
       - institution: Ho Chi Minh City University of Technology
         area: Computer Science and Engineering
         degree: B.E.
-        date:
         start_date: 2017-09
         end_date: 2023-06
         location: HCMC, Vietnam
         highlights:
-          - "GPA: 8.0/10 — Academic Excellence Scholarship; Five Good Student Award"
-          - "Thesis: Survival2D — multiplayer Battle Royale game server in Java (Netty/WebSocket) with authoritative architecture, FlatBuffers serialization, behavior-tree AI bots, and server-side anti-cheat"
+          - "GPA: 8.0/10; Academic Excellence Scholarship; Five Good Student Award."
+          - "Thesis: Survival2D, a multiplayer battle royale server built with Java, Netty/WebSocket, FlatBuffers, behavior-tree AI, and server-side anti-cheat."
 design:
   theme: engineeringresumes
   page:
@@ -256,7 +250,7 @@ locale:
   #   - November
   #   - December
 settings:
-  current_date: "2026-06-11"
+  current_date: "2026-11-08"
   render_command:
     design:
     locale:

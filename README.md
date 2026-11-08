@@ -2,11 +2,10 @@
 
 - Phone: +84 869 156 149
 - Email: [tiennm99@outlook.com](mailto:tiennm99@outlook.com)
-- Location: HCMC, Vietnam
+- Location: Ho Chi Minh City, Vietnam
 - Website: [miti99.com](https://miti99.com/)
 - LinkedIn: [miti99](https://linkedin.com/in/miti99)
 - GitHub: [tiennm99](https://github.com/tiennm99)
-- Telegram: [tiennm5](https://t.me/tiennm5)
 
 
 # Experience
@@ -14,28 +13,28 @@
 
 July 2020 – present
 
-Progressed from Game Programming Fresher to Senior Software Engineer over 5+ years building and operating production backends for real-time multiplayer games, collaborating daily with client, QA, release, and product stakeholders.
+Progressed from an entry-level game programmer to Senior Software Engineer, building and maintaining Java backends for multiplayer games since 2020. Work with client developers, QA, release teams, and product stakeholders to deliver and support live games.
 
-- [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2): Built and operated gameplay systems, battle synchronization, matchmaking, payments/webpay, admin tooling, automated tests, and delivery pipelines as primary Java backend contributor
+- Developed gameplay, battle synchronization, matchmaking, payments, and admin tools for [Chaos Age 2](https://play.google.com/store/apps/details?id=vn.zps.tl2) as a primary Java backend contributor, using Java 21, Netty, Vert.x, Couchbase, Redis, and Kafka.
 
-- Built and maintained Java 21 backend modules with Netty/Vert.x, Couchbase, Redis, Kafka, Gradle, JUnit 5, Mockito, Docker-based local dependencies, and GitLab CI pipelines; used automated tests around gameplay, payment, and release-critical flows
+- Diagnosed and fixed production concurrency issues; maintained gameplay events, payment integrations, configuration, and metrics for [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), [Show](https://play.google.com/store/apps/details?id=zps.games.show), and [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js).
 
-- Applied OOP and design patterns to reusable packet handlers, gameplay workflows, payment/config modules, and admin tooling for live products
+- Investigated high CPU usage and memory pressure using JVM thread dumps, heap analysis, and GC logs; built load-testing tools to reproduce game-server workloads.
 
-- [Burkozel](https://play.google.com/store/apps/details?id=zps.games.burkozel), [Show](https://play.google.com/store/apps/details?id=zps.games.show), and [Sky Garden](https://play.google.com/store/apps/details?id=vn.kvtm.js): Diagnosed and fixed live concurrency issues; maintained backend gameplay events, payment/config updates, metrics, and release support
+- Built reusable packet handlers and gameplay modules; added JUnit 5 and Mockito tests for gameplay and payments, Docker-based local dependencies, and Gradle/GitLab CI delivery pipelines.
 
-- Built an internal Claude Code plugin/skill marketplace and Java game-server scaffolding guidance, standardizing packet-handler generation, framework usage, and AI-assisted delivery workflows
+- Created an internal Claude Code plugin and skill marketplace with Java server scaffolding guidance to standardize packet-handler generation and AI-assisted development.
 
 
 
 # Projects
-## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot) / [Java original](https://github.com/tiennm99/store-scraper-bot/tree/e794000df38c35d3e1a9aa0545d4573a2298a8a9)**
+## **[Store Scraper Bot](https://github.com/tiennm99/store-scraper-bot)**
 
 Nov 2025 – present
 
-Telegram bot for tracking Apple App Store and Google Play app updates; original Java 21 implementation later ported to Node.js/Vercel.
+Telegram bot that tracks app updates on the Apple App Store and Google Play.
 
-- Built Java bot with Gradle, MongoDB, command-pattern Telegram handlers, reusable repository abstractions, Docker Compose, and JUnit scraper tests; ported to serverless Node.js with Upstash Redis, Vercel Cron, and GitHub Actions checks
+- Built the [original Java 21 implementation](https://github.com/tiennm99/store-scraper-bot/tree/e794000df38c35d3e1a9aa0545d4573a2298a8a9) with MongoDB, command-based handlers, reusable repositories, Gradle, Docker Compose, and JUnit scraper tests. Ported it to Node.js on Vercel with Upstash Redis, Vercel Cron, and GitHub Actions.
 
 
 
@@ -43,9 +42,9 @@ Telegram bot for tracking Apple App Store and Google Play app updates; original 
 
 2026
 
-Multiplayer Gomoku game with authoritative Go WebSocket backend, protobuf binary messages, Docker Compose, GitHub Actions CI, and Phaser client.
+Multiplayer Gomoku game with a Go WebSocket server, Protocol Buffers messages, and a Phaser client.
 
-- Designed server-authoritative gameplay (move validation, win detection, PVP/PVE/spectator modes, minimax AI with alpha-beta pruning) with Go tests over game, lobby, and codec flows; CI runs vet, tests, and builds
+- Implemented server-side move validation, win detection, player and spectator modes, and a minimax AI with alpha-beta pruning. Added game, lobby, and codec tests, Docker Compose, and GitHub Actions for vet, tests, and builds.
 
 
 
@@ -53,31 +52,29 @@ Multiplayer Gomoku game with authoritative Go WebSocket backend, protobuf binary
 
 May 2026 – present
 
-Modular Go Telegram bot framework on AWS Lambda (SAM) with pluggable KV storage providers (Firestore/DynamoDB) and AI integration with rate limiting.
+Modular Go Telegram bot framework deployed to AWS Lambda with AWS SAM.
 
-- Covered modules, storage providers, and AI rate limiting with 53 Go test files; GitHub Actions CI plus OIDC-authenticated AWS deploy pipeline
+- Built pluggable Firestore and DynamoDB storage providers and rate-limited AI integrations. Added 53 Go test files covering modules, storage, and rate limiting, plus GitHub Actions CI and OIDC-authenticated AWS deployments.
 
 
 
 # Skills
 **Languages:** Java, Go, JavaScript/TypeScript, Shell
 
-**Frameworks & Libraries:** Netty, Vert.x, Spring Boot, JUnit 5, Mockito, Cocos2d-x, Godot, WebSocket
+**Frameworks & Libraries:** Netty, Vert.x, Spring Boot, WebSocket, Cocos2d-x, Godot
 
 **Data & Messaging:** Couchbase, Redis, MySQL, Kafka, ClickHouse
 
-**Infrastructure & DevOps:** Docker, GitLab CI, GitHub Actions, Linux, AWS Lambda/SAM, Cloudflare Workers, Vercel
+**Infrastructure & DevOps:** Docker, Linux, GitLab CI, GitHub Actions, AWS Lambda/SAM, Cloudflare Workers, Vercel
 
-**Architecture:** OOP and design patterns, reusable components, real-time multiplayer game-server architecture, event-driven design
-
-**Delivery Practices:** Unit testing, code review, production debugging, continuous integration and delivery (CI/CD), DevOps collaboration, AI-assisted development workflows
+**Testing & Engineering:** JUnit 5, Mockito, unit testing, code review, production debugging, CI/CD, OOP, design patterns, event-driven architecture, AI-assisted development
 
 # Education
 ## **Ho Chi Minh City University of Technology**, B.E. in Computer Science and Engineering -- HCMC, Vietnam
 Sept 2017 – June 2023
 
-- GPA: 8.0/10 — Academic Excellence Scholarship; Five Good Student Award
+- GPA: 8.0/10; Academic Excellence Scholarship; Five Good Student Award.
 
-- Thesis: Survival2D — multiplayer Battle Royale game server in Java (Netty/WebSocket) with authoritative architecture, FlatBuffers serialization, behavior-tree AI bots, and server-side anti-cheat
+- Thesis: Survival2D, a multiplayer battle royale server built with Java, Netty/WebSocket, FlatBuffers, behavior-tree AI, and server-side anti-cheat.
 
 
