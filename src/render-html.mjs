@@ -98,5 +98,5 @@ export function renderHtml(cv, css) {
     </main>
   </div>
 </body>
-</html>\n`;
+</html>\n`.replace(/[\t ]+$/gm, '');
 }
