@@ -73,7 +73,7 @@ Modular Go Telegram bot framework deployed to AWS Lambda with AWS SAM.
 ## **Ho Chi Minh City University of Technology**, B.E. in Computer Science and Engineering -- HCMC, Vietnam
 Sept 2017 – June 2023
 
-- GPA: 8.0/10; Academic Excellence Scholarship; Five Good Student Award.
+- GPA: 8.14/10; Academic Excellence Scholarship; Five Good Student Award.
 
 - Thesis: Survival2D, a multiplayer battle royale server built with Java, Netty/WebSocket, FlatBuffers, behavior-tree AI, and server-side anti-cheat.
 

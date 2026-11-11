@@ -204,7 +204,7 @@
 
   ],
   main-column-second-row: [
-    - GPA: 8.0\/10; Academic Excellence Scholarship; Five Good Student Award.
+    - GPA: 8.14\/10; Academic Excellence Scholarship; Five Good Student Award.
 
     - Thesis: Survival2D, a multiplayer battle royale server built with Java, Netty\/WebSocket, FlatBuffers, behavior-tree AI, and server-side anti-cheat.
 
