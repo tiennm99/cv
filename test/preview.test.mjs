@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { spawn, execFile } from 'node:child_process';
 import { once } from 'node:events';
+import { createServer } from 'node:net';
 import { copyFile, mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -8,15 +9,28 @@ import { promisify } from 'node:util';
 import { pathToFileURL } from 'node:url';
 import { test } from 'node:test';
 
+/** @returns {Promise<number>} A free local port (the default 4173 may be taken). */
+async function freePort() {
+  const server = createServer();
+  server.listen(0, '127.0.0.1');
+  await once(server, 'listening');
+  const { port } = server.address();
+  server.close();
+  await once(server, 'close');
+  return port;
+}
+
 test('preview entrypoint supports filesystem paths and remains safe to import', async t => {
   const directory = await mkdtemp(join(tmpdir(), 'cv-preview-#%-'));
   const script = join(directory, 'scripts', 'preview.mjs');
   const html = '<!doctype html><title>Preview fixture</title>';
   try {
     await mkdir(join(directory, 'scripts'));
-    await mkdir(join(directory, 'dist'));
+    await mkdir(join(directory, 'dist', 'assets'), { recursive: true });
     await copyFile(new URL('../scripts/preview.mjs', import.meta.url), script);
     await writeFile(join(directory, 'dist', 'index.html'), html);
+    await writeFile(join(directory, 'dist', 'assets', 'app.js'), 'export {};');
+    await writeFile(join(directory, 'secret.txt'), 'outside dist');
 
     await t.test('import exits without starting the server', async () => {
       const { stdout, stderr } = await promisify(execFile)(process.execPath,
@@ -28,7 +42,9 @@ test('preview entrypoint supports filesystem paths and remains safe to import', 
 
     for (const entrypoint of [script, join('scripts', 'preview.mjs')]) {
       await t.test(`serves files when invoked with ${entrypoint === script ? 'an absolute' : 'a relative'} path`, async () => {
-        const child = spawn(process.execPath, [entrypoint], { cwd: directory, stdio: ['ignore', 'pipe', 'pipe'] });
+        const port = await freePort();
+        const origin = `http://127.0.0.1:${port}`;
+        const child = spawn(process.execPath, [entrypoint], { cwd: directory, stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env, PORT: String(port) } });
         const exited = once(child, 'exit');
         let output = '';
         let startupTimer;
@@ -38,15 +54,23 @@ test('preview entrypoint supports filesystem paths and remains safe to import', 
             child.on('error', reject);
             child.stdout.on('data', chunk => {
               output += chunk;
-              if (output.includes('CV preview: http://127.0.0.1:4173')) resolve();
+              if (output.includes(`CV preview: ${origin}/cv/`)) resolve();
             });
             child.stderr.on('data', chunk => { output += chunk; });
             exited.then(([code, signal]) => reject(new Error(`Preview exited before startup (${code}, ${signal}): ${output}`)), reject);
           });
           clearTimeout(startupTimer);
-          const response = await fetch('http://127.0.0.1:4173', { signal: AbortSignal.timeout(5000) });
-          assert.equal(response.status, 200);
-          assert.equal(await response.text(), html);
+          const get = path => fetch(`${origin}${path}`, { signal: AbortSignal.timeout(5000), redirect: 'manual' });
+          for (const path of ['/cv/', '/']) {
+            const response = await get(path);
+            assert.equal(response.status, 200);
+            assert.equal(await response.text(), html);
+          }
+          const asset = await get('/cv/assets/app.js');
+          assert.equal(asset.status, 200);
+          assert.match(asset.headers.get('content-type'), /javascript/);
+          assert.equal((await get('/cv')).status, 301);
+          for (const path of ['/cv/../secret.txt', '/cv/%2e%2e/secret.txt', '/missing.js']) assert.equal((await get(path)).status, 404);
           child.kill('SIGTERM');
           const [code, signal] = await Promise.race([
             exited,

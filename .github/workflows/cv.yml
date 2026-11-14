@@ -1,4 +1,4 @@
-name: Build and deploy CV
+name: Build and deploy site and CV
 
 on:
   push:
@@ -31,13 +31,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y poppler-utils
 
-      - name: Test CV validation and rendering
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests (CV data, preview server, site logic)
         run: npm test
 
-      - name: Build and verify website and PDF
+      - name: Build the landing site and PDF, then check both
         run: npm run check
 
-      - name: Upload public website
+      - name: Upload dist/ (landing site + PDF)
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist
