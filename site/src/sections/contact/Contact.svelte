@@ -26,8 +26,6 @@
   // Ends in a no-break space: SVG drops a trailing plain space, which tightened the seam.
   const ringText = 'Download the CV · PDF · one page ·\u00A0';
 
-  /** Repos renamed since the yml was written, so the PDF's project links resolve to the current repo. */
-  const RENAMED = { 'tiennm99/miti99bot': 'tiennm99/tiennm99bot' };
   /**
    * Display name for a yml project, through the same featured titles the Projects section shows
    * (the yml keeps its own wording; the site never uses miti99 as a product name).
@@ -35,8 +33,7 @@
    * @returns {string} Title shown on the site.
    */
   const projectTitle = project => {
-    const slug = project.url.match(/github\.com\/([^/]+\/[^/#?]+)/)?.[1] ?? '';
-    const repo = RENAMED[slug] ?? slug;
+    const repo = project.url.match(/github\.com\/([^/]+\/[^/#?]+)/)?.[1] ?? '';
     return featured.find(item => item.repo === repo)?.title ?? project.name;
   };
 

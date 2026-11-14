@@ -37,7 +37,7 @@ cv:
         summary: Multiplayer Gomoku game with a Go WebSocket server, Protocol Buffers messages, and a Phaser client.
         highlights:
           - "Implemented server-side move validation, win detection, player and spectator modes, and a minimax AI with alpha-beta pruning. Added game, lobby, and codec tests, Docker Compose, and GitHub Actions for vet, tests, and builds."
-      - name: "[miti99bot](https://github.com/tiennm99/miti99bot)"
+      - name: "[tiennm99bot](https://github.com/tiennm99/tiennm99bot)"
         start_date: 2026-05
         end_date: present
         summary: Modular Go Telegram bot framework deployed to AWS Lambda with AWS SAM.
