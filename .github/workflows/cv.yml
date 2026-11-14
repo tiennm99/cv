@@ -26,7 +26,8 @@ jobs:
         run: npm ci
 
       - name: Set up uv (runs the Typst PDF build)
-        uses: astral-sh/setup-uv@v10
+        # setup-uv publishes no moving major tag after v7, so this is the latest exact release.
+        uses: astral-sh/setup-uv@v10.3.3
         with:
           enable-cache: true
 
