@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tien Nguyen Minh · miti99</title>
+    <meta name="description" content="Tien Nguyen Minh (miti99): senior Java engineer building real-time backends for live multiplayer games, and a builder of public side projects in Go, JavaScript and three.js." />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f5f2ea" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://api.github.com" crossorigin />
+    <script>
+      // Apply the saved theme and motion choice before first paint (keys from lib/ui.svelte.js).
+      try {
+        var theme = localStorage.getItem('ui:theme');
+        if (theme === 'light' || theme === 'invert') document.documentElement.dataset.theme = theme;
+        var motion = localStorage.getItem('ui:motion');
+        if (motion === 'off') document.documentElement.dataset.motion = 'reduced';
+        if (motion === 'on') document.documentElement.dataset.motion = 'full';
+      } catch (error) {
+        // Storage blocked: follow the system preferences.
+      }
+    </script>
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <noscript>
+        <main style="padding: 24px; max-width: 40rem; font-family: system-ui, sans-serif">
+          <h1>Tien Nguyen Minh</h1>
+          <p>Senior Java Software Engineer, real-time backends for live multiplayer games. Ho Chi Minh City, Vietnam.</p>
+          <p><a href="./miti99.pdf" download="Tien-Nguyen-Minh-CV.pdf">Download the CV (PDF)</a></p>
+          <p><a href="https://github.com/tiennm99">GitHub</a> · <a href="https://www.linkedin.com/in/miti99">LinkedIn</a> · <a href="https://miti99.com/">Blog</a></p>
+        </main>
+      </noscript>
+    </div>
+  </body>
+</html>
