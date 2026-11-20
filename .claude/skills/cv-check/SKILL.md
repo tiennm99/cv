@@ -5,9 +5,10 @@ description: Build and check the landing site and the PDF CV (one-page paginatio
 
 # CV Check
 
-The repo builds two outputs into `dist/`: the landing site (`site/`) and
-`miti99.pdf`, typeset by Typst from `miti99.yml` through `pdf/cv.typ` (no
-browser). Preserve all CV content; fix PDF layout in the template, not in the copy. The PDF
+The repo builds into `dist/` the landing site (`site/`), `miti99.pdf`, typeset
+by Typst from `miti99.yml` through `pdf/cv.typ` (no browser), and the
+`llms.txt` / `llms-full.txt` Markdown copies; it also regenerates the root
+`README.md` (`src/build-markdown.mjs`). Preserve all CV content; fix PDF layout in the template, not in the copy. The PDF
 must fit one page.
 
 ## Build and check
@@ -30,7 +31,7 @@ asserts, and `README.md` for setup (uv for the PDF) and the
 To inspect the PDF directly, use `pdfinfo miti99.pdf` and
 `pdftotext -layout miti99.pdf -`. Report the actual page count and check
 result. Look at the PDF for clipping, orphaned headings and readable text even
-when the checks pass. After a content change, the rebuilt root `miti99.pdf` must
+when the checks pass. After a content change, the rebuilt root `miti99.pdf` and `README.md` must
 be committed (the check fails when it differs from `dist/miti99.pdf`).
 
 ## Repair the PDF layout if necessary

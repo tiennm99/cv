@@ -9,7 +9,7 @@ const pdfProject = fileURLToPath(new URL('../pdf/', import.meta.url));
 const markdown = new MarkdownIt({ html: false, linkify: false, typographer: false });
 markdown.disable('image');
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const socialBase = { GitHub: 'https://github.com/', LinkedIn: 'https://linkedin.com/in/' };
+export const socialBase = { GitHub: 'https://github.com/', LinkedIn: 'https://linkedin.com/in/' };
 
 /**
  * Splits inline Markdown into styled text segments.
@@ -41,10 +41,10 @@ const formatDate = value => {
   const [year, month] = String(value).split('-');
   return month ? `${months[Number(month) - 1]} ${year}` : String(value);
 };
-const dates = entry => entry.date !== undefined
+export const dates = entry => entry.date !== undefined
   ? formatDate(entry.date)
   : `${formatDate(entry.start_date)} – ${formatDate(entry.end_date)}`;
-const title = key => key.replace(/_/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase());
+export const title = key => key.replace(/_/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase());
 
 /**
  * Builds the JSON the Typst template lays out. The PDF is for recruiters, so it keeps the phone number.

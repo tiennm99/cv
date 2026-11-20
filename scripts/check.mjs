@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import MarkdownIt from 'markdown-it';
 import { normalizedLinks, pdfUrlLinks } from '../src/link-checks.mjs';
 import { loadCv } from '../src/load-cv.mjs';
+import { llmsFull, llmsTxt, readme } from '../src/build-markdown.mjs';
 
 const root = new URL('../', import.meta.url);
 const cv = await loadCv(new URL('miti99.yml', root));
@@ -45,10 +46,22 @@ for (const expected of normalizedLinks(links)) assert.ok(pdfLinks.has(expected),
 
 // ---------- dist/ layout ----------
 const top = (await readdir(new URL('dist/', root))).sort();
-assert.deepEqual(top, ['assets', 'favicon.svg', 'index.html', 'miti99.pdf'], `Unexpected dist/ entries: ${top.join(', ')}`);
+assert.deepEqual(top, ['assets', 'favicon.svg', 'index.html', 'llms-full.txt', 'llms.txt', 'miti99.pdf'], `Unexpected dist/ entries: ${top.join(', ')}`);
 assert.deepEqual(await readFile(new URL('miti99.pdf', root)), await readFile(pdfPath), 'Root miti99.pdf differs from dist/miti99.pdf; commit the rebuilt PDF');
 await assert.rejects(access(new URL('index.html', root)), 'The old web CV (root index.html) must not come back');
 const html = await readFile(new URL('dist/index.html', root), 'utf8');
+
+// ---------- Markdown copies ----------
+const readmeText = await readFile(new URL('README.md', root), 'utf8');
+assert.equal(readmeText, readme(cv), 'README.md is stale; run npm run build and commit it');
+assert.equal(await readFile(new URL('dist/llms.txt', root), 'utf8'), llmsTxt(cv), 'dist/llms.txt is stale');
+const full = await readFile(new URL('dist/llms-full.txt', root), 'utf8');
+assert.equal(full, llmsFull(cv), 'dist/llms-full.txt is stale');
+for (const source of [full, readmeText]) {
+  const visible = normalize(source.replace(/\[([^\]]*)\]\([^)\s]+\)/g, '$1').replace(/[*`]/g, ''));
+  for (const expected of text.filter(value => value !== cv.phone)) assert.ok(visible.includes(normalize(expected)), `Markdown copy lost source text: ${expected}`);
+  assert.ok(!source.includes(cv.phone), 'Phone number must stay out of the Markdown copies');
+}
 assert.match(html, /<div id="app">/, 'dist/index.html is not the landing site');
 
-console.log('Passed: tagged one-page Letter PDF with every source text and link; dist/ holds the landing site and the PDF only.');
+console.log('Passed: tagged one-page Letter PDF with every source text and link; dist/ holds the landing site, the PDF and llms.txt; README.md is current.');
