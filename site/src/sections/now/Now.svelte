@@ -350,8 +350,11 @@
   @keyframes now-tick {
     from { scale: 1 0; }
   }
-  /* The hand moves by transform (ruler-width container units), never by layout. */
-  .ruler { container-type: inline-size; }
+  /* The hand moves by transform (ruler-width container units), never by layout.
+     The glide transitions the registered --pos number, not the pixel transform,
+     so a resize moves the hand straight to its place on the new ruler width. */
+  @property --pos { syntax: '<number>'; inherits: true; initial-value: 0; }
+  .ruler { container-type: inline-size; transition: --pos 1s linear; }
   .hand {
     position: absolute;
     top: 0;
@@ -361,13 +364,13 @@
     margin-left: -1px;
     background: var(--accent);
     transform: translateX(calc(var(--pos) * 100cqw));
-    transition: transform 1s linear;
   }
   .hand span {
     position: absolute;
     top: 0;
     left: 50%;
-    translate: -50% 0;
+    /* Centred on the hand, but held inside the ruler near 00:00 and 24:00. */
+    translate: clamp(calc(var(--pos) * -100cqw), -50%, calc((1 - var(--pos)) * 100cqw - 100%)) 0;
     padding: 2px 6px;
     background: var(--ink);
     color: var(--paper);

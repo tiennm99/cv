@@ -7,6 +7,9 @@
 //   PDF download, and the
 //   show-off button opens the animated site at /cv/show-off/, which links back.
 // External requests are blocked, so the run also covers the offline fallbacks.
+// Each page's clock starts at 23:58:00 in Saigon and runs in real time, so the show-off
+// site's 24-hour ruler hand and its label sit at the far right end and their overflow is
+// caught on every run, while animations and live ticks still advance.
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { extname, join } from 'node:path';
@@ -23,6 +26,8 @@ const CDN = /\b(?:fonts\.googleapis\.com|fonts\.gstatic\.com|cdn\.jsdelivr\.net|
 /** Hosts the page may call at runtime: live GitHub data, avatars and the blog feed. */
 const ALLOWED_HOSTS = new Set(['api.github.com', 'avatars.githubusercontent.com', 'github.com', 'miti99.com']);
 const WIDTHS = [360, 390, 768, 1440, 1920];
+/** Start of each page's clock: the 24-hour ruler's worst case, its hand and label at the right end. */
+const START_TIME = new Date('2026-11-20T23:58:00+07:00');
 
 /**
  * @param {string} dir Directory.
@@ -88,7 +93,9 @@ const externalHosts = new Set();
  * @returns {Promise<{ page: import('playwright').Page, context: import('playwright').BrowserContext }>} Page.
  */
 async function open(label, options, url) {
-  const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, acceptDownloads: true, ...options });
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, acceptDownloads: true, timezoneId: 'Asia/Saigon', ...options });
+  // The clock starts at START_TIME and runs in real time, so GSAP tweens and live ticks advance.
+  await context.clock.install({ time: START_TIME });
   const origin = new URL(url).origin;
   await context.route('**/*', route => {
     const target = new URL(route.request().url());
@@ -140,6 +147,9 @@ async function checkWidths(page, label, widths) {
   for (const width of widths) {
     await page.setViewportSize({ width, height: width < 768 ? 844 : 900 });
     await page.waitForTimeout(600);
+    // Past midnight the ruler hand moves to its left end, so the right-end case is no longer measured.
+    const hour = await page.evaluate(() => new Date().getHours());
+    if (hour !== 23) problems.push(`[${label}] page clock passed midnight before the ${width}px check; start it earlier`);
     const result = await page.evaluate(overflowProbe);
     if (result.scrollWidth > result.vw || result.found.length) problems.push(`[${label}] horizontal overflow at ${width}px: ${result.found.join('; ') || `scrollWidth ${result.scrollWidth}`}`);
   }

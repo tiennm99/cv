@@ -90,7 +90,8 @@ only locally, so run it before every push. The checks:
   the root PDF matches `dist/miti99.pdf`; `README.md` and the llms files match
   the generator, hold every source text and no phone number; the old root
   `index.html` web CV is gone.
-- `check-site.mjs` (`check:all` only, Chromium): serves `dist/` under `/cv/`; checks that the simple CV has no JavaScript, no
+- `check-site.mjs` (`check:all` only, Chromium): serves `dist/` under `/cv/` with the
+  page clock starting at 23:58 Saigon time and running in real time (the 24-hour ruler's worst case); checks that the simple CV has no JavaScript, no
   overflow, no buttons when printed, a working PDF download and a Show off button that reaches the
   animated site, which links back; then, on the show-off site with external requests
   blocked, checks relative URLs, no phone number in any web asset, no CDN
