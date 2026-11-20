@@ -26,12 +26,19 @@ main { max-width: 48rem; margin: 0 auto; padding: 1.25rem 1.25rem 3rem; }
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
-.actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.9rem; }
 .button { display: inline-flex; align-items: center; min-height: 40px; padding: 0 0.95rem; border: 1px solid var(--blue); border-radius: 6px; font-size: 0.9rem; font-weight: 600; }
 .button:hover { text-decoration: none; background: var(--blue-soft); }
 .button.primary { background: var(--blue); color: #fff; }
 .button.primary:hover { background: #1e40af; }
 header { padding-bottom: 0.9rem; border-bottom: 2px solid var(--blue); }
+/* Wide screens: the buttons share the name's row; narrow ones get them after the contacts. */
+@media (min-width: 46rem) {
+  header { display: grid; grid-template-columns: 1fr auto; column-gap: 1rem; align-items: center; }
+  header > * { grid-column: 1 / -1; }
+  h1 { grid-column: 1; grid-row: 1; }
+  .actions { grid-column: 2; grid-row: 1; margin-top: 0; }
+}
 h1 { margin: 0; font-size: clamp(1.9rem, 6vw, 2.4rem); line-height: 1.15; color: var(--blue); letter-spacing: -0.01em; }
 .headline { margin: 0.25rem 0 0; font-size: 1.1rem; font-weight: 600; }
 .contact { display: flex; flex-wrap: wrap; gap: 0.15rem 0; margin: 0.6rem 0 0; padding: 0; list-style: none; font-size: 0.92rem; color: var(--ink-2); }
@@ -53,7 +60,6 @@ dt { font-weight: 600; }
 dd { margin: 0; }
 footer { margin-top: 2.5rem; padding-top: 0.75rem; border-top: 1px solid var(--blue-soft); font-size: 0.85rem; color: var(--ink-2); }
 @media (max-width: 34rem) {
-  .actions { justify-content: flex-start; }
   .contact { gap: 0.15rem 1rem; }
   .contact li + li::before { content: none; }
   dl { grid-template-columns: 1fr; gap: 0; }
@@ -64,6 +70,7 @@ footer { margin-top: 2.5rem; padding-top: 0.75rem; border-top: 1px solid var(--b
   body { font-size: 10.5pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   main { max-width: none; padding: 0; }
   .actions, footer { display: none; }
+  header { display: block; }
   article, dl > * { break-inside: avoid; }
   h2 { break-after: avoid; }
   a:hover { text-decoration: none; }
@@ -126,14 +133,14 @@ export function cvHtml(cv) {
 </head>
 <body>
 <main>
-<nav class="actions" aria-label="Other versions">
-<a class="button primary" href="./miti99.pdf" download="Tien-Nguyen-Minh-CV.pdf">Download PDF</a>
-<a class="button" href="${SHOW_OFF_PATH}">Show off ✦</a>
-</nav>
 <header>
 <h1>${escape(cv.name)}</h1>
 <p class="headline">${escape(cv.headline)}</p>
 <ul class="contact">${contact.map(item => `<li>${item}</li>`).join('')}</ul>
+<nav class="actions" aria-label="Other versions">
+<a class="button primary" href="./miti99.pdf" download="Tien-Nguyen-Minh-CV.pdf">Download PDF</a>
+<a class="button" href="${SHOW_OFF_PATH}">Show-off version ✦</a>
+</nav>
 </header>
 ${sections.join('\n')}
 <footer>Also as <a href="./miti99.pdf">PDF</a> and <a href="./README.md">Markdown (README.md)</a> · <a href="./llms.txt">llms.txt</a> · <a href="${REPO_URL}">Source</a></footer>
