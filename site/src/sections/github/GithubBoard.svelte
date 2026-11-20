@@ -435,13 +435,13 @@
   }
 
   /* ---------- the board ---------- */
-  /* Real departures boards are black: the board keeps its own dark palette in
-     every theme, lifted a step and outlined when the page itself is dark. */
+  /* Real departures boards are black: the board keeps its own dark Dracula palette
+     in every theme, lifted a step and outlined when the page itself is dark. */
   .board {
-    --ink: oklch(0.17 0.012 270);
-    --paper: oklch(0.965 0.01 95);
-    --accent: oklch(0.63 0.235 31);
-    --accent-ink: oklch(0.17 0.012 270);
+    --ink: oklch(0.255 0.019 280.5);
+    --paper: oklch(0.977 0.008 106.5);
+    --accent: oklch(0.742 0.149 301.9);
+    --accent-ink: oklch(0.255 0.019 280.5);
     --board: var(--ink);
     --board-ink: var(--paper);
     --board-dim: color-mix(in oklch, var(--paper) 76%, var(--ink));
@@ -644,13 +644,13 @@
   }
 
   :global(:root[data-theme="invert"]) .board {
-    --ink: oklch(0.2 0.014 270);
-    box-shadow: 0 0 0 1px oklch(0.34 0.012 270);
+    --ink: oklch(0.255 0.019 280.5);
+    box-shadow: 0 0 0 1px oklch(0.403 0.032 277.8);
   }
   @media (prefers-color-scheme: dark) {
     :global(:root:not([data-theme="light"])) .board {
-      --ink: oklch(0.2 0.014 270);
-      box-shadow: 0 0 0 1px oklch(0.34 0.012 270);
+      --ink: oklch(0.255 0.019 280.5);
+      box-shadow: 0 0 0 1px oklch(0.403 0.032 277.8);
     }
   }
 

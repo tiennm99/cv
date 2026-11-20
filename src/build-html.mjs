@@ -12,6 +12,8 @@ const inline = value => markdown.renderInline(String(value));
 const escape = value => markdown.utils.escapeHtml(String(value));
 
 export const SHOW_OFF_PATH = './show-off/';
+/** Favicon of the simple CV, in its blue-on-white theme (the show-off site keeps its own). */
+export const FAVICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><path d="M6 24V8h4l4 8 4-8h4v16h-3V14l-3 6h-4l-3-6v10z" fill="#fff"/></svg>\n';
 
 const CSS = `
 :root {

@@ -163,10 +163,10 @@
     font-variation-settings: "wght" 820, "wdth" 68;
     line-height: 0.9;
     /* The open card sits on --ink, light in one theme and dark in the other. Fall back
-       to the card text colour, then derive a vermilion whose lightness mirrors the
+       to the card text colour, then derive a Dracula purple whose lightness mirrors the
        surface: bright on the dark card, deep on the light one (both above 4.5:1). */
     color: inherit;
-    color: oklch(from var(--ink) calc(0.72 - 0.25 * l) 0.2 31);
+    color: oklch(from var(--ink) calc(0.74 - 0.25 * l) 0.16 302);
   }
   .school { margin: 0; }
 

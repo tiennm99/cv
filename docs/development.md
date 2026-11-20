@@ -39,6 +39,12 @@ committed root PDF. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` (for example
   the simple CV, README and llms files leave it out, like the site.
 - The show-off site links the PDF and the simple CV one level up (`../`), since
   it is served from `show-off/`.
+- Themes: the simple CV and the PDF are blue on white (`#1d4ed8`); the show-off
+  site uses Alucard in light mode and Dracula in dark mode
+  ([draculatheme.com/spec](https://draculatheme.com/spec)), with the colour
+  tokens in `site/src/app.css` mirrored in `site/src/lib/tokens.js`.
+- The PDF keeps phrases together with Typst boxes (`keep`, `tail` and `skills`
+  in `pdf/cv.typ`), never with no-break characters, so copied text stays plain.
 - `README.md` is generated: edit `miti99.yml` or `src/build-markdown.mjs`, never
   the README itself.
 - Curated site copy (featured projects, links, cross-links) lives in

@@ -11,7 +11,7 @@ import { build as viteBuild } from 'vite';
 import { loadCv } from '../src/load-cv.mjs';
 import { buildPdf } from '../src/build-pdf.mjs';
 import { llmsFull, llmsTxt, readme } from '../src/build-markdown.mjs';
-import { cvHtml } from '../src/build-html.mjs';
+import { FAVICON_SVG, cvHtml } from '../src/build-html.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const out = join(root, 'dist');
@@ -25,7 +25,7 @@ await writeFile(join(root, 'README.md'), readmeText);
 await rm(out, { recursive: true, force: true });
 await viteBuild({ configFile: join(root, 'site/vite.config.js'), logLevel: 'warn' });
 await writeFile(join(out, 'index.html'), cvHtml(cv));
-await copyFile(join(root, 'site/public/favicon.svg'), join(out, 'favicon.svg'));
+await writeFile(join(out, 'favicon.svg'), FAVICON_SVG);
 await copyFile(pdfPath, join(out, 'miti99.pdf'));
 await writeFile(join(out, 'README.md'), readmeText);
 await writeFile(join(out, 'llms.txt'), llmsTxt(cv));
