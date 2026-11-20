@@ -19,5 +19,6 @@ test('pdfData keeps every section and the recruiter contact details', async () =
   assert.deepEqual(data.sections.map(section => section.title), Object.keys(cv.sections).map(key => key[0].toUpperCase() + key.slice(1)));
   assert.ok(data.contacts.some(contact => contact.url === `mailto:${cv.email}`));
   assert.ok(data.contacts.some(contact => contact.url?.startsWith('tel:')));
+  assert.deepEqual(data.sections[0].items[0].role, [{ text: cv.sections.experience[0].position }]);
   assert.match(data.sections[0].items[0].dates, /^[A-Z][a-z]{2} \d{4} – (present|[A-Z][a-z]{2} \d{4})$/);
 });

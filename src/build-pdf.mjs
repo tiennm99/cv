@@ -67,9 +67,11 @@ export function pdfData(cv) {
     : {
       title: title(key),
       kind: 'entries',
+      // The usual resume layout, as on the web CV: organisation and place, then role
+      // and dates; a project has only its name and dates.
       items: items.map(item => ({
-        title: segments(item.position ?? item.name ?? item.institution),
-        subtitle: segments([item.company, item.degree && item.area ? `${item.degree} in ${item.area}` : undefined].filter(Boolean).join(' · ')),
+        title: segments(item.company ?? item.institution ?? item.name),
+        role: item.position ? segments(item.position) : item.degree ? segments(`${item.degree} in ${item.area}`) : [],
         location: item.location ?? '',
         dates: dates(item),
         summary: item.summary ? segments(item.summary) : [],
