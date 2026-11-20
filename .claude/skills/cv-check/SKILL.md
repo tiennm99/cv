@@ -1,11 +1,12 @@
 ---
 name: cv-check
-description: Build and check the landing site and the PDF CV (one-page pagination, selectable text, no phone number on the site, no overflow). Preserve CV copy unless the user explicitly requests edits.
+description: Build and check the simple web CV, the show-off site and the PDF CV (one-page pagination, selectable text, no phone number on the site, no overflow). Preserve CV copy unless the user explicitly requests edits.
 ---
 
 # CV Check
 
-The repo builds into `dist/` the landing site (`site/`), `miti99.pdf`, typeset
+The repo builds into `dist/` the default static web CV (`src/build-html.mjs`),
+the animated show-off site (`site/`, in `dist/show-off/`), `miti99.pdf`, typeset
 by Typst from `miti99.yml` through `pdf/cv.typ` (no browser), and the
 `llms.txt` / `llms-full.txt` Markdown copies; it also regenerates the root
 `README.md` (`src/build-markdown.mjs`). Preserve all CV content; fix PDF layout in the template, not in the copy. The PDF

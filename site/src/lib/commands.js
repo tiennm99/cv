@@ -31,6 +31,7 @@ export function buildCommands(profile) {
   ];
   /** @type {Command[]} */
   const open = [
+    { id: 'open:simple', group: 'Open', label: 'Simple CV', keywords: 'plain classic resume', href: links.simpleCv },
     { id: 'open:github', group: 'Open', label: 'GitHub', hint: 'tiennm99', href: links.github },
     { id: 'open:github-org', group: 'Open', label: 'GitHub WIP org', hint: 'tiennm99dev', href: links.githubOrg },
     { id: 'open:blog', group: 'Open', label: 'Blog', hint: 'miti99.com', href: links.blog },

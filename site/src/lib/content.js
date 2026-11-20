@@ -126,6 +126,8 @@ export const links = {
   linkedin: 'https://www.linkedin.com/in/miti99',
   blog: 'https://miti99.com/',
   linkInBio: 'https://tiennm99.github.io/iammiti99/',
-  cvPdf: './miti99.pdf',
+  // The site is served from show-off/, one level below the PDF and the simple CV.
+  cvPdf: '../miti99.pdf',
+  simpleCv: '../',
   cvDownloadName: 'Tien-Nguyen-Minh-CV.pdf',
 };

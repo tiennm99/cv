@@ -2,6 +2,7 @@
   import { SECTIONS } from '../lib/sections.js';
   import { ui } from '../lib/ui.svelte.js';
   import { scrollToId } from '../lib/motion/runtime.js';
+  import { links } from '../lib/content.js';
   import LiveChip from './LiveChip.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
 
@@ -48,6 +49,7 @@
   <p class="compact label" aria-hidden="true">{current?.num ?? '01'}/{String(SECTIONS.length).padStart(2, '0')}</p>
 
   <div class="tools">
+    <a class="simple label" href={links.simpleCv}>Simple CV</a>
     <LiveChip />
     <button class="kbd" type="button" onclick={() => (ui.paletteOpen = true)} aria-haspopup="dialog" aria-keyshortcuts="Meta+K Control+K /">
       <span class="wide"><kbd>{isMac ? '⌘' : 'Ctrl'}</kbd><kbd>K</kbd></span>
@@ -140,6 +142,20 @@
   .kbd:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
   .kbd kbd { font: inherit; }
   .kbd .wide { display: none; gap: 2px; }
+  /* Narrow phones reach the simple CV through the Menu palette instead. */
+  .simple { display: none; }
+  @media (min-width: 480px) {
+    .simple { display: inline-flex; }
+  }
+  .simple {
+    align-items: center;
+    min-height: 36px;
+    padding-inline: var(--s-2);
+    color: var(--ink-2);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .simple:hover { color: var(--ink); }
 
   @media (min-width: 768px) {
     .ruler { display: block; }

@@ -31,7 +31,7 @@ function profilePlugin() {
 }
 
 /**
- * Serves the committed root miti99.pdf at ./miti99.pdf in the dev server, so the
+ * Serves the committed root miti99.pdf at /miti99.pdf in the dev server, so the
  * download links work before a full build (the build copies it into dist/).
  * @returns {import('vite').Plugin} Vite plugin.
  */
@@ -78,7 +78,8 @@ export default defineConfig({
   base: './',
   plugins: [profilePlugin(), devPdfPlugin(), fontPreloadPlugin(), svelte(), tailwindcss()],
   build: {
-    outDir: '../dist',
+    // The default page at dist/index.html is the static CV (src/build-html.mjs).
+    outDir: '../dist/show-off',
     emptyOutDir: true,
     target: 'es2022',
     assetsInlineLimit: 0,

@@ -1,8 +1,10 @@
-// Checks the built landing site in dist/, served under the /cv/ project-site path:
+// Checks the built web CV and show-off site in dist/, served under the /cv/ project-site path:
 // - static: relative URLs only, no phone number in any text asset, no CDN hosts;
 // - in Chromium: every asset loads under /cv/, only the allowed live APIs are
 //   requested, no console or page errors, no horizontal overflow from 360 to 1920px
-//   (motion on, and reduced motion without WebGL), and the PDF download works.
+//   (motion on, and reduced motion without WebGL), and the PDF download works;
+// - the default static CV at /cv/: no JavaScript, no overflow, PDF download, and the
+//   show-off button opens the animated site at /cv/show-off/, which links back.
 // External requests are blocked, so the run also covers the offline fallbacks.
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
@@ -33,9 +35,11 @@ async function files(dir) {
 
 // ---------- static ----------
 const all = await files(out);
-const html = await readFile(join(out, 'index.html'), 'utf8');
-for (const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
-  assert.ok(!url.startsWith('/'), `Root-relative URL breaks the /cv/ project site: ${url}`);
+for (const page of ['index.html', 'show-off/index.html']) {
+  const html = await readFile(join(out, page), 'utf8');
+  for (const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
+    assert.ok(!url.startsWith('/'), `Root-relative URL breaks the /cv/ project site in ${page}: ${url}`);
+  }
 }
 const digits = cv.phone.replace(/\D/g, '');
 const local = digits.replace(/^84/, '');
@@ -145,7 +149,22 @@ try {
     server.once('error', reject);
     server.listen(0, '127.0.0.1', resolve);
   });
-  const site = `http://127.0.0.1:${server.address().port}${BASE}`;
+  const home = `http://127.0.0.1:${server.address().port}${BASE}`;
+  const site = `${home}show-off/`;
+
+  // The default page: the static CV, with no JavaScript at all.
+  const simple = await open('simple CV', {}, home);
+  assert.equal(await simple.page.locator('script').count(), 0, 'The simple CV must ship no JavaScript');
+  await checkWidths(simple.page, 'simple CV', WIDTHS);
+  const plainText = await simple.page.locator('body').innerText();
+  for (const pattern of phonePatterns) assert.ok(!pattern.test(plainText), 'Phone number rendered on the simple CV');
+  assert.ok(plainText.includes(cv.email), 'The yml email is missing from the simple CV');
+  const plainPdf = simple.page.locator('a[href="./miti99.pdf"][download]').first();
+  const [plainDownload] = await Promise.all([simple.page.waitForEvent('download'), plainPdf.click()]);
+  assert.deepEqual(await readFile(await plainDownload.path()), await readFile(join(out, 'miti99.pdf')), 'Simple CV download is not dist/miti99.pdf');
+  await Promise.all([simple.page.waitForURL(site), simple.page.locator('a[href="./show-off/"]').click()]);
+  await simple.page.locator('a[href="../"]').first().waitFor({ state: 'attached' });
+  await simple.context.close();
 
   const motion = await open('motion', {}, site);
   assert.equal(await motion.page.locator('main section').count() >= 10, true, 'Expected the ten sections on the page');
@@ -159,7 +178,7 @@ try {
   const still = await open('reduced, no WebGL', { reducedMotion: 'reduce' }, `${site}?nogl`);
   await sweep(still.page);
   await checkWidths(still.page, 'reduced, no WebGL', WIDTHS);
-  const link = still.page.locator('a[href="./miti99.pdf"][download]').first();
+  const link = still.page.locator('a[href="../miti99.pdf"][download]').first();
   await link.scrollIntoViewIfNeeded();
   const [download] = await Promise.all([still.page.waitForEvent('download'), link.click()]);
   assert.equal(await download.failure(), null);

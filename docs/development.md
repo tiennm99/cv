@@ -3,17 +3,17 @@
 ## Setup
 
 Node.js 24+ with npm, and [uv](https://docs.astral.sh/uv/) for the PDF. The
-checks also need Poppler (`pdfinfo`, `pdftotext`); the local site check also
+checks also need Poppler (`pdfinfo`, `pdftotext`); the local browser check also
 needs Playwright's Chromium (`npx playwright install chromium`).
 
 ```sh
 npm ci
-npm run dev        # landing site with hot reload at http://127.0.0.1:5199/
-npm run build      # dist/: site, PDF, llms.txt; also refreshes the root miti99.pdf and README.md
+npm run dev        # show-off site with hot reload at http://127.0.0.1:5199/
+npm run build      # dist/: simple CV, show-off site, PDF, llms.txt; also refreshes the root miti99.pdf and README.md
 npm run preview    # serves dist/ at http://127.0.0.1:4173/cv/, like GitHub Pages
 ```
 
-`npm run build:site` rebuilds the site, README and llms files and reuses the
+`npm run build:site` rebuilds both web versions, README and llms files and reuses the
 committed root PDF. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` (for example
 `/usr/bin/google-chrome`) to use an existing Chromium instead of Playwright's.
 
@@ -22,12 +22,13 @@ committed root PDF. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` (for example
 | Path | What it is |
 | --- | --- |
 | `miti99.yml` | The single CV data source (contact, experience, projects, skills, education). |
-| `site/` | Landing site: `src/App.svelte` shell, `src/sections/<id>/` one folder per section, `src/lib/` shared code, `test/` Vitest. |
+| `src/build-html.mjs` | The default web CV at `/cv/`: one static HTML page with inline CSS and no JavaScript, with a **Show off** button to the animated site. |
+| `site/` | Show-off site (animated, kinetic type), built into `dist/show-off/` and served at `/cv/show-off/`: `src/App.svelte` shell, `src/sections/<id>/` one folder per section, `src/lib/` shared code, `test/` Vitest. |
 | `src/load-cv.mjs` | Loads and validates `miti99.yml`. |
 | `src/build-pdf.mjs` | Turns the CV into JSON for Typst and runs `pdf/build.py` through uv. |
 | `src/build-markdown.mjs` | Renders the CV as Markdown: the root `README.md`, and `llms.txt` / `llms-full.txt` ([llmstxt.org](https://llmstxt.org/)) for the site. |
 | `pdf/` | The PDF: `cv.typ` Typst template, bundled Be Vietnam Pro fonts (OFL), and a uv project pinning the Typst Python binding. |
-| `scripts/build.mjs` | Builds the PDF and `README.md`, builds the site into `dist/`, then adds the PDF and the llms files. |
+| `scripts/build.mjs` | Builds the PDF and `README.md`, the show-off site into `dist/show-off/`, then writes the simple CV, the PDF and the llms files into `dist/`. |
 | `scripts/check*.mjs` | Output checks run by `npm run check` and `npm run check:all`. |
 | `scripts/preview.mjs` | Serves `dist/` at `/cv/` (port from `PORT`, default 4173). |
 
@@ -35,7 +36,9 @@ committed root PDF. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` (for example
 
 - The site reads `miti99.yml` through the `virtual:profile` Vite module, which
   whitelists fields and never copies the phone number. The PDF keeps the phone;
-  the README and llms files leave it out, like the site.
+  the simple CV, README and llms files leave it out, like the site.
+- The show-off site links the PDF and the simple CV one level up (`../`), since
+  it is served from `show-off/`.
 - `README.md` is generated: edit `miti99.yml` or `src/build-markdown.mjs`, never
   the README itself.
 - Curated site copy (featured projects, links, cross-links) lives in
@@ -76,11 +79,14 @@ CI runs it. `npm run check:all` adds the browser check of the site, which runs
 only locally, so run it before every push. The checks:
 
 - `check.mjs`: the PDF is one tagged US Letter page holding every text and link
-  from `miti99.yml`; `dist/` holds only the site, the PDF and the llms files;
+  from `miti99.yml`; `dist/` holds only the simple CV, `show-off/`, the PDF and
+  the llms files; the simple CV holds every source text and link and no phone;
   the root PDF matches `dist/miti99.pdf`; `README.md` and the llms files match
   the generator, hold every source text and no phone number; the old root
   `index.html` web CV is gone.
-- `check-site.mjs` (`check:all` only, Chromium): serves `dist/` under `/cv/` and, with external requests
+- `check-site.mjs` (`check:all` only, Chromium): serves `dist/` under `/cv/`; checks that the simple CV has no JavaScript, no
+  overflow, a working PDF download and a Show off button that reaches the
+  animated site, which links back; then, on the show-off site with external requests
   blocked, checks relative URLs, no phone number in any web asset, no CDN
   hosts, only the allowed live hosts requested, no console or page errors, no
   horizontal overflow at 360, 390, 768, 1440 and 1920px (motion on, and reduced
