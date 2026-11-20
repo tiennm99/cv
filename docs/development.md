@@ -22,7 +22,7 @@ committed root PDF. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` (for example
 | Path | What it is |
 | --- | --- |
 | `miti99.yml` | The single CV data source (contact, experience, projects, skills, education). |
-| `src/build-html.mjs` | The default web CV at `/cv/`: one static HTML page with inline CSS and no JavaScript, with a **Show off** button to the animated site. |
+| `src/build-html.mjs` | The default web CV at `/cv/`: one printable static HTML page, blue on white, with inline CSS and no JavaScript. **Download PDF** and **Show off** (to the animated site) are hidden when printed. |
 | `site/` | Show-off site (animated, kinetic type), built into `dist/show-off/` and served at `/cv/show-off/`: `src/App.svelte` shell, `src/sections/<id>/` one folder per section, `src/lib/` shared code, `test/` Vitest. |
 | `src/load-cv.mjs` | Loads and validates `miti99.yml`. |
 | `src/build-pdf.mjs` | Turns the CV into JSON for Typst and runs `pdf/build.py` through uv. |
@@ -85,7 +85,7 @@ only locally, so run it before every push. The checks:
   the generator, hold every source text and no phone number; the old root
   `index.html` web CV is gone.
 - `check-site.mjs` (`check:all` only, Chromium): serves `dist/` under `/cv/`; checks that the simple CV has no JavaScript, no
-  overflow, a working PDF download and a Show off button that reaches the
+  overflow, no buttons when printed, a working PDF download and a Show off button that reaches the
   animated site, which links back; then, on the show-off site with external requests
   blocked, checks relative URLs, no phone number in any web asset, no CDN
   hosts, only the allowed live hosts requested, no console or page errors, no

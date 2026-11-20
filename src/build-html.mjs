@@ -1,4 +1,5 @@
-// Renders the default web CV: one static HTML page with inline CSS and no JavaScript.
+// Renders the default web CV: one static, printable HTML page (blue on white) with
+// inline CSS and no JavaScript. Printing it (Ctrl+P) hides the buttons and the footer.
 // Like the other web copies it leaves out the phone number; only the PDF carries it.
 // The animated site lives beside it at ./show-off/.
 import MarkdownIt from 'markdown-it';
@@ -14,56 +15,58 @@ export const SHOW_OFF_PATH = './show-off/';
 
 const CSS = `
 :root {
-  color-scheme: light dark;
-  --paper: #fbfaf7; --ink: #1c1b19; --ink-2: #5d5a54; --line: #e4e0d8; --accent: #b4532a;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Charter, "Bitstream Charter", Georgia, serif;
-  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --paper: #151412; --ink: #ece8e1; --ink-2: #a39e95; --line: #2e2b27; --accent: #e08a5f; }
+  color-scheme: light;
+  --ink: #1a1f2b; --ink-2: #4a5263; --blue: #1d4ed8; --blue-soft: #dbe6fd;
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.65 var(--sans); }
-main { max-width: 46rem; margin: 0 auto; padding: 4.5rem 1.25rem 3rem; }
-a { color: inherit; text-decoration-color: var(--line); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-a:hover { color: var(--accent); text-decoration-color: currentColor; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-header { padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
-h1 { margin: 0; font: 600 clamp(2.4rem, 7vw, 3.4rem)/1.05 var(--serif); letter-spacing: -0.02em; }
-.headline { margin: 0.75rem 0 0; font: italic 1.2rem/1.4 var(--serif); color: var(--ink-2); }
-.contact { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 1.25rem 0 0; padding: 0; list-style: none; font-size: 0.92rem; color: var(--ink-2); }
-.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
-.button { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0 1.1rem; border: 1px solid var(--ink); border-radius: 999px; font-size: 0.95rem; font-weight: 500; text-decoration: none; }
-.button.primary { background: var(--ink); color: var(--paper); }
-.button.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
-.button:hover { border-color: var(--accent); }
-section { padding-top: 2.5rem; }
-h2 { margin: 0 0 1.25rem; font: 600 0.78rem/1 var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
-article + article { margin-top: 1.75rem; }
-h3 { margin: 0; font: 600 1.25rem/1.3 var(--serif); }
-h3 a { text-decoration: none; }
-.org { color: var(--ink-2); font-weight: 400; }
-.meta { margin: 0.2rem 0 0; font-size: 0.85rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
-article p { margin: 0.6rem 0 0; }
-article ul { margin: 0.6rem 0 0; padding-left: 1.1rem; }
-article li + li { margin-top: 0.35rem; }
-article li::marker { color: var(--accent); }
-dl { display: grid; grid-template-columns: minmax(9rem, max-content) 1fr; gap: 0.6rem 1.5rem; margin: 0; }
+body { margin: 0; background: #fff; color: var(--ink); font: 0.98rem/1.55 var(--font); }
+main { max-width: 52rem; margin: 0 auto; padding: 1.25rem 1.25rem 3rem; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.button { display: inline-flex; align-items: center; min-height: 40px; padding: 0 0.95rem; border: 1px solid var(--blue); border-radius: 6px; font-size: 0.9rem; font-weight: 600; }
+.button:hover { text-decoration: none; background: var(--blue-soft); }
+.button.primary { background: var(--blue); color: #fff; }
+.button.primary:hover { background: #1e40af; }
+header { padding-bottom: 0.9rem; border-bottom: 2px solid var(--blue); }
+h1 { margin: 0; font-size: clamp(1.9rem, 6vw, 2.4rem); line-height: 1.15; color: var(--blue); letter-spacing: -0.01em; }
+.headline { margin: 0.25rem 0 0; font-size: 1.1rem; font-weight: 600; }
+.contact { display: flex; flex-wrap: wrap; gap: 0.15rem 0; margin: 0.6rem 0 0; padding: 0; list-style: none; font-size: 0.92rem; color: var(--ink-2); }
+.contact li + li::before { content: "|"; margin: 0 0.6rem; color: var(--blue-soft); }
+section { padding-top: 1.4rem; }
+h2 { margin: 0 0 0.75rem; padding-bottom: 0.2rem; border-bottom: 1px solid var(--blue-soft); font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); }
+article + article { margin-top: 1rem; }
+.row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; align-items: baseline; }
+h3 { margin: 0; font-size: 1.02rem; }
+.org { font-weight: 400; color: var(--ink-2); }
+.meta { margin: 0; font-size: 0.88rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.where { margin: 0; font-size: 0.88rem; color: var(--ink-2); font-style: italic; }
+article p { margin: 0.35rem 0 0; }
+article ul { margin: 0.35rem 0 0; padding-left: 1.15rem; }
+article li + li { margin-top: 0.2rem; }
+article li::marker { color: var(--blue); }
+dl { display: grid; grid-template-columns: minmax(9rem, max-content) 1fr; gap: 0.3rem 1.25rem; margin: 0; }
 dt { font-weight: 600; }
-dd { margin: 0; color: var(--ink-2); }
-footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--ink-2); }
+dd { margin: 0; }
+footer { margin-top: 2.5rem; padding-top: 0.75rem; border-top: 1px solid var(--blue-soft); font-size: 0.85rem; color: var(--ink-2); }
 @media (max-width: 34rem) {
-  main { padding-top: 3rem; }
-  dl { grid-template-columns: 1fr; gap: 0.15rem; }
-  dd { margin-bottom: 0.6rem; }
+  .actions { justify-content: flex-start; }
+  .contact { gap: 0.15rem 1rem; }
+  .contact li + li::before { content: none; }
+  dl { grid-template-columns: 1fr; gap: 0; }
+  dd { margin-bottom: 0.5rem; }
 }
+@page { size: auto; margin: 14mm 14mm 16mm; }
 @media print {
-  :root { --paper: #fff; --ink: #000; --ink-2: #333; --line: #ccc; --accent: #000; }
+  body { font-size: 10.5pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   main { max-width: none; padding: 0; }
   .actions, footer { display: none; }
-  section, article { break-inside: avoid; }
-  a { text-decoration: none; }
+  article, dl > * { break-inside: avoid; }
+  h2 { break-after: avoid; }
+  a:hover { text-decoration: none; }
 }
 `;
 
@@ -75,11 +78,11 @@ function entry(item) {
   const heading = item.position
     ? `${inline(item.position)} <span class="org">· ${inline(item.company)}</span>`
     : inline(item.name ?? item.institution);
-  const meta = [item.degree && `${item.degree} in ${item.area}`, dates(item), item.location].filter(Boolean).map(escape).join(' · ');
+  const where = [item.degree && `${item.degree} in ${item.area}`, item.location].filter(Boolean).map(escape).join(' · ');
   return [
     '<article>',
-    `<h3>${heading}</h3>`,
-    `<p class="meta">${meta}</p>`,
+    `<div class="row"><h3>${heading}</h3><p class="meta">${escape(dates(item))}</p></div>`,
+    where ? `<p class="where">${where}</p>` : '',
     item.summary ? `<p>${inline(item.summary)}</p>` : '',
     `<ul>${item.highlights.map(highlight => `<li>${inline(highlight)}</li>`).join('')}</ul>`,
     '</article>',
@@ -119,14 +122,14 @@ export function cvHtml(cv) {
 </head>
 <body>
 <main>
+<nav class="actions" aria-label="Other versions">
+<a class="button primary" href="./miti99.pdf" download="Tien-Nguyen-Minh-CV.pdf">Download PDF</a>
+<a class="button" href="${SHOW_OFF_PATH}">Show off ✦</a>
+</nav>
 <header>
 <h1>${escape(cv.name)}</h1>
 <p class="headline">${escape(cv.headline)}</p>
 <ul class="contact">${contact.map(item => `<li>${item}</li>`).join('')}</ul>
-<div class="actions">
-<a class="button primary" href="./miti99.pdf" download="Tien-Nguyen-Minh-CV.pdf">Download PDF</a>
-<a class="button" href="${SHOW_OFF_PATH}">Show off ✦</a>
-</div>
 </header>
 ${sections.join('\n')}
 <footer>Also as <a href="./miti99.pdf">PDF</a> and <a href="./llms-full.txt">Markdown</a> · <a href="https://github.com/tiennm99/cv">Source</a></footer>

@@ -3,7 +3,8 @@
 // - in Chromium: every asset loads under /cv/, only the allowed live APIs are
 //   requested, no console or page errors, no horizontal overflow from 360 to 1920px
 //   (motion on, and reduced motion without WebGL), and the PDF download works;
-// - the default static CV at /cv/: no JavaScript, no overflow, PDF download, and the
+// - the default static CV at /cv/: no JavaScript, no overflow, buttons hidden in print,
+//   PDF download, and the
 //   show-off button opens the animated site at /cv/show-off/, which links back.
 // External requests are blocked, so the run also covers the offline fallbacks.
 import assert from 'node:assert/strict';
@@ -156,6 +157,9 @@ try {
   const simple = await open('simple CV', {}, home);
   assert.equal(await simple.page.locator('script').count(), 0, 'The simple CV must ship no JavaScript');
   await checkWidths(simple.page, 'simple CV', WIDTHS);
+  await simple.page.emulateMedia({ media: 'print' });
+  assert.equal(await simple.page.locator('.actions').isVisible(), false, 'Printing the simple CV must hide the buttons');
+  await simple.page.emulateMedia({ media: 'screen' });
   const plainText = await simple.page.locator('body').innerText();
   for (const pattern of phonePatterns) assert.ok(!pattern.test(plainText), 'Phone number rendered on the simple CV');
   assert.ok(plainText.includes(cv.email), 'The yml email is missing from the simple CV');
