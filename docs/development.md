@@ -9,7 +9,7 @@ needs Playwright's Chromium (`npx playwright install chromium`).
 ```sh
 npm ci
 npm run dev        # show-off site with hot reload at http://127.0.0.1:5199/
-npm run build      # dist/: simple CV, show-off site, PDF, llms.txt; also refreshes the root miti99.pdf and README.md
+npm run build      # dist/: simple CV, show-off site, PDF, README.md, llms.txt; also refreshes the root miti99.pdf and README.md
 npm run preview    # serves dist/ at http://127.0.0.1:4173/cv/, like GitHub Pages
 ```
 
@@ -26,9 +26,9 @@ committed root PDF. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` (for example
 | `site/` | Show-off site (animated, kinetic type), built into `dist/show-off/` and served at `/cv/show-off/`: `src/App.svelte` shell, `src/sections/<id>/` one folder per section, `src/lib/` shared code, `test/` Vitest. |
 | `src/load-cv.mjs` | Loads and validates `miti99.yml`. |
 | `src/build-pdf.mjs` | Turns the CV into JSON for Typst and runs `pdf/build.py` through uv. |
-| `src/build-markdown.mjs` | Renders the CV as Markdown: the root `README.md`, and `llms.txt` / `llms-full.txt` ([llmstxt.org](https://llmstxt.org/)) for the site. |
+| `src/build-markdown.mjs` | Renders the CV as Markdown: the root `README.md`, also published on the site as `README.md` (so its links are absolute), and `llms.txt` / `llms-full.txt` ([llmstxt.org](https://llmstxt.org/)). |
 | `pdf/` | The PDF: `cv.typ` Typst template, bundled Be Vietnam Pro fonts (OFL), and a uv project pinning the Typst Python binding. |
-| `scripts/build.mjs` | Builds the PDF and `README.md`, the show-off site into `dist/show-off/`, then writes the simple CV, the PDF and the llms files into `dist/`. |
+| `scripts/build.mjs` | Builds the PDF and `README.md`, the show-off site into `dist/show-off/`, then writes the simple CV, the PDF, README.md and the llms files into `dist/`. |
 | `scripts/check*.mjs` | Output checks run by `npm run check` and `npm run check:all`. |
 | `scripts/preview.mjs` | Serves `dist/` at `/cv/` (port from `PORT`, default 4173). |
 
@@ -79,8 +79,8 @@ CI runs it. `npm run check:all` adds the browser check of the site, which runs
 only locally, so run it before every push. The checks:
 
 - `check.mjs`: the PDF is one tagged US Letter page holding every text and link
-  from `miti99.yml`; `dist/` holds only the simple CV, `show-off/`, the PDF and
-  the llms files; the simple CV holds every source text and link and no phone;
+  from `miti99.yml`; `dist/` holds only the simple CV, `show-off/`, the PDF,
+  `README.md` (same as the root one) and the llms files; the simple CV holds every source text and link and no phone;
   the root PDF matches `dist/miti99.pdf`; `README.md` and the llms files match
   the generator, hold every source text and no phone number; the old root
   `index.html` web CV is gone.

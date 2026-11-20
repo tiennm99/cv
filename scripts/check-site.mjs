@@ -18,7 +18,7 @@ import { createPreviewServer, BASE } from './preview.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const out = join(root, 'dist');
 const cv = await loadCv(join(root, 'miti99.yml'));
-const TEXT = new Set(['.html', '.js', '.css', '.json', '.svg', '.txt', '.xml', '.webmanifest']);
+const TEXT = new Set(['.html', '.js', '.css', '.json', '.svg', '.txt', '.md', '.xml', '.webmanifest']);
 const CDN = /\b(?:fonts\.googleapis\.com|fonts\.gstatic\.com|cdn\.jsdelivr\.net|unpkg\.com|cdnjs\.cloudflare\.com|esm\.sh|cdn\.skypack\.dev)\b/;
 /** Hosts the page may call at runtime: live GitHub data, avatars and the blog feed. */
 const ALLOWED_HOSTS = new Set(['api.github.com', 'avatars.githubusercontent.com', 'github.com', 'miti99.com']);

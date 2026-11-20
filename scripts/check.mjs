@@ -47,7 +47,7 @@ for (const expected of normalizedLinks(links)) assert.ok(pdfLinks.has(expected),
 
 // ---------- dist/ layout ----------
 const top = (await readdir(new URL('dist/', root))).sort();
-assert.deepEqual(top, ['favicon.svg', 'index.html', 'llms-full.txt', 'llms.txt', 'miti99.pdf', 'show-off'], `Unexpected dist/ entries: ${top.join(', ')}`);
+assert.deepEqual(top, ['README.md', 'favicon.svg', 'index.html', 'llms-full.txt', 'llms.txt', 'miti99.pdf', 'show-off'], `Unexpected dist/ entries: ${top.join(', ')}`);
 assert.deepEqual(await readFile(new URL('miti99.pdf', root)), await readFile(pdfPath), 'Root miti99.pdf differs from dist/miti99.pdf; commit the rebuilt PDF');
 await assert.rejects(access(new URL('index.html', root)), 'The old web CV (root index.html) must not come back');
 const html = await readFile(new URL('dist/show-off/index.html', root), 'utf8');
@@ -67,6 +67,7 @@ assert.match(simple, /href="\.\/show-off\/"/, 'The simple CV must link to the sh
 // ---------- Markdown copies ----------
 const readmeText = await readFile(new URL('README.md', root), 'utf8');
 assert.equal(readmeText, readme(cv), 'README.md is stale; run npm run build and commit it');
+assert.equal(await readFile(new URL('dist/README.md', root), 'utf8'), readmeText, 'The site README.md differs from the root README.md');
 assert.equal(await readFile(new URL('dist/llms.txt', root), 'utf8'), llmsTxt(cv), 'dist/llms.txt is stale');
 const full = await readFile(new URL('dist/llms-full.txt', root), 'utf8');
 assert.equal(full, llmsFull(cv), 'dist/llms-full.txt is stale');
@@ -77,4 +78,4 @@ for (const source of [full, readmeText]) {
 }
 assert.match(html, /<div id="app">/, 'dist/show-off/index.html is not the show-off site');
 
-console.log('Passed: tagged one-page Letter PDF with every source text and link; dist/ holds the simple CV, the show-off site, the PDF and llms.txt; README.md is current.');
+console.log('Passed: tagged one-page Letter PDF with every source text and link; dist/ holds the simple CV, the show-off site, the PDF, README.md and llms.txt; README.md is current.');

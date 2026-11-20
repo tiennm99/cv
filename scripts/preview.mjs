@@ -18,6 +18,7 @@ const TYPES = {
   '.woff': 'font/woff',
   '.pdf': 'application/pdf',
   '.txt': 'text/plain; charset=utf-8',
+  '.md': 'text/markdown; charset=utf-8',
   '.xml': 'application/xml',
 };
 

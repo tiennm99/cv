@@ -2,7 +2,7 @@
 
 # Tien Nguyen Minh
 
-[Website](https://tiennm99.github.io/cv/) · [Show-off version](https://tiennm99.github.io/cv/show-off/) · [PDF](miti99.pdf) · [llms.txt](https://tiennm99.github.io/cv/llms.txt)
+[Website](https://tiennm99.github.io/cv/) · [Show-off version](https://tiennm99.github.io/cv/show-off/) · [PDF](https://tiennm99.github.io/cv/miti99.pdf) · [llms.txt](https://tiennm99.github.io/cv/llms.txt)
 
 **Senior Java Software Engineer | Real-Time Backends**
 
@@ -69,7 +69,7 @@ Modular Go Telegram bot framework deployed to AWS Lambda with AWS SAM.
 
 ## About this repo
 
-One data file, [`miti99.yml`](miti99.yml), builds the simple web CV, the
+One data file, [`miti99.yml`](https://github.com/tiennm99/cv/blob/main/miti99.yml), builds the simple web CV, the
 animated show-off site, the one-page PDF (Typst), this README and the
 `llms.txt` files for the site.
 
@@ -80,4 +80,4 @@ npm run build   # dist/ plus the committed miti99.pdf and README.md
 ```
 
 Needs Node.js 24+ and [uv](https://docs.astral.sh/uv/). Checks, layout and
-deployment: [docs/development.md](docs/development.md).
+deployment: [docs/development.md](https://github.com/tiennm99/cv/blob/main/docs/development.md).

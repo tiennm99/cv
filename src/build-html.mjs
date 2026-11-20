@@ -4,7 +4,7 @@
 // The animated site lives beside it at ./show-off/.
 import MarkdownIt from 'markdown-it';
 import { dates, socialBase, title } from './build-pdf.mjs';
-import { SITE_URL } from './build-markdown.mjs';
+import { REPO_URL, SITE_URL } from './build-markdown.mjs';
 
 const markdown = new MarkdownIt({ html: false, linkify: false, typographer: false });
 markdown.disable('image');
@@ -22,7 +22,7 @@ const CSS = `
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: #fff; color: var(--ink); font: 0.98rem/1.55 var(--font); }
-main { max-width: 52rem; margin: 0 auto; padding: 1.25rem 1.25rem 3rem; }
+main { max-width: 48rem; margin: 0 auto; padding: 1.25rem 1.25rem 3rem; }
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
@@ -41,9 +41,9 @@ h2 { margin: 0 0 0.75rem; padding-bottom: 0.2rem; border-bottom: 1px solid var(-
 article + article { margin-top: 1rem; }
 .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; align-items: baseline; }
 h3 { margin: 0; font-size: 1.02rem; }
-.org { font-weight: 400; color: var(--ink-2); }
-.meta { margin: 0; font-size: 0.88rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
-.where { margin: 0; font-size: 0.88rem; color: var(--ink-2); font-style: italic; }
+.row p { margin: 0; }
+.role { font-style: italic; }
+.right { font-size: 0.9rem; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
 article p { margin: 0.35rem 0 0; }
 article ul { margin: 0.35rem 0 0; padding-left: 1.15rem; }
 article li + li { margin-top: 0.2rem; }
@@ -75,14 +75,18 @@ footer { margin-top: 2.5rem; padding-top: 0.75rem; border-top: 1px solid var(--b
  * @returns {string} Article HTML.
  */
 function entry(item) {
-  const heading = item.position
-    ? `${inline(item.position)} <span class="org">· ${inline(item.company)}</span>`
-    : inline(item.name ?? item.institution);
-  const where = [item.degree && `${item.degree} in ${item.area}`, item.location].filter(Boolean).map(escape).join(' · ');
+  // The usual resume layout: organisation and place on the first line, role and
+  // dates on the second; a project has its name and dates on one line.
+  const lines = item.company
+    ? [[inline(item.company), escape(item.location)], [inline(item.position), escape(dates(item))]]
+    : item.institution
+      ? [[inline(item.institution), escape(item.location)], [escape(`${item.degree} in ${item.area}`), escape(dates(item))]]
+      : [[inline(item.name), escape(dates(item))]];
+  const [[name, nameRight], role] = lines;
   return [
     '<article>',
-    `<div class="row"><h3>${heading}</h3><p class="meta">${escape(dates(item))}</p></div>`,
-    where ? `<p class="where">${where}</p>` : '',
+    `<div class="row"><h3>${name}</h3><p class="right">${nameRight}</p></div>`,
+    role ? `<div class="row"><p class="role">${role[0]}</p><p class="right">${role[1]}</p></div>` : '',
     item.summary ? `<p>${inline(item.summary)}</p>` : '',
     `<ul>${item.highlights.map(highlight => `<li>${inline(highlight)}</li>`).join('')}</ul>`,
     '</article>',
@@ -117,7 +121,7 @@ export function cvHtml(cv) {
 <meta name="description" content="${escape(`${cv.name}: ${cv.headline}. ${cv.location}.`)}">
 <link rel="canonical" href="${SITE_URL}">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-<link rel="alternate" type="text/markdown" href="./llms-full.txt" title="CV in Markdown">
+<link rel="alternate" type="text/markdown" href="./README.md" title="CV in Markdown">
 <style>${CSS.trim()}</style>
 </head>
 <body>
@@ -132,7 +136,7 @@ export function cvHtml(cv) {
 <ul class="contact">${contact.map(item => `<li>${item}</li>`).join('')}</ul>
 </header>
 ${sections.join('\n')}
-<footer>Also as <a href="./miti99.pdf">PDF</a> and <a href="./llms-full.txt">Markdown</a> · <a href="https://github.com/tiennm99/cv">Source</a></footer>
+<footer>Also as <a href="./miti99.pdf">PDF</a> and <a href="./README.md">Markdown (README.md)</a> · <a href="./llms.txt">llms.txt</a> · <a href="${REPO_URL}">Source</a></footer>
 </main>
 </body>
 </html>

@@ -18,9 +18,10 @@ test('cvMarkdown has every section and entry, and no phone number', () => {
 test('readme is marked as generated and links the other formats', () => {
   const text = readme(cv);
   assert.match(text, /^<!-- Generated from miti99\.yml/);
-  assert.ok(text.includes('(miti99.pdf)'));
+  assert.ok(text.includes(`(${SITE_URL}miti99.pdf)`));
   assert.ok(text.includes(`${SITE_URL}llms.txt`));
   assert.ok(text.includes('docs/development.md'));
+  for (const [, href] of text.matchAll(/\]\(([^)]+)\)/g)) assert.match(href, /^(https?|mailto):/, `README link must work on GitHub and the site: ${href}`);
 });
 
 test('llms.txt follows the llmstxt.org shape', () => {

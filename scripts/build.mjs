@@ -19,13 +19,15 @@ const pdfPath = join(root, 'miti99.pdf');
 
 const cv = await loadCv(join(root, 'miti99.yml'));
 if (!process.argv.includes('--site-only')) buildPdf(cv, pdfPath);
-await writeFile(join(root, 'README.md'), readme(cv));
+const readmeText = readme(cv);
+await writeFile(join(root, 'README.md'), readmeText);
 
 await rm(out, { recursive: true, force: true });
 await viteBuild({ configFile: join(root, 'site/vite.config.js'), logLevel: 'warn' });
 await writeFile(join(out, 'index.html'), cvHtml(cv));
 await copyFile(join(root, 'site/public/favicon.svg'), join(out, 'favicon.svg'));
 await copyFile(pdfPath, join(out, 'miti99.pdf'));
+await writeFile(join(out, 'README.md'), readmeText);
 await writeFile(join(out, 'llms.txt'), llmsTxt(cv));
 await writeFile(join(out, 'llms-full.txt'), llmsFull(cv));
 console.log('Built the web CV, the show-off site, miti99.pdf and llms.txt into dist/, and README.md.');
